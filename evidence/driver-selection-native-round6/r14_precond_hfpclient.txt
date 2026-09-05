@@ -1,0 +1,23 @@
+      HeadsetClientStateMachine:
+       total records=36
+       rec[0]: time=09-05 15:23:54.289 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CALLSETUP, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[1]: time=09-05 15:23:54.396 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_STATE, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[2]: time=09-05 15:23:54.407 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_SIGNAL, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[3]: time=09-05 15:23:54.410 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_ROAMING_STATE, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[4]: time=09-05 15:23:54.421 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_BATTERY_LEVEL, value1:3, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[5]: time=09-05 15:23:54.421 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CALLHELD, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[6]: time=09-05 15:23:54.421 processed=Connected org=Connected dest=<null> what=8(0x8) SET_SPEAKER_VOLUME: arg1=5, arg2=0, obj=null
+       rec[7]: time=09-05 15:23:54.421 processed=Connected org=Connected dest=<null> what=7(0x7) SET_MIC_VOLUME: arg1=15, arg2=0, obj=null
+       rec[8]: time=09-05 15:23:54.421 processed=Connected org=Connected dest=<null> what=52(0x34) SUBSCRIBER_INFO: arg1=0, arg2=0, obj=null
+       rec[9]: time=09-05 15:23:54.427 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_IN_BAND_RINGTONE, value1:1, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[10]: time=09-05 15:23:54.444 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_STATE, value1:1, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[11]: time=09-05 15:23:54.451 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_SIGNAL, value1:5, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[12]: time=09-05 15:23:54.451 processed=Connected org=Connected dest=<null> what=22(0x16) SEND_BIEV: arg1=2, arg2=0, obj=null
+       rec[13]: time=09-05 15:23:54.451 processed=Connected org=Connected dest=<null> what=50(0x32) QUERY_CURRENT_CALLS: arg1=0, arg2=0, obj=null
+       rec[14]: time=09-05 15:23:54.451 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[15]: time=09-05 15:23:54.477 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_SUBSCRIBER_INFO, value1:1, value2:0, value3:0, value4:0, string: "3243397192", device:XX:XX:XX:XX:E4:95}
+       rec[16]: time=09-05 15:23:54.477 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[17]: time=09-05 15:23:54.579 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_OPERATOR_NAME, value1:0, value2:0, value3:0, value4:0, string: "TIGO", device:XX:XX:XX:XX:E4:95}
+       rec[18]: time=09-05 15:23:54.580 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+       rec[19]: time=09-05 15:23:54.581 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:E4:95}
+      curState=Connected

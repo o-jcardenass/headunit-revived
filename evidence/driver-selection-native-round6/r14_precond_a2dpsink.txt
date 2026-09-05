@@ -1,0 +1,9 @@
+  mDevice: XX:XX:XX:XX:E4:95(motorola edge 30 neo) name=A2DPSinkStateMachine state=Connected
+
+Profile: AvrcpTargetService:
+  AVRCP version: Invalid
+  List of MediaControllers: size=3
+    Media Player 1: com.zxbluelet
+    MediaController (com.zxbluelet@a7cd288) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not Provided" artist="" album="" duration=0 trackPosition=1/1 image=null }
