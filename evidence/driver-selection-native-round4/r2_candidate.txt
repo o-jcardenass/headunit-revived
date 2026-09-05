@@ -1,0 +1,105 @@
+--------- beginning of main
+09-05 11:06:08.464 I/OPENHU  (19845): [2] MainActivity.logLaunchSource | App launched by third party: android-app://com.android.shell (action: null)
+09-05 11:06:08.747 I/OPENHU  (19845): [2] UsbDeviceDiagnostics.logDeviceList | UsbDiagnostics: USB list sees 0 USB device(s), 0 usable for Android Auto
+09-05 11:06:08.748 I/OPENHU  (19845): [2] UsbDeviceDiagnostics.logDeviceList | UsbDiagnostics: nothing is on the bus. Either the port carries no data, the unit is not in USB host mode, or a wireless adapter is waiting for its phone before it presents itself.
+09-05 11:06:08.975 I/OPENHU  (19845): [2] HomeFragment.onResume | HomeFragment: onResume. isConnected=false
+09-05 11:06:09.772 I/OPENHU  (19845): [2] AapService.onCreate | AapService creating...
+09-05 11:06:09.802 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper: == Bluetooth address source dump ==
+09-05 11:06:09.807 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   adapter.address                      = 02:00:00:00:00:00
+09-05 11:06:09.807 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   getAddress() reflection              = 02:00:00:00:00:00
+09-05 11:06:09.808 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   Settings.Secure bluetooth_address    = null
+09-05 11:06:09.809 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.sys.bt.mac          = null
+09-05 11:06:09.809 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.sys.btmac           = null
+09-05 11:06:09.810 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.vendor.bt.mac       = null
+09-05 11:06:09.811 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property sys.bt.mac                  = null
+09-05 11:06:09.811 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.sys.bluetooth.mac   = null
+09-05 11:06:09.812 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property ro.boot.btmacaddr           = null
+09-05 11:06:09.813 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property vendor.bt.bdaddr            = null
+09-05 11:06:09.813 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.zj.BTmac            = null
+09-05 11:06:09.814 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property persist.zlink.carplay.mac   = null
+09-05 11:06:09.814 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper:   property sys.bt.bdaddr               = null
+09-05 11:06:09.815 I/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper: == end Bluetooth address source dump ==
+09-05 11:06:09.815 W/OPENHU  (19845): [2] BluetoothHelper.logAddressSourceDump | BluetoothHelper: no source named this unit's Bluetooth address. Read it under Settings/About/Status, or off the paired phone under the gear beside this device, and enter it under Wireless connection. Without it the phone is not told where to connect hands-free and no setup QR can be drawn.
+09-05 11:06:09.844 I/OPENHU  (19845): [2] AapService.registerReceivers | Registered runtime MEDIA_BUTTON receiver
+09-05 11:06:09.847 I/OPENHU  (19845): [2] AapService.registerReceivers | Registered dynamic WiFi Auto-start receiver
+09-05 11:06:09.850 I/OPENHU  (19845): [2] AapService.registerReceivers | Registered wake detection receiver (18 actions)
+09-05 11:06:09.852 I/OPENHU  (19845): [2] AapService.registerReceivers | Registered Bluetooth auto-disconnect receiver
+09-05 11:06:09.888 I/OPENHU  (19845): [2] WifiLauncherManager.setActive | WifiLauncher: Initializing WiFi Mode: NATIVE
+09-05 11:06:09.901 I/OPENHU  (19845): [2] WifiDirectManager.<init> | WifiDirectManager: Device supports WiFi Direct. Initializing...
+09-05 11:06:09.916 I/OPENHU  (19845): [2] WirelessServer.start | WirelessServer: binding port 5288...
+09-05 11:06:09.919 I/OPENHU  (19845): [51] 1.invokeSuspend | Wireless Server listening on port 5288
+09-05 11:06:09.922 I/OPENHU  (19845): [51] WirelessServer.logLocalNetworkInterfaces | Interface: seth_lte0, IP: 10.14.245.165
+09-05 11:06:09.923 I/OPENHU  (19845): [51] WirelessServer.logLocalNetworkInterfaces | Interface: wlan0, IP: 192.168.1.8
+09-05 11:06:09.923 I/OPENHU  (19845): [51] WirelessServer.logLocalNetworkInterfaces | Interface: p2p-wlan0-2, IP: 192.168.49.1
+09-05 11:06:09.929 I/OPENHU  (19845): [2] WifiDirectManager.claimNativeCreateWindow | WifiDirectManager: a Native AA group create is claimed (bringing the Native AA group up); a refresh in the next 15s waits for it.
+09-05 11:06:09.933 I/OPENHU  (19845): [2] WifiDirectManager.startNativeAaQuietHost | WifiDirectManager: startNativeAaQuietHost() requested. Removing old group if any...
+09-05 11:06:09.934 I/OPENHU  (19845): [2] WifiDirectManager.claimNativeCreateWindow | WifiDirectManager: a Native AA group create is claimed (recreating the group); a refresh in the next 15s waits for it.
+09-05 11:06:09.934 I/OPENHU  (19845): [2] WifiDirectManager.invalidateNativeGroupCredentials | WifiDirectManager: the group is being removed (recreating the group), so its credentials are no longer handed out.
+09-05 11:06:09.949 I/OPENHU  (19845): [2] NativeAaHandshakeManager.start | NativeAA: Starting Bluetooth Handshake Servers (primary radio [Navegadortz2])...
+09-05 11:06:09.966 I/OPENHU  (19845): [2] NativeAaHandshakeManager.shouldRegisterDummyHfp | NativeAA: radio [Navegadortz2] already advertises Hands-Free, so the stand-in HFP record is not registered - the real stack answers calls, this app cannot.
+09-05 11:06:09.972 I/OPENHU  (19845): [52] 1.invokeSuspend | NativeAA: ACTIVELY LISTENING on Android Auto UUID (4de17a00-52cb-11e6-bdf4-0800200c9a66) on radio [Navegadortz2]... Waiting for phone to connect back!
+09-05 11:06:10.043 I/OPENHU  (19845): [2] AapService.registerNetworkMonitor | NetworkMonitor: Registered network change listener
+09-05 11:06:10.048 I/OPENHU  (19845): [54] 1.onAvailable | NetworkMonitor: Network available: 100
+09-05 11:06:10.094 I/OPENHU  (19845): [2] 1.onReceive | WifiDirectManager: WIFI_P2P_STATE_CHANGED_ACTION state=2
+09-05 11:06:10.096 I/OPENHU  (19845): [2] 1.invokeSuspend | AapService: Mode requires WiFi Direct — ensuring hotspot is disabled first...
+09-05 11:06:10.103 I/OPENHU  (19845): [2] HotspotManager.setHotspotEnabled | HotspotManager: Setting hotspot enabled=false (API 34, canWriteSettings=true)
+09-05 11:06:10.116 I/OPENHU  (19845): [2] 1.invoke | WifiDirectManager: requestDeviceInfo success: 02:00:00:00:00:00
+09-05 11:06:10.117 I/OPENHU  (19845): [53] 1.invokeSuspend | WppTcpServer: listening for Android Auto on TCP 5299
+09-05 11:06:10.126 I/OPENHU  (19845): [2] AapService.onStartCommand | AapService: ACTION_NATIVE_AA_PROMPT_SHOWN received
+09-05 11:06:10.622 I/OPENHU  (19845): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: Attempting createGroup for Native AA (Attempt 0)...
+09-05 11:06:10.623 I/OPENHU  (19845): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: this unit's WiFi radio reports a 5 GHz band.
+09-05 11:06:10.624 I/OPENHU  (19845): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: Band preference is 5 GHz only, set by the user.
+09-05 11:06:10.632 I/OPENHU  (19845): [2] WifiDirectManager.chooseNativeGroupIdentity | WifiDirectManager: group identity: asking for the kept network DIRECT-TX-Navegadortz2 again, so a phone that saved it can rejoin without being set up for a new one.
+09-05 11:06:10.635 I/OPENHU  (19845): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: Requesting Native AA P2P group on 5GHz band. Chosen by the user.
+09-05 11:06:10.636 I/OPENHU  (19845): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: 5 GHz channel is automatic, so the driver picks within the band.
+09-05 11:06:10.668 I/OPENHU  (19845): [2] 1.onSuccess | WifiDirectManager: 5GHz createGroup SUCCESS!
+09-05 11:06:10.741 I/OPENHU  (19845): [2] 1.onReceive | WifiDirectManager: Connected. Requesting info...
+09-05 11:06:10.751 I/OPENHU  (19845): [2] WifiDirectManager.onConnectionInfoAvailable | WifiDirectManager: Group formed. Owner: true, GO IP: 192.168.49.1
+09-05 11:06:10.756 I/OPENHU  (19845): [2] 1.invoke | WifiDirectManager: Updated localDeviceAddress via requestDeviceInfo: 02:00:00:00:00:00
+09-05 11:06:10.762 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: System Location Check: GPS=true, Network=true
+09-05 11:06:10.763 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump | WifiDirectManager: == BSSID source dump (iface=p2p-wlan0-3) ==
+09-05 11:06:10.764 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   static override (Settings)       = 0
+09-05 11:06:10.765 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   getGroupOwnerBssid()             = null
+09-05 11:06:10.780 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   IPv6 link-local (p2p-wlan0-3)    = 32:f6:a5:c8:54:1e
+09-05 11:06:10.785 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   IPv6 link-local (any p2p/ap)     = 32:f6:a5:c8:54:1e
+09-05 11:06:10.798 W/OPENHU  (19845): [2] WifiDirectManager.getWifiDirectMac | WifiDirectManager: No valid MAC found in NetworkInterface scan for p2p-wlan0-3
+09-05 11:06:10.799 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   NetworkInterface.hardwareAddress = 00:00:00:00:00:00
+09-05 11:06:10.800 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   lastKnownBssid (null)            = null
+09-05 11:06:10.801 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   requestDeviceInfo                = 02:00:00:00:00:00
+09-05 11:06:10.802 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   group.owner.deviceAddress        = 02:00:00:00:00:00
+09-05 11:06:10.806 I/OPENHU  (19845): [2] WifiDirectManager.getMacFromShell | WifiDirectManager: MAC retrieved via sysfs (p2p-wlan0-3): 32:f6:a5:c8:54:1e
+09-05 11:06:10.806 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   sysfs / ip link                  = 32:f6:a5:c8:54:1e
+09-05 11:06:10.810 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   Settings.Secure p2p address      = null
+09-05 11:06:10.811 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump$report | WifiDirectManager:   reflection over WifiP2pGroup     = null
+09-05 11:06:10.812 I/OPENHU  (19845): [2] WifiDirectManager.logBssidSourceDump | WifiDirectManager: == end BSSID source dump ==
+09-05 11:06:10.818 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: BSSID read from the IPv6 link-local address of p2p-wlan0-3 (EUI-64): 32:F6:A5:C8:54:1E
+09-05 11:06:10.819 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: Initial BSSID from IPv6 link-local: 32:F6:A5:C8:54:1E
+09-05 11:06:10.821 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: onGroupInfoAvailable: SSID: DIRECT-TX-Navegadortz2, BSSID: 32:F6:A5:C8:54:1E (source=IPv6 link-local), GO: true, IFACE: p2p-wlan0-3, Freq: 5200 MHz (5GHz)
+09-05 11:06:10.824 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: group identity ssid=DIRECT-TX-Navegadortz2 persistent=yes (netId 5) asked=persistent matchesRequest=yes bssid=32:F6:A5:C8:54:1E stable=no (same name but the BSSID moved from A2:21:D9:A6:2A:3C to 32:F6:A5:C8:54:1E; this unit re-addresses the group on every create) source=IPv6 link-local
+09-05 11:06:10.832 W/OPENHU  (19845): [2] WifiDirectManager.logStationCoexistence | WifiDirectManager: This unit is connected to another WiFi network on 5500 MHz while hosting the WiFi Direct group on 5200 MHz. One radio has to retune between the two, which can cost the projected video and audio a few hundred milliseconds at a time. Measured units have run clean in this state, so read this as context for a report rather than as something to change.
+09-05 11:06:10.834 I/OPENHU  (19845): [2] WifiDirectManager.notifyNativeGroupStarted | WifiDirectManager: Native AA WiFi Direct: 5GHz (5200 MHz), 5GHz requested, SSID=DIRECT-TX-Navegadortz2
+09-05 11:06:10.841 I/OPENHU  (19845): [66] WifiDirectManager.onGroupInfoAvailable$lambda$7 | WifiDirectManager: SUCCESS - Providing credentials to listener. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:10.843 I/OPENHU  (19845): [66] WifiLauncherNative.onNativeCredentials | AapService: Received WiFi credentials from manager (SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1). Updating and Triggering Poke.
+09-05 11:06:10.845 I/OPENHU  (19845): [66] NativeAaHandshakeManager.updateWifiCredentials | NativeAA: Credentials updated. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:11.672 I/OPENHU  (19845): [2] WifiDirectManager.onConnectionInfoAvailable | WifiDirectManager: Group formed. Owner: true, GO IP: 192.168.49.1
+09-05 11:06:11.674 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: System Location Check: GPS=true, Network=true
+09-05 11:06:11.680 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: BSSID read from the IPv6 link-local address of p2p-wlan0-3 (EUI-64): 32:F6:A5:C8:54:1E
+09-05 11:06:11.681 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: Initial BSSID from IPv6 link-local: 32:F6:A5:C8:54:1E
+09-05 11:06:11.682 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: onGroupInfoAvailable: SSID: DIRECT-TX-Navegadortz2, BSSID: 32:F6:A5:C8:54:1E (source=IPv6 link-local), GO: true, IFACE: p2p-wlan0-3, Freq: 5200 MHz (5GHz)
+09-05 11:06:11.687 I/OPENHU  (19845): [2] 1.invoke | WifiDirectManager: Updated localDeviceAddress via requestDeviceInfo: 02:00:00:00:00:00
+09-05 11:06:11.690 I/OPENHU  (19845): [68] WifiDirectManager.onGroupInfoAvailable$lambda$7 | WifiDirectManager: SUCCESS - Providing credentials to listener. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:11.691 I/OPENHU  (19845): [68] WifiLauncherNative.onNativeCredentials | AapService: Received WiFi credentials from manager (SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1). Updating and Triggering Poke.
+09-05 11:06:11.691 I/OPENHU  (19845): [68] NativeAaHandshakeManager.updateWifiCredentials | NativeAA: Credentials updated. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:11.695 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: System Location Check: GPS=true, Network=true
+09-05 11:06:11.702 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: BSSID read from the IPv6 link-local address of p2p-wlan0-3 (EUI-64): 32:F6:A5:C8:54:1E
+09-05 11:06:11.703 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: Initial BSSID from IPv6 link-local: 32:F6:A5:C8:54:1E
+09-05 11:06:11.705 I/OPENHU  (19845): [2] WifiDirectManager.onGroupInfoAvailable | WifiDirectManager: onGroupInfoAvailable: SSID: DIRECT-TX-Navegadortz2, BSSID: 32:F6:A5:C8:54:1E (source=IPv6 link-local), GO: true, IFACE: p2p-wlan0-3, Freq: 5200 MHz (5GHz)
+09-05 11:06:11.713 I/OPENHU  (19845): [69] WifiDirectManager.onGroupInfoAvailable$lambda$7 | WifiDirectManager: SUCCESS - Providing credentials to listener. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:11.714 I/OPENHU  (19845): [69] WifiLauncherNative.onNativeCredentials | AapService: Received WiFi credentials from manager (SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1). Updating and Triggering Poke.
+09-05 11:06:11.714 I/OPENHU  (19845): [69] NativeAaHandshakeManager.updateWifiCredentials | NativeAA: Credentials updated. SSID=DIRECT-TX-Navegadortz2, IP=192.168.49.1, BSSID=32:F6:A5:C8:54:1E, identity stable=no
+09-05 11:06:12.852 I/OPENHU  (19845): [60] 1.invokeSuspend | NativeAA: Multi-driver selection is active and awaiting user choice — deferring automated multi-device poke loop.
+09-05 11:06:35.891 I/OPENHU  (19845): [60] 1.invokeSuspend | NativeAA: the driver prompt went unanswered — waking every paired phone again.
+09-05 11:06:35.895 W/OPENHU  (19845): [60] 1.invokeSuspend | NativeAA: No wake poke device selected, and poking all paired devices is on. Poking all of them...
+09-05 11:06:35.903 I/OPENHU  (19845): [60] 1.invokeSuspend | NativeAA: Attempting active poke to device: motorola edge 30 neo (A0:46:5A:97:E4:95)...
+09-05 11:06:35.922 I/OPENHU  (19845): [60] NativeAaHandshakeManager.pokeDevice | NativeAA: Calling socket.connect() for motorola edge 30 neo via HFP-AG (0000111f-0000-1000-8000-00805f9b34fb)...
+09-05 11:06:51.303 I/OPENHU  (19845): [60] NativeAaHandshakeManager.pokeDevice | NativeAA: Calling socket.connect() for motorola edge 30 neo via HSP-AG (00001112-0000-1000-8000-00805f9b34fb)...
