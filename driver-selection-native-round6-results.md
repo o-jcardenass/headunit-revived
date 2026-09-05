@@ -324,3 +324,15 @@ Not measured. Recorded here so the SHAs above stay navigable.
   lines to roughly five at every log level, and the `turned away N connection attempts` summary
   still reports the true total. Nothing about who is accepted, refused, poked or woken moves.
 - New testing tip `f430ed05`, stamp `f430ed0563ef`, unit gate **1361 / 0**.
+
+### Correction to the section above
+
+The compaction first squashed the branch onto `main`, which swallowed the three commits of
+`origin/driver-change-native-mode` (`d103ce7a`) that this work sits on top of. That was wrong and the
+SHAs it produced (`b7425a4e`, `47a84b4b`, testing `f430ed05`) never left the bench. The branch is now
+**two commits above `d103ce7a`**, split by component: `02b02a76` the link side (the accept gate, the
+switch wake, the log cadence, the tests) and `3ed0bac2` the UI side (the selector labels and the
+connect indicator). 13 files, +1137/-118. Content is unchanged from what is described above: the
+tree at `3ed0bac2` is byte-identical to the squash it replaces, and the first commit compiles on its
+own. New testing tip `cce12836`, stamp `cce12836ca6a`, unit gate **1361 / 0**. The tags still hold
+everything the round cites.
