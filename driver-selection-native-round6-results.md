@@ -304,3 +304,23 @@ by view id, not by this text — nothing in this round's verdicts changes. `test
 - **RFCOMM reconnect flood scale.** 602 cycles in R14b vs round 5's 282 — the flood's rate looks
   tied to how long the outgoing phone stays powered and in range; both phones sat on the bench the
   whole round. Still bounded, still log-volume-only.
+
+## Post-round: the branch was compacted to two commits
+
+Not measured. Recorded here so the SHAs above stay navigable.
+
+- The nine commits on `fix/native-driver-selection-headless` are now two, grouped by component:
+  `b7425a4e` "Native AA: let the driver choose which phone gets the session" (22 files, the code)
+  and `47a84b4b` "Translations: driver selection and the WiFi/Bluetooth strings in 20 locales"
+  (40 files). Content-preserving: the new tip's tree hash equals `8bed7833`'s exactly and
+  `git diff 8bed7833 <new tip>` was empty before anything else was added.
+- Every SHA this file cites is held by a tag on the fork. `driver-selection-pre-compaction` is
+  `8bed7833` and `driver-selection-testing-pre-compaction` is `1c87d607`, which keeps **`7520686c`**,
+  the candidate this round measured, reachable along with its whole history.
+- One behaviour-free change rides on the feature commit, aimed at the capture volume noted above.
+  The `NativeAA: Connection accepted from ...` line is skipped when the address is one the accept
+  gate is already turning away, and `refuseAtGate` now restates the refusal with its running count
+  once a minute instead of falling silent after the first line. An R14-shaped run goes from 602
+  lines to roughly five at every log level, and the `turned away N connection attempts` summary
+  still reports the true total. Nothing about who is accepted, refused, poked or woken moves.
+- New testing tip `f430ed05`, stamp `f430ed0563ef`, unit gate **1361 / 0**.
