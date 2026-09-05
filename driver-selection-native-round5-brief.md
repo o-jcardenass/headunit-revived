@@ -22,6 +22,14 @@ Both stay bonded for every run. One run wants a third, non-phone device bonded; 
 Read **§3 of `TESTING-TEMPLATE.md`** and then **§3 of this brief**. §3 below supersedes the
 template wherever the two disagree about how to drive the app.
 
+**Brief revision 2.** If your copy does not carry this block, it is revision 1 and its SHAs have
+moved. What changed: `ACTION_NATIVE_AA_CANCEL_POKE` was added to the automation surface, so **R5b is
+back and is run this round**. Both branch tips moved with it, the candidate is now `42133e6d`, stamp
+`42133e6d9e8a`, and the unit gate is 1340 / 0. **Build revision 1's APK and R0 will fail on the
+stamp.** Revision 1 said R5b could not run and listed it under "do not re-run"; both of those are
+withdrawn. Revision 1's §6 also miscounted its own runs as seven; there are nine with R5b back.
+Nothing about any other run changed.
+
 This file is append-only. Corrections arrive as new commits and a `git pull` fast-forwards, so no
 brief you have already read changes under you.
 
@@ -34,7 +42,7 @@ this rig with these phones in rounds 1 to 4 and is quoted inline where it is nee
 
 | | Branch | SHA |
 |---|---|---|
-| **Candidate** | `fork/testing/driver-selection-plus-automation` | `5a5b4954` |
+| **Candidate** | `fork/testing/driver-selection-plus-automation` | `42133e6d` |
 
 **Both branch tips were rewritten since round 4**, so a plain `git pull` on an existing local copy
 will refuse to fast-forward. Reset onto the remote rather than merging.
@@ -42,7 +50,7 @@ will refuse to fast-forward. Reset onto the remote rather than merging.
 ```bash
 git fetch fork
 git checkout testing/driver-selection-plus-automation
-git reset --hard fork/testing/driver-selection-plus-automation      # 5a5b4954
+git reset --hard fork/testing/driver-selection-plus-automation      # 42133e6d
 
 # how it was made, and how to remake it if an input moves:
 #   git checkout -b testing/driver-selection-plus-automation fork/fix/native-driver-selection-headless
@@ -55,21 +63,22 @@ Its two inputs, both on `fork`:
 | Input | Tip | What it is |
 |---|---|---|
 | `fix/native-driver-selection-headless` | `e86638aa` | **three** commits on the upstream driver-selection head `d103ce7a`, itself on `main` `ce2897c4`. The first two are what rounds 2 to 4 measured, unchanged. The third is this round's subject. |
-| `pr/automation-command-surface` | `2f21242e` | unchanged since round 2: the automation receiver and the build stamp. Not under test; it is the instrument. |
+| `pr/automation-command-surface` | `5a2ae3c7` | the automation receiver and the build stamp, plus one commit this round: `ACTION_NATIVE_AA_CANCEL_POKE` is now a relayed action. Not under test; it is the instrument. |
 
 **Identity check, exact as in rounds 3 and 4.** The build stamps its own commit:
 
 ```bash
-./gradlew :app:assembleGithubDebug        # prints "Building from commit: 5a5b49543863"
+./gradlew :app:assembleGithubDebug        # prints "Building from commit: 42133e6d9e8a"
 adb shell am broadcast -f 0x00000020 -n com.andrerinas.headunitrevived/com.andrerinas.openheadunit.automation.AutomationReceiver \
   -a com.andrerinas.openheadunit.ACTION_QUERY_STATE
-# the reply JSON on data= must carry "commit":"5a5b49543863"
+# the reply JSON on data= must carry "commit":"42133e6d9e8a"
 ```
 
 Anything ending in `-dirty` means the tree had uncommitted changes when it was built. Stop and clean
 it: a dirty build cannot be tied to this brief.
 
-Unit gate, measured off-rig: **1338 / 0**. (The fix branch alone is 1309; round 4's merge was 1333.)
+Unit gate, measured off-rig: **1340 / 0**. (The fix branch alone is 1309, the automation branch 1290;
+round 4's merge was 1333.)
 `:app:compileGithubDebugKotlin` succeeds off-rig, so a build failure on the rig is a toolchain
 problem, not the branch.
 
@@ -100,9 +109,8 @@ the poke loop are all untouched, which is why four of this round's runs are guar
 
 ### What is still open, and is not this round
 
-**R5b cannot run, again.** `ACTION_NATIVE_AA_CANCEL_POKE` is still not an automation action - the
-round 4 erratum stands, and nothing in this round's commit adds it. Do not attempt R5b. Its question,
-whether Cancel ends the exclusive gate early, needs that action implemented first.
+**R5b runs this round.** The round 4 erratum is fixed: `ACTION_NATIVE_AA_CANCEL_POKE` is now a
+relayed automation action, so the run's own trigger exists. It is briefed in §6.
 
 **R4 is not re-briefed.** Its precondition is a phone re-opening a Bluetooth ACL on demand, and round
 4 spent about 55 minutes failing to get one. Nothing in this round's commit touches that path.
@@ -133,10 +141,12 @@ broadcast never landed, whatever the shell printed, and the run is void rather t
 |---|---|
 | `ACTION_START_WIRELESS` | Arms the wireless mode without launching MainActivity. R1's headless case. |
 | `ACTION_NATIVE_AA_POKE --es extra_mac <MAC>` | A poke at one named phone, on the **same** code path as picking that phone in the selector. R5 and R12 use it to avoid a timed tap. |
+| `ACTION_NATIVE_AA_CANCEL_POKE` | The Cancel the selector's Back press sends, with no extras. **New this round**, and R5b's trigger. |
 | `ACTION_LOG_MARKER --es text <label>` | Writes `AutomationMarker: <label>` at WARN. Put one before and after every step. |
 | `ACTION_QUERY_STATE` | Build identity and session state in one ordered broadcast; the reply comes back on `data=`. |
 
-`ACTION_NATIVE_AA_CANCEL_POKE` is **not** in this list, and is not in the build. See §2.
+`ACTION_SET_LOG_LEVEL`, `ACTION_START_LOG_CAPTURE` and `ACTION_EXPORT_LOG` are gated behind
+`allow-external-configuration`. **This round does not use them.**
 
 ### The one instrument this round gets wrong if you take a shortcut
 
@@ -234,6 +244,8 @@ Auto-connect: begin (Native-AA driver:
 btConnected=
 Auto-connect: a phone is answering, taking the full screen.
 paired device(s) are not phones and are not poked.
+AapService: ACTION_NATIVE_AA_CANCEL_POKE received
+NativeAA: cancelPoke() called — user explicitly canceled driver selection.
 ```
 
 The first ends with `, mode=` and the mode name, and **the mode is the whole verdict of three runs**:
@@ -241,7 +253,9 @@ The first ends with `, mode=` and the mode name, and **the mode is the whole ver
 one was not. The second is a fragment of the `HomeFragment: Connecting to Native-AA device:` line and
 carries `true` or `false`; the two must always agree, and a run where they disagree is a finding on
 its own. The third prints once when the pill is replaced by the overlay. The fourth begins with a
-count and appears only when something bonded was held back from the wake list.
+count and appears only when something bonded was held back from the wake list. The last two are
+R5b's, and they are new to this round only in the sense that nothing could reach them before: the
+code path is the one round 4's R4 exercised by pressing Back.
 
 **Should not appear at all this round:**
 
@@ -301,15 +315,17 @@ grep -o "p2p-wlan0-[0-9]*" log.txt | sort -u
 
 ## 6. Runs
 
-Seven runs. Three are new, four are guards. Every run uses the `send` helper from §3, `-f` flag
-included. Bracket each step with `ACTION_LOG_MARKER`, and confirm `AutomationReceiver:` appears for
-the first command of each run before waiting out a capture.
+Nine runs: the build gate, five new (R10, R11, R12, R13, R5b) and three guards (R1, R2, R5). Run
+them in the order written, with the one exception §3 gives R13, which is run last and needs an
+accessory bonded. Every run uses the `send` helper from §3, `-f` flag included. Bracket each step
+with `ACTION_LOG_MARKER`, and confirm `AutomationReceiver:` appears for the first command of each run
+before waiting out a capture.
 
 ### R0: build gate
 
 Build, install, unit-test on the rig. PASS needs all three: the build prints
-`Building from commit: 5a5b49543863` with no `-dirty`; `ACTION_QUERY_STATE` replies with the same
-commit; the unit gate reads **1338 / 0**. Record the APK md5.
+`Building from commit: 42133e6d9e8a` with no `-dirty`; `ACTION_QUERY_STATE` replies with the same
+commit; the unit gate reads **1340 / 0**. Record the APK md5.
 
 Any other unit count means the wrong tree was built. Stop and say so rather than running the round.
 
@@ -515,6 +531,56 @@ unreachable pick can appear in the same capture.
 
 ---
 
+### R5b: the driver changes their mind. **New, and the run round 4 could not do.**
+
+Round 4 could not run this because its trigger did not exist. It does now. The question is unchanged:
+**does Cancel end the chosen driver's exclusive gate early, or does the gate run its own clock out?**
+
+Run this immediately after R5, from a fresh setup, so the pick is the same one R5 makes.
+
+Setup exactly as R5. Let the countdown resolve to D-MOTO, wait for the first session, `KEYCODE_BACK`,
+tap **Switch Phone**, and wait for the selector. Then pick D-POCO **and cancel in the same adb
+invocation**, so the gap is one round trip and not two:
+
+```bash
+send ACTION_LOG_MARKER --es text R5b-pick-then-cancel
+adb shell "am broadcast -f 0x00000020 -n $RX -a com.andrerinas.openheadunit.ACTION_NATIVE_AA_POKE --es extra_mac DC:B7:2E:5E:4E:59;            am broadcast -f 0x00000020 -n $RX -a com.andrerinas.openheadunit.ACTION_NATIVE_AA_CANCEL_POKE"
+```
+
+**Both broadcasts must log `AutomationReceiver:`.** If the second one logs
+`Automation: refused - unknown action`, the wrong tree was built and R0 missed it; stop and say so,
+because that is exactly round 4's erratum and it would void the run.
+
+Then watch for 180 s.
+
+**PASS**, all four:
+
+1. `AapService: ACTION_NATIVE_AA_CANCEL_POKE received` and
+   `NativeAA: cancelPoke() called — user explicitly canceled driver selection.` both present
+2. **zero** `Attempting manual poke to` and `Attempting active poke to device` lines after the cancel,
+   across the whole remaining capture
+3. **zero** `waits until that phone has had its turn.` lines after the cancel: the exclusive gate is
+   no longer refusing on the chosen driver's behalf
+4. no second `SSL handshake complete` inside the 120 s the gate would otherwise have held
+
+**FAIL**: a poke after the cancel, or refusal lines still naming D-POCO more than a second or two
+after it. That would mean Cancel stops the wake but leaves the gate standing, which is the defect
+this run exists to find.
+
+**Read this before calling the silence afterwards a bug.** The cancel handler sets `userExitedAA`,
+and that gates **every** credential-triggered auto-poke until something explicitly clears it: a
+genuine new `WirelessServer` connection, or `ACTION_BT_AUTO_START`. Round 4 flagged this from the
+code. So a quiet unit after a successful cancel is the design, not a second defect. Expect
+`AapService: userExitedAA is true. Skipping auto-poke.` on each group recreation and report the
+count; it is context, not a criterion.
+
+**Pre-registered contingency, carried over from round 4.** D-POCO answers in about 3.1 to 3.5 s on
+this rig. If the session forms before the cancel lands anyway, the run cannot be done this way:
+say so, report it as **R5 passing a second time** with R5's five criteria, and give the measured gap
+between the pick and the cancel so a future round knows how much margin it needs.
+
+---
+
 ## 7. Do not re-run
 
 - **`main`'s numbers.** Round 1 measured them on this rig with these phones.
@@ -522,7 +588,6 @@ unreachable pick can appear in the same capture.
   disconnect path, the history-resolution path or the single-phone case. Rounds 3 and 4 measured them.
 - **R4, cancel.** Its precondition is a phone re-opening a Bluetooth ACL on demand, which round 4
   could not obtain in 55 minutes across two attempts. Nothing this round touches that path.
-- **R5b.** Its trigger does not exist in the build. See §2.
 - **R9, the chosen driver's poke.** Round 4 read 3 manual pokes and 6 guard lines. The wake loop is
   untouched this round; R1 already walks the list-building code that did change.
 - **Whether `Auto` differs from `Always`.** Unfixed on purpose, and not a finding.
@@ -537,10 +602,12 @@ Three things decide whether this ships:
    whether the poke still fired.
 2. **R11**: whether the escalation line appeared, and whether the overlay replaced the pill after it.
 3. **R12**: that a reachable phone still reads `btConnected=true` and `mode=OVERLAY`.
+4. **R5b**: whether Cancel stopped the wake **and** dropped the exclusive gate, or only the wake.
 
 Plus, in one line each: R0's commit, md5 and unit count; R1's poke count, first-poke seconds and
 `not phones` line count; R2's measured deadline; R5's second-handshake owner and group count; and
-R13's three screenshots or the reason it was untestable.
+R13's three screenshots or the reason it was untestable; and R5b's measured gap between the pick and
+the cancel.
 
 **One thing to watch for that is nobody's criterion.** `btConnected` and the `mode=` on the following
 line are two readings of one decision. If they ever disagree in any capture, that is a defect worth
