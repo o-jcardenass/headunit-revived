@@ -282,6 +282,16 @@ Both MAC strings empty, `native-poke-bt-macs` and `auto-start-bt-macs` empty in 
 
 ---
 
+## Post-round change (not measured)
+
+`8bed7833` on `fix/native-driver-selection-headless` renames the reachable-case overlay text
+`connecting_driver` from `Native-AA driver: %s` to `Starting Android Auto with %s` — a user read
+the old string on the black loading screen as a debug label. Resource string only; the
+disconnected-phone pill text (`%s is disconnected, waking it...`, unchanged) and the `Auto-connect:
+begin (Native-AA driver: ...)` log line are untouched, and R10/R12/R14/R15 judged the overlay/pill
+by view id, not by this text — nothing in this round's verdicts changes. `testing/...` re-merged to
+`1c87d607`.
+
 ## Anything the brief did not ask about
 
 - **The `native-aa-complete-hfp-slc` poke behaviour.** On every poke the socket logs
