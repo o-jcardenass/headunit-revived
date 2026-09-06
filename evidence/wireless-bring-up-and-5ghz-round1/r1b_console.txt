@@ -1,0 +1,48 @@
+======================================================================
+=== r1b   19:00:52 ===
+======================================================================
+--- phone radios off ---
+BluetoothShellCommand: Exec disable
+disable: Success
+Wi-Fi is disabled
+  state: OFF
+--- HU: force-stop, clear log, start capture ---
+--- HU station at launch: mWifiInfo SSID: "Pegue Cdesta", BSSID: f4:52:46:60:8d:4e, MAC: fe:87:f2:8d:8f:91, IP: /192.168.1.8, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 5, RSSI: -23, Link speed: 292Mbps, Tx Link speed: 292Mbps, Max Supported Tx Link speed: 433Mbps, Rx Link speed: 390Mbps, Max Supported Rx Link speed: 433Mbps, Frequency: 5500MHz
+--- HU launch 19:01:00, settle 18s ---
+--- minted SSID: DIRECT-TX-Navegadortz2
+--- phone radios on 19:01:18 ---
+BluetoothShellCommand: Exec enable
+enable: Success
+  state: ON
+Wi-Fi is enabled
+  SSL handshake seen at ~15s after phone-on
+--- HU wifip2p freq ---
+    mWifiP2pInfo groupFormed: true isGroupOwner: true groupOwnerAddress: /192.168.49.1
+     frequency: 5805
+     frequency: 0
+     frequency: 0
+     frequency: 0
+     frequency: 0
+mWifiInfo SSID: "Pegue Cdesta", BSSID: f4:52:46:60:8d:4e, MAC: fe:87:f2:8d:8f:91, IP: /192.168.1.8, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 5, RSSI: -23, Link speed: 433Mbps, Tx Link speed: 433Mbps, Max Supported Tx Link speed: 433Mbps, Rx Link speed: 433Mbps, Max Supported Rx Link speed: 433Mbps, Frequency: 5500MHz
+--- teardown: headunit://exit then force-stop ---
+mWifiInfo SSID: "Pegue Cdesta", BSSID: f4:52:46:60:8d:4e, MAC: fe:87:f2:8d:8f:91, IP: /192.168.1.8, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 5, RSSI: -23, Link speed: 292Mbps, Tx Link speed: 292Mbps, Max Supported Tx Link speed: 433Mbps, Rx Link speed: 433Mbps, Max Supported Rx Link speed: 433Mbps, Frequency: 5500MHz
+
+----- decisive lines: r1b -----
+  1049:09-05 19:01:02.281 I/OPENHU  (21656): [2] AapService.onCreate | AapService creating...
+  1541:09-05 19:01:02.530 I/OPENHU  (21656): [2] StationStandDown.standDown | StationStandDown: asked this unit to leave its WiFi network so the group can have the radio to itself (disableNetwork returned false). It is rejoined when the session ends.
+  3780:09-05 19:01:04.039 I/OPENHU  (21656): [2] StationStandDown.standDown$lambda$0 | StationStandDown: this unit has left its WiFi network.
+  4290:09-05 19:01:04.573 I/OPENHU  (21656): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: Requesting Native AA P2P group on 5GHz band. Chosen by the user.
+  4292:09-05 19:01:04.573 I/OPENHU  (21656): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: 5 GHz channel is automatic, so the driver picks within the band.
+  4351:09-05 19:01:04.606 I/OPENHU  (21656): [2] 1.onSuccess | WifiDirectManager: 5GHz createGroup SUCCESS!
+  23291:09-05 19:01:23.235 I/OPENHU  (21656): [50] 1.invokeSuspend | WirelessServer: Incoming connection detected from /192.168.49.50
+  23597:09-05 19:01:23.484 I/OPENHU  (21656): [72] AapSslContext.performHandshake | SSL handshake complete. Session id: JeT6CYDUWmc+k2MBJfx70qWeZe4LWhf6z4/3OxbmjFA=
+  23604:09-05 19:01:23.486 D/OPENHU  (21656): [72] AapTransport.handshake | Handshake: SSL handshake complete. TS: 33758833
+  52583:09-05 19:01:39.712 W/OPENHU  (21656): [2] StationStandDown.restore | StationStandDown: the platform refused to re-enable this unit's WiFi network. It may have to be reconnected by hand.
+  --counts--
+  createGroup SUCCESS       : 1
+  SSL handshake complete    : 2
+  Incoming connection det.  : 1
+  MATCH! Starting AapService: 1
+  USB projection in flight  : 0
+  p2p ifaces                : p2p-wlan0-2 
+  last capture ts           : 09-05 19:01:48   (now 09-05 19:01:49)
