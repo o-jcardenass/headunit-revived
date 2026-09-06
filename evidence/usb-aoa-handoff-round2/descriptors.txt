@@ -1,0 +1,32 @@
+=== Motorola edge 30 neo (R7 - MTP mode, no attach delivered) ===
+09-05 23:12:32.317 D/UsbHostManager( 1422): Added device UsbDevice[mName=/dev/bus/usb/001/002,mVendorId=8888,mProductId=11906,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=motorola,mProductName=motorola edge 30 neo,mVersion=5.04,mSerialNumberReader=com.android.server.usb.UsbSerialReader@639e425, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+09-05 23:12:32.317 D/UsbHostManager( 1422): UsbConfiguration[mId=1,mName=mtp,mAttributes=192,mMaxPower=0,mInterfaces=[
+09-05 23:12:32.317 D/UsbHostManager( 1422): UsbInterface[mId=0,mAlternateSetting=0,mName=MTP,mClass=255,mSubclass=255,mProtocol=0,mEndpoints=[
+09-05 23:12:32.317 D/UsbHostManager( 1422): UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:12:32.317 D/UsbHostManager( 1422): UsbEndpoint[mAddress=1,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:12:32.317 D/UsbHostManager( 1422): UsbEndpoint[mAddress=130,mAttributes=3,mMaxPacketSize=28,mInterval=6]]]]
+09-05 23:12:34.515 D/UsbHostManager( 1422): Removed device at /dev/bus/usb/001/002: motorola edge 30 neo
+09-05 23:12:35.076 D/UsbHostManager( 1422): USB device attached: vidpid 22b8:2e82 mfg/product/ver/serial motorola/motorola edge 30 neo/5.04/ZY22GC3BM4 hasAudio/HID/Storage: false/false/false
+09-05 23:12:35.082 D/UsbHostManager( 1422): Added device UsbDevice[mName=/dev/bus/usb/001/003,mVendorId=8888,mProductId=11906,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=motorola,mProductName=motorola edge 30 neo,mVersion=5.04,mSerialNumberReader=com.android.server.usb.UsbSerialReader@cb39d5a, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+09-05 23:12:35.082 D/UsbHostManager( 1422): UsbConfiguration[mId=1,mName=mtp,mAttributes=192,mMaxPower=0,mInterfaces=[
+09-05 23:12:35.082 D/UsbHostManager( 1422): UsbInterface[mId=0,mAlternateSetting=0,mName=MTP,mClass=255,mSubclass=255,mProtocol=0,mEndpoints=[
+09-05 23:12:35.082 D/UsbHostManager( 1422): UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:12:35.082 D/UsbHostManager( 1422): UsbEndpoint[mAddress=1,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:12:35.082 D/UsbHostManager( 1422): UsbEndpoint[mAddress=130,mAttributes=3,mMaxPacketSize=28,mInterval=6]]]]
+
+=== Carlinkit dongle idle (18d1:4ee1, PTP 06/01/01) ===
+09-05 23:27:55.871 D/UsbHostManager( 1422): USB device attached: vidpid 18d1:4ee1 mfg/product/ver/serial Google/Pixel 4/4.40/99021FFAZ006X3 hasAudio/HID/Storage: false/false/false
+09-05 23:27:55.874 D/UsbHostManager( 1422): Added device UsbDevice[mName=/dev/bus/usb/001/002,mVendorId=6353,mProductId=20193,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=Google,mProductName=Pixel 4,mVersion=4.40,mSerialNumberReader=com.android.server.usb.UsbSerialReader@68f610f, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+09-05 23:27:55.874 D/UsbHostManager( 1422): UsbConfiguration[mId=1,mName=null,mAttributes=128,mMaxPower=250,mInterfaces=[
+09-05 23:27:55.874 D/UsbHostManager( 1422): UsbInterface[mId=0,mAlternateSetting=0,mName=MTP,mClass=6,mSubclass=1,mProtocol=1,mEndpoints=[
+09-05 23:27:55.874 D/UsbHostManager( 1422): UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:27:55.874 D/UsbHostManager( 1422): UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:27:55.874 D/UsbHostManager( 1422): UsbEndpoint[mAddress=131,mAttributes=3,mMaxPacketSize=28,mInterval=6]]]]
+
+=== Carlinkit dongle accessory (18d1:2d00, Android Accessory Interface FF/FF/00) ===
+09-05 23:43:09.435 D/UsbHostManager( 1422): USB device attached: vidpid 18d1:2d00 mfg/product/ver/serial Google/Pixel 4/4.40/99021FFAZ006X3 hasAudio/HID/Storage: false/false/false
+09-05 23:43:09.438 D/UsbHostManager( 1422): Added device UsbDevice[mName=/dev/bus/usb/001/003,mVendorId=6353,mProductId=11520,mClass=0,mSubclass=0,mProtocol=0,mManufacturerName=Google,mProductName=Pixel 4,mVersion=4.40,mSerialNumberReader=com.android.server.usb.UsbSerialReader@32c4679, mHasAudioPlayback=false, mHasAudioCapture=false, mHasMidi=false, mHasVideoCapture=false, mHasVideoPlayback=false, mConfigurations=[
+09-05 23:43:09.438 D/UsbHostManager( 1422): UsbConfiguration[mId=1,mName=null,mAttributes=128,mMaxPower=250,mInterfaces=[
+09-05 23:43:09.438 D/UsbHostManager( 1422): UsbInterface[mId=0,mAlternateSetting=0,mName=Android Accessory Interface,mClass=255,mSubclass=255,mProtocol=0,mEndpoints=[
+09-05 23:43:09.438 D/UsbHostManager( 1422): UsbEndpoint[mAddress=2,mAttributes=2,mMaxPacketSize=512,mInterval=0]
+09-05 23:43:09.438 D/UsbHostManager( 1422): UsbEndpoint[mAddress=129,mAttributes=2,mMaxPacketSize=512,mInterval=0]]]]

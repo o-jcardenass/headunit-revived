@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <boolean name="gps-navigation" value="true" />
+    <string name="vehicle-model">Desktop Head Unit</string>
+    <string name="head-unit-make">Google</string>
+    <boolean name="stretch_to_fill" value="true" />
+    <boolean name="raise-projection-during-call" value="true" />
+    <boolean name="attach_hw_dsp_equalizer" value="false" />
+    <string name="vehicle-id">headlessunit-001</string>
+    <boolean name="static-audio-focus" value="false" />
+    <set name="connection-modes" />
+    
+    <boolean name="fake_speed" value="true" />
+    <int name="inset-left" value="0" />
+    <int name="screen-orientation" value="3" />
+    <boolean name="auto-resume-playback-on-reconnect" value="false" />
+    <boolean name="hud_mirroring" value="false" />
+    <boolean name="mic-echo-canceler" value="false" />
+    <string name="wifi-direct-group-name">DIRECT-V3-POCOX3NFC</string>
+    <int name="pixel-aspect-ratio-e4" value="10000" />
+    <string name="hotspot-interface"></string>
+    <boolean name="hide-battery-level" value="false" />
+    <string name="hotspot-password"></string>
+    <boolean name="show-navigation-notifications" value="false" />
+    <string name="video-codec">H.265</string>
+    <boolean name="sync-media-session-aa-metadata" value="false" />
+    <set name="auto-start-bt-macs" />
+    <string name="head-unit-model">Desktop Head Unit</string>
+    <boolean name="kill-on-disconnect" value="false" />
+    <boolean name="auto-enable-hotspot" value="false" />
+    <string name="vehicle-make">Google</string>
+    <int name="audio-latency-multiplier" value="2" />
+    <int name="view-mode" value="2" />
+    <string name="static-bssid">0</string>
+    <int name="inset-top" value="0" />
+    
+    <int name="dpi-pixel-density" value="218" />
+    <string name="bt-address"></string>
+    <boolean name="native-wifi-version-exchange" value="false" />
+    <int name="mic-sample-rate" value="16000" />
+    <boolean name="use-head-unit-microphone" value="false" />
+    <int name="hotspot-band" value="0" />
+    <boolean name="use-libusb" value="false" />
+    <set name="native-poke-bt-macs" />
+    <string name="last-connection-ip"></string>
+    
+    <int name="resolutionId" value="3" />
+    <int name="navigation-volume-offset" value="0" />
+    <boolean name="mic-auto-gain-control" value="false" />
+    
+    <int name="mic-input-source" value="0" />
+    <int name="audio-queue-capacity" value="20" />
+    <int name="wait-for-wifi-timeout" value="10" />
+    <int name="software-video-decoder" value="1" />
+    <int name="onboarding-version" value="2" />
+    <string name="last-connection-type">usb</string>
+    <boolean name="enable-audio-sink" value="true" />
+    <int name="helper-connection-strategy" value="2" />
+    <int name="fullscreen-mode" value="1" />
+    <int name="playback-focus-mode" value="0" />
+    <int name="assistant-volume-offset" value="0" />
+    <boolean name="native-aa-complete-hfp-slc" value="true" />
+    <string name="app-language"></string>
+    <string name="bluetooth-manager-service-name">bluetooth_manager</string>
+    <boolean name="hide-clock" value="false" />
+    <boolean name="forced_scale" value="false" />
+    <boolean name="use_measured_touch_surface" value="false" />
+    <string name="last-connection-usb-device">Google Pixel 4 (VID: 18D1 PID: 2D00)</string>
+    <boolean name="advanced-settings-active" value="true" />
+    <boolean name="show-fps-counter" value="true" />
+    <int name="inset-right" value="0" />
+    
+    <string name="hotspot-ssid"></string>
+    <boolean name="hide-phone-signal" value="false" />
+    <boolean name="right-hand-drive" value="false" />
+    <int name="media-key-routing" value="0" />
+    <boolean name="enable-rotary" value="false" />
+    <boolean name="has-accepted-disclaimer" value="true" />
+    <boolean name="force-software-decoding" value="false" />
+    <string name="vehicle-display-name">Open Headunit</string>
+    <boolean name="show-toast-messages" value="true" />
+    <string name="wifi-direct-last-group-bssid">D2:C7:57:67:AD:D6</string>
+    <string name="wifi-direct-group-passphrase">aZTD88TUOCc5</string>
+    <int name="media-volume-offset" value="0" />
+    <boolean name="use-aac-audio" value="false" />
+    <int name="fps-limit" value="60" />
+    <boolean name="wait-for-wifi-before-wifi-direct" value="false" />
+    <int name="inset-bottom" value="0" />
+    <string name="native-preferred-device-mac"></string>
+    <int name="vehicle-type" value="3" />
+    <boolean name="native-aa-ignore-external-bt" value="false" />
+    <string name="vehicle-year">2025</string>
+    <string name="wifi-direct-last-group-ssid">DIRECT-V3-POCOX3NFC</string>
+    <boolean name="gesture_hint_shown" value="true" />
+    
+    <int name="native-driver-selection-timeout" value="10" />
+    <boolean name="mic-noise-suppressor" value="false" />
+<int name="wifi-connection-mode" value="3" /><int name="native-ap-transport" value="0" /><int name="wifi-5ghz-channel" value="0" /><int name="native-driver-selection-mode" value="0" /><int name="log-level" value="0" /><int name="wifi-direct-band" value="0" /></map>

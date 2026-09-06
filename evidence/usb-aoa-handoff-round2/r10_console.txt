@@ -1,0 +1,16 @@
+09-05 23:27:56.539 I/OPENHU  ( 2326): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:27:56.553 I/OPENHU  ( 2326): [205] UsbAccessoryMode.switch | Success controlTransfer len: 2  acc_ver: 2
+09-05 23:27:56.554 I/OPENHU  ( 2326): [205] UsbAccessoryMode.switch | acc_ver: 2
+09-05 23:27:56.555 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 7  index: 0  string: "Android"
+09-05 23:27:56.556 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 12  index: 1  string: "Android Auto"
+09-05 23:27:56.558 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 12  index: 2  string: "Android Auto"
+09-05 23:27:56.560 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 5  index: 3  string: "2.0.1"
+09-05 23:27:56.561 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 45  index: 4  string: "https://developer.android.com/auto/index.html"
+09-05 23:27:56.562 I/OPENHU  ( 2326): [205] UsbAccessoryMode.initStringControlTransfer | Success controlTransfer len: 12  index: 5  string: "HU-AAAAAA001"
+09-05 23:27:56.563 I/OPENHU  ( 2326): [205] UsbAccessoryMode.switch | Sending acc start
+09-05 23:27:57.420 I/OPENHU  ( 2326): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:27:59.345 I/OPENHU  ( 2326): [2] UsbLauncherManager.requestPermission | Requesting USB permission for Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:28:01.369 I/OPENHU  ( 2326): [217] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@13d2012
+09-05 23:28:02.172 I/OPENHU  ( 2326): [207] AapSslContext.performHandshake | SSL handshake complete. Session id: j6470kuGo7qTX2q3gDmjmAnldgLe1NVomRdtvQMMCto=
+09-05 23:28:02.172 D/OPENHU  ( 2326): [207] AapTransport.handshake | Handshake: SSL handshake complete. TS: 431735171
+09-05 23:28:06.365 I/OPENHU  ( 2326): [236] VideoDecoder.outputThreadLoop | First frame rendered (hardware decode)

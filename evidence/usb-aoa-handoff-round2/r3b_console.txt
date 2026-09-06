@@ -1,0 +1,55 @@
+09-05 23:35:56.892 I/OPENHU  ( 4473): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:35:56.914 I/OPENHU  ( 4473): [205] UsbAccessoryMode.switch | Sending acc start
+09-05 23:35:56.915 I/OPENHU  ( 4473): [205] UsbAccessoryMode.switch | Acc start sent (len=0). Waiting for re-enumeration...
+09-05 23:35:57.774 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:35:59.236 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode permission arrived after 438ms: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:35:59.254 I/OPENHU  ( 4473): [218] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@13d2012
+09-05 23:36:00.081 I/OPENHU  ( 4473): [207] AapSslContext.performHandshake | SSL handshake complete. Session id: UUCLmQxwAEbyNLrXVP/cRCrIwXbyV1x+PRbiISP9W9w=
+09-05 23:36:00.081 D/OPENHU  ( 4473): [207] AapTransport.handshake | Handshake: SSL handshake complete. TS: 432213080
+09-05 23:36:51.745 I/OPENHU  ( 4473): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:36:51.767 I/OPENHU  ( 4473): [244] UsbAccessoryMode.switch | Sending acc start
+09-05 23:36:51.767 I/OPENHU  ( 4473): [244] UsbAccessoryMode.switch | Acc start sent (len=0). Waiting for re-enumeration...
+09-05 23:36:52.234 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:36:53.367 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode device has no permission (re-enumerated); requesting permission: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:36:53.702 I/OPENHU  ( 4473): [2] 1.invokeSuspend | UsbAttachedActivity didn't handle Google Pixel 4 (VID: 18D1 PID: 4EE1). Trying from service...
+09-05 23:36:53.710 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:36:53.718 I/OPENHU  ( 4473): [212] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@f14852f
+09-05 23:36:53.805 I/OPENHU  ( 4473): [207] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@f27f822
+09-05 23:36:54.576 I/OPENHU  ( 4473): [207] AapSslContext.performHandshake | SSL handshake complete. Session id: TEfcOJY6qjYusZ0d2uW70JM+ub1/8wermkvL39o3GZ4=
+09-05 23:36:54.578 D/OPENHU  ( 4473): [207] AapTransport.handshake | Handshake: SSL handshake complete. TS: 432267576
+09-05 23:37:49.278 I/OPENHU  ( 4473): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:37:49.290 I/OPENHU  ( 4473): [261] UsbAccessoryMode.switch | Sending acc start
+09-05 23:37:49.290 I/OPENHU  ( 4473): [261] UsbAccessoryMode.switch | Acc start sent (len=0). Waiting for re-enumeration...
+09-05 23:37:49.734 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:37:50.760 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode device has no permission (re-enumerated); requesting permission: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:37:51.213 I/OPENHU  ( 4473): [218] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@7c4132
+09-05 23:37:52.166 I/OPENHU  ( 4473): [207] AapSslContext.performHandshake | SSL handshake complete. Session id: zAHxQdRHJ4tk2/V8x73iLZuH3TUTrzDqHUy6uDK6HAM=
+09-05 23:37:52.166 D/OPENHU  ( 4473): [207] AapTransport.handshake | Handshake: SSL handshake complete. TS: 432325165
+09-05 23:38:47.240 I/OPENHU  ( 4473): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:38:47.246 I/OPENHU  ( 4473): [277] UsbAccessoryMode.switch | Sending acc start
+09-05 23:38:47.246 I/OPENHU  ( 4473): [277] UsbAccessoryMode.switch | Acc start sent (len=0). Waiting for re-enumeration...
+09-05 23:38:47.698 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:38:48.722 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode device has no permission (re-enumerated); requesting permission: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:38:48.860 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:38:48.876 I/OPENHU  ( 4473): [209] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@37cb7e9
+09-05 23:38:49.919 I/OPENHU  ( 4473): [207] AapSslContext.performHandshake | SSL handshake complete. Session id: EhMnapRvIY/RQgGu8lPCv7lQh3DYqkicieCavyEwgLs=
+09-05 23:38:49.920 D/OPENHU  ( 4473): [207] AapTransport.handshake | Handshake: SSL handshake complete. TS: 432382918
+09-05 23:38:50.151 I/OPENHU  ( 4473): [207] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@9d78615
+09-05 23:38:52.799 E/OPENHU  ( 4473): [207] AapTransport.handshake | Handshake: SSL performHandshake failed.
+09-05 23:38:52.807 E/OPENHU  ( 4473): [207] AapTransport.startHandshake$com_andrerinas_headunitrevived_3_3_1_githubDebug | Handshake failed
+09-05 23:38:56.679 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:38:56.685 I/OPENHU  ( 4473): [209] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@1caa283
+09-05 23:38:59.413 E/OPENHU  ( 4473): [211] AapTransport.handshake | Handshake: SSL performHandshake failed.
+09-05 23:38:59.424 E/OPENHU  ( 4473): [211] AapTransport.startHandshake$com_andrerinas_headunitrevived_3_3_1_githubDebug | Handshake failed
+09-05 23:39:11.274 I/OPENHU  ( 4473): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:39:11.282 I/OPENHU  ( 4473): [290] UsbAccessoryMode.switch | Sending acc start
+09-05 23:39:11.282 I/OPENHU  ( 4473): [290] UsbAccessoryMode.switch | Acc start sent (len=0). Waiting for re-enumeration...
+09-05 23:39:11.733 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:39:12.759 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode device has no permission (re-enumerated); requesting permission: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:39:13.252 I/OPENHU  ( 4473): [2] 1.invokeSuspend | UsbAttachedActivity didn't handle Google Pixel 4 (VID: 18D1 PID: 4EE1). Trying from service...
+09-05 23:39:13.262 I/OPENHU  ( 4473): [2] UsbLauncherManager.checkAlreadyConnected | Found device already in accessory mode: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:39:13.558 I/OPENHU  ( 4473): [211] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@de6184
+09-05 23:39:13.668 I/OPENHU  ( 4473): [2] UsbLauncherManager.awaitAccessoryPermission | Accessory-mode permission arrived after 404ms: Google Pixel 4 (VID: 18D1 PID: 2D00)
+09-05 23:39:13.673 I/OPENHU  ( 4473): [209] StandardUsbProjectionConnection.usbOpen | Established connection: android.hardware.usb.UsbDeviceConnection@6df33b4
+09-05 23:39:14.178 E/OPENHU  ( 4473): [208] AapTransport.startHandshake$com_andrerinas_headunitrevived_3_3_1_githubDebug | Handshake failed
+09-05 23:39:14.236 E/OPENHU  ( 4473): [209] AapTransport.startHandshake$com_andrerinas_headunitrevived_3_3_1_githubDebug | Handshake failed

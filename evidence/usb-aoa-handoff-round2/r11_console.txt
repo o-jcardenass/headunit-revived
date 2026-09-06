@@ -1,0 +1,7 @@
+09-05 23:30:00.931 I/OPENHU  ( 2916): [2] UsbAttachedActivity.onCreate | USB Intent: Intent { act=android.hardware.usb.action.USB_DEVICE_ATTACHED flg=0x11800000 cmp=com.andrerinas.headunitrevived/com.andrerinas.openheadunit.app.UsbAttachedActivity (has extras) }
+09-05 23:30:00.941 I/OPENHU  ( 2916): [2] UsbAttachedActivity.onCreate | USB auto-start: launching app for Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:30:00.960 I/OPENHU  ( 2916): [2] UsbAttachedActivity.onCreate | Switching USB device to accessory mode Google Pixel 4 (VID: 18D1 PID: 4EE1)
+09-05 23:30:01.849 I/OPENHU  ( 2916): [2] UsbReceiver.onReceive | USB Intent: Intent { act=android.hardware.usb.action.USB_DEVICE_ATTACHED flg=0x11000010 (has extras) }
+09-05 23:30:03.493 I/OPENHU  ( 2916): [2] UsbAttachedActivity.onCreate | USB Intent: Intent { act=android.hardware.usb.action.USB_DEVICE_ATTACHED flg=0x10800000 cmp=com.andrerinas.headunitrevived/com.andrerinas.openheadunit.app.UsbAttachedActivity (has extras) }
+09-05 23:30:03.500 I/OPENHU  ( 2916): [2] UsbAttachedActivity.onCreate | Usb in accessory mode and has permission. Starting AapService.
+09-05 23:30:04.462 I/OPENHU  ( 2916): [2] AapProjectionActivity.onNewIntent | AapProjectionActivity: onNewIntent received
