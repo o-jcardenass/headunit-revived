@@ -1,0 +1,6 @@
+    mWifiP2pInfo groupFormed: true isGroupOwner: true groupOwnerAddress: /192.168.49.1
+     frequency: 5240
+     frequency: 0
+     frequency: 0
+     frequency: 0
+     frequency: 0

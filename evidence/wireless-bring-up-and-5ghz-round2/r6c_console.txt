@@ -1,0 +1,17 @@
+09-05 21:17:55.364 I/OPENHU  (32480): [2] 1.onSuccess | WifiDirectManager: 5GHz createGroup SUCCESS!
+09-05 21:17:57.092 I/OPENHU  (32480): [2] AutomationReceiver.onReceive | AutomationReceiver: com.andrerinas.openheadunit.ACTION_LOG_MARKER
+09-05 21:17:57.097 W/OPENHU  (32480): [2] AutomationEffectRunner.run | AutomationMarker: r6-armed
+09-05 21:17:57.613 I/OPENHU  (32480): [62] 1.invokeSuspend | NativeAA: Attempting active poke to device: POCO X3 NFC (DC:B7:2E:5E:4E:59)...
+09-05 21:17:57.626 I/OPENHU  (32480): [62] NativeAaHandshakeManager.pokeDevice | NativeAA: Calling socket.connect() for POCO X3 NFC via HFP-AG (0000111f-0000-1000-8000-00805f9b34fb)...
+09-05 21:17:57.804 I/OPENHU  (32480): [2] AutomationReceiver.onReceive | AutomationReceiver: com.andrerinas.openheadunit.ACTION_NATIVE_AA_POKE
+09-05 21:17:57.823 I/OPENHU  (32480): [2] NativeAaHandshakeManager.manualPoke | NativeAA: Manual poke requested for POCO X3 NFC (DC:B7:2E:5E:4E:59)
+09-05 21:17:57.830 I/OPENHU  (32480): [61] 1.invokeSuspend | NativeAA: another poke is already connecting to POCO X3 NFC — waiting for it rather than opening a second socket.
+09-05 21:18:01.913 I/OPENHU  (32480): [72] 1.invokeSuspend | NativeAA: Attempting manual poke to POCO X3 NFC...
+09-05 21:18:01.924 I/OPENHU  (32480): [72] NativeAaHandshakeManager.pokeDevice | NativeAA: Calling socket.connect() for POCO X3 NFC via HFP-AG (0000111f-0000-1000-8000-00805f9b34fb)...
+09-05 21:18:13.086 I/OPENHU  (32480): [62] NativeAaHandshakeManager.pokeDevice | NativeAA: Poke via HFP-AG to POCO X3 NFC (DC:B7:2E:5E:4E:59) failed: read failed, socket might closed or timeout, read ret: -1
+09-05 21:18:28.492 I/OPENHU  (32480): [72] NativeAaHandshakeManager.pokeDevice | NativeAA: Poke via HFP-AG to POCO X3 NFC (DC:B7:2E:5E:4E:59) failed: read failed, socket might closed or timeout, read ret: -1
+09-05 21:18:28.498 I/OPENHU  (32480): [72] NativeAaHandshakeManager.pokeDevice | NativeAA: Calling socket.connect() for POCO X3 NFC via HSP-AG (00001112-0000-1000-8000-00805f9b34fb)...
+09-05 21:18:43.891 I/OPENHU  (32480): [72] NativeAaHandshakeManager.pokeDevice | NativeAA: Poke via HSP-AG to POCO X3 NFC (DC:B7:2E:5E:4E:59) failed: read failed, socket might closed or timeout, read ret: -1
+09-05 21:18:43.897 I/OPENHU  (32480): [72] 1.invokeSuspend | NativeAA: Manual poke to POCO X3 NFC finished.
+09-05 21:18:52.886 I/OPENHU  (32480): [2] AutomationReceiver.onReceive | AutomationReceiver: com.andrerinas.openheadunit.ACTION_LOG_MARKER
+09-05 21:18:52.887 W/OPENHU  (32480): [2] AutomationEffectRunner.run | AutomationMarker: r6-fired

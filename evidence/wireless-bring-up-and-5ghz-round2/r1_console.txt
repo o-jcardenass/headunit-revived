@@ -1,0 +1,21 @@
+----- decisive lines: r1 -----
+  1103:09-05 21:20:56.576 I/OPENHU  ( 3195): [2] AapService.onCreate | AapService creating...
+  1206:09-05 21:20:56.646 W/OPENHU  ( 3195): [2] StationStandDown.restore | StationStandDown: the platform refused to re-enable this unit's WiFi network. It may have to be reconnected by hand.
+  1433:09-05 21:20:56.808 I/OPENHU  ( 3195): [2] StationStandDown.standDown | StationStandDown: asked this unit to leave its WiFi network so the group can have the radio to itself (disableNetwork returned false). It is rejoined when the session ends.
+  3706:09-05 21:20:57.000 I/OPENHU  ( 3195): [2] StationStandDown.standDown$lambda$0 | StationStandDown: this unit has left its WiFi network.
+  4456:09-05 21:20:57.522 I/OPENHU  ( 3195): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: Requesting Native AA P2P group on 5GHz band. Chosen by the user.
+  4457:09-05 21:20:57.522 I/OPENHU  ( 3195): [2] WifiDirectManager.createQuietGroup | WifiDirectManager: 5 GHz channel is automatic, so the driver picks within the band.
+  4523:09-05 21:20:57.559 I/OPENHU  ( 3195): [2] 1.onSuccess | WifiDirectManager: 5GHz createGroup SUCCESS!
+  24747:09-05 21:21:17.713 I/OPENHU  ( 3195): [52] 1.invokeSuspend | WirelessServer: Incoming connection detected from /192.168.49.50
+  25107:09-05 21:21:17.993 I/OPENHU  ( 3195): [62] AapSslContext.performHandshake | SSL handshake complete. Session id: JHTHeI/wiy9E/upKdPSSgE9jYLeekfw1NjkvcVpbM8M=
+  25112:09-05 21:21:17.994 D/OPENHU  ( 3195): [62] AapTransport.handshake | Handshake: SSL handshake complete. TS: 42154651
+  55366:09-05 21:21:32.737 W/OPENHU  ( 3195): [2] StationStandDown.restore | StationStandDown: the platform refused to re-enable this unit's WiFi network. It may have to be reconnected by hand.
+  --counts--
+  createGroup SUCCESS       : 1
+  SSL sessions (Session id) : 1
+  AapService creating       : 1
+  Incoming connection det.  : 1
+  MATCH! Starting AapService: 1
+  USB projection in flight  : 0
+  p2p ifaces                : p2p-wlan0-10 p2p-wlan0-11 
+  last capture ts           : 09-05 21:21:43   (now 09-05 21:21:45)

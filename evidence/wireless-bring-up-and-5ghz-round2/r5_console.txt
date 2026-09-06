@@ -1,0 +1,11 @@
+09-05 21:31:26.945 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:28.377 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:29.386 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:30.391 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:31.399 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:32.406 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:33.414 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:34.417 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: a USB projection attempt is in flight — holding the wireless bring-up for up to 8000ms
+09-05 21:31:35.421 I/OPENHU  (27988): [2] AapService.deferWirelessForUsbHandoff | AapService: the USB attempt did not settle within 8475ms — arming wireless anyway
+09-05 21:31:35.459 I/OPENHU  (27988): [2] WifiDirectManager.startNativeAaQuietHost | WifiDirectManager: startNativeAaQuietHost() requested. Removing old group if any...
+09-05 21:31:36.083 I/OPENHU  (27988): [2] 1.onSuccess | WifiDirectManager: 5GHz createGroup SUCCESS!
