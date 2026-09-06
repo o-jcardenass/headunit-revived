@@ -1,0 +1,1 @@
+mWifiInfo SSID: "Pegue Cdesta", BSSID: f4:52:46:60:8d:4e, MAC: fe:87:f2:8d:8f:91, IP: /192.168.1.8, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 5, RSSI: -23, Link speed: 292Mbps, Tx Link speed: 292Mbps, Max Supported Tx Link speed: 433Mbps, Rx Link speed: 433Mbps, Max Supported Rx Link speed: 433Mbps, Frequency: 5500MHz
