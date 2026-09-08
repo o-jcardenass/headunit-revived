@@ -226,3 +226,32 @@ The standard results format, plus these three things, which are the round:
 
 If R1 and R2 both come back negative, that is a complete and useful round. It closes a design
 direction that algebra alone made look obvious, and it is worth more than a confirmation would be.
+
+---
+
+## Correction, appended after this brief was pushed
+
+**Round 4 has run, and its R5 failed.** Read `ultrawide-touch-alignment-round4-results.md` before
+this brief. Three consequences for round 5.
+
+**1. The identity gate in §1 is stale.** It says the `commit` field must match "the candidate SHA
+from round 4", which was `2a8ce83f`. That is no longer the candidate. The branch has gained a
+floating-button default flip and will gain at least one more commit to answer round 4's R5, so
+**take the candidate SHA from this thread's router row in `README.md` at the moment you start**, and
+record the live APK md5 per device as round 4 did. Round 4 found the `ACTION_QUERY_STATE` reply
+still truncates at the first inner quote, so md5 is the identity that works.
+
+**2. Round 4 answered one question this brief left open, and it is not the one this round asks.**
+Round 4's R5 measured that Android Auto anchors its canvas at the **top-left** of the negotiated
+buffer, with the announced margin at the bottom, proven by the coordinate Android Auto itself logged
+receiving. That settles the anchoring convention. It says nothing about whether the phone honours
+`pixel_aspect_ratio_e4`, which is what this round exists to find out, so every run below stands as
+written.
+
+**3. R3 gets more valuable, not less.** Round 4 showed a phone honouring a `0x144` margin exactly,
+drawing its content in buffer rows `0..576` and leaving the announced margin blank. That is the 20%
+row of R3's table, now confirmed from Android Auto's own side rather than from a photograph. R3 asks
+what happens as that fraction grows toward 33.3%, and the round 4 evidence is the anchor point the
+comparison is measured against.
+
+Nothing else in this brief changes. The probe is still buildless, and `10001` still forces square.
