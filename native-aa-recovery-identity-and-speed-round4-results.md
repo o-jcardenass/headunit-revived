@@ -427,3 +427,50 @@ md5 candidate `eeebeb94…` / baseline `bdf1cccd…`.
 - **When the two phones swap head-unit / driver roles inside one round, the incoming driver keeps
   WiFi-Direct group-owner state from its stint as head unit** and cannot join the new head unit's
   group until its WiFi is cycled. Cost R5b one capture. Folded into Setup notes §4 as a rig rule.
+
+---
+
+## Addendum — real two-phone bond on D-POCO (post-round, operator-added)
+
+After the round, a **Galaxy S24+** (`24:A4:52:CF:70:EF`, device class `0x5A020C` = phone) was paired
+to D-POCO, giving it **two real phones bonded** (`motorola edge 30 neo` + `Galaxy S24+`). The app
+"kept crashing." This is the same standing selector crash R2b targets, now reached by a genuine
+second phone instead of a forced deep link — a stronger reproduction. Both phones' `settings.xml`
+was at the pre-round restore.
+
+### Pre-round build (`959467e2`, the restore) — crashes on every launch
+
+```
+09-09 13:45:24.132 E/AndroidRuntime: FATAL EXCEPTION: main
+09-09 13:45:24.132 E/AndroidRuntime: java.lang.IllegalStateException: Fragment HomeFragment{692796f} (…) not attached to a context.
+09-09 13:45:24.132 E/AndroidRuntime:   at androidx.fragment.app.Fragment.requireContext(Fragment.java:972)
+09-09 13:45:24.132 E/AndroidRuntime:   at com.andrerinas.openheadunit.main.HomeFragment.showNativeAaDeviceSelector$lambda$54(HomeFragment.kt:1023)
+09-09 13:45:24.132 E/AndroidRuntime:   at com.andrerinas.openheadunit.main.HomeFragment$$ExternalSyntheticLambda6.onShow(D8$$SyntheticClass:0)
+09-09 13:45:24.132 E/AndroidRuntime:   at android.app.Dialog$ListenersHandler.handleMessage(Dialog.java:1502)
+```
+
+`showNativeAaDeviceSelector$lambda$54` / `HomeFragment.kt:1023` — the exact **baseline** stack from
+round 3 and round 4's R2b baseline arm. `959467e2` (main `12706e26` + ultrawide commits) predates the
+guard, so it hits this on every launch as soon as a second phone is bonded. FATAL ×1 per launch, PID
+changes.
+
+### Round-4 candidate (`289595df`) — no crash
+
+Same phone, same bond, same `settings.xml`:
+
+- **Plain launch:** FATAL **0**, PID stable across 28 s. Classifier correct —
+  `driver candidates: 2 phone, 0 unknown, 3 not a phone - hidden: Navegadortz2 (gateway but class
+  not phone), BC8-Android (hands free unit), Magnetic Speaker (hands free unit)` (`motorola edge 30
+  neo -> PHONE, vouched for by a stored MAC`, `Galaxy S24+ -> PHONE, advertises the Audio Gateway
+  record`). `motorola edge 30 neo` was BT-connected so `shouldShowSelector` returned false
+  (`connectedCount == 1`, unambiguous) and the service auto-woke it; session formed headless,
+  `SSL handshake complete`.
+- **Forced selector + relaunch** (`--ez show_driver_selector true`, cold): `MainActivity:
+  EXTRA_SHOW_DRIVER_SELECTOR received`, `finishDrawing of relaunch` for `MainActivity` present (the
+  crash-triggering relaunch), FATAL **0**, PID 18567 stable, replacement fragment took the startup
+  path (`motorola edge 30 neo is disconnected, waking it...`) and connected.
+
+**The user's crash is fixed by this branch.** D-POCO left on the candidate `eeebeb94…`
+(`289595df`) rather than the crashing pre-round build; D-MOTO left on `959467e2` (one phone bonded,
+does not hit it). Captures: `dpoco_2phone_preround.txt`, `dpoco_2phone_candidate.txt`,
+`dpoco_2phone_cand_selector.txt` in `round-native-aa-recovery-r4/`.
