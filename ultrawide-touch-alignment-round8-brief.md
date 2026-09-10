@@ -8,6 +8,10 @@ Hosts, and the labels used throughout:
 | **D-POCO** | POCO X3 NFC (`M2007J20CG`), Android 15 | 2400x1080 landscape | the projecting phone for D-HU |
 | **D-MOTO** | Moto edge 30 neo, Gearhead `17.5.663234` | ~2400x1080 | Self Mode, R5 and R6 only |
 
+> **Correction, 2026-09-10:** the two candidate SHAs in the first push of this brief were superseded
+> minutes later by an amend. The commits are **`94efd6df`** (compacted) and **`89093db4`** (tip), and
+> they are what this file now says throughout. The trees are otherwise unchanged.
+
 Read `TESTING-TEMPLATE.md` before planning any step; §7a applies in full. This file is append-only;
 corrections arrive as new commits and a `git pull` fast-forwards.
 
@@ -47,19 +51,19 @@ which is why the Moto adopted the portrait `1080x2400` for 61 ms with `chosen=_1
 
 ### The candidate
 
-`fix/video-fit-and-ultrawide-touch` is now **five commits** on `main` `12706e26`, tip `c1e1006c`.
-Round 7's `fd4819b0` and `409056f4` were compacted into `2b9d8f7f` with the fixes folded in, so
+`fix/video-fit-and-ultrawide-touch` is now **five commits** on `main` `12706e26`, tip `89093db4`.
+Round 7's `fd4819b0` and `409056f4` were compacted into `94efd6df` with the fixes folded in, so
 **those two SHAs no longer resolve on the branch**; cite the new ones. The last commit is separate on
 purpose so R6 can A/B it alone:
 
-- **`2b9d8f7f` Screen config: announce the canvas the video is drawn into, and follow it.** The
+- **`94efd6df` Screen config: announce the canvas the video is drawn into, and follow it.** The
   anchor now remembers the canvas it came from and is re-derived when the insets move under it.
   `SystemUI.apply` reads the window's content area **before** it re-seeds the manual insets, so the
   content size and the insets in force describe the same layout. Outside immersive the display
   fallback carries the insets like any other canvas. New `utils/ScreenOrientationPolicy` is the one
   copy of the portrait/landscape swap, used by all five readings. `SettingsActivity` no longer
   describes a canvas at all.
-- **`c1e1006c` Screen config: a wobbling display reading no longer drops a measurement.** New
+- **`89093db4` Screen config: a wobbling display reading no longer drops a measurement.** New
   `utils/ScreenSettingsHash` folds the effective orientation where the panel metrics used to be, and
   a stored canvas is bounded by the panel proportionally rather than exactly.
 
@@ -80,7 +84,7 @@ purpose so R6 can A/B it alone:
 
 ## 1. R0 build and unit-test gate
 
-- **Candidate:** `fork/fix/video-fit-and-ultrawide-touch` @ `c1e1006c` (take the exact SHA from this
+- **Candidate:** `fork/fix/video-fit-and-ultrawide-touch` @ `89093db4` (take the exact SHA from this
   thread's `README.md` router row when you start).
 - **Baseline:** round 7's candidate, `409056f4`. It is **no longer on the branch** and is reachable
   only from the fork ref round 7 pushed or by SHA; if neither resolves, say so and run the
@@ -268,7 +272,7 @@ from which app opened, from a screencap, not from the `Touch map` line.
 
 ## 8. R6: the A/B the last commit earns
 
-Same as R5, on a build of **`2b9d8f7f`** (the candidate with `c1e1006c` reverted). This is what shows
+Same as R5, on a build of **`94efd6df`** (the candidate with `89093db4` reverted). This is what shows
 the `(from DISPLAY)` fall-through is that commit's to remove rather than something else's.
 
 Expected if the reading is right: this arm reproduces round 7's second `Honest Init` at
