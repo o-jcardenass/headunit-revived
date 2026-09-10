@@ -23,31 +23,44 @@ Remotes on the shared object store: `origin` is `andreknieriem/open-headunit` (u
 in practice), `fork` is `o-jcardenass/open-headunit` (where our branches, including this transfer
 branch, are pushed).
 
-Start every round the way the template says: read `README.md`'s Threads table to find your thread
-and the brief it names, read only that brief (not other threads', per the README), and inventory
-`hur-wifi-test-scripts/` on the rig before building anything.
+Start every round the way the template says, and read as little as it takes. `README.md` is a
+router: its `## Queue` section is a few lines naming every brief that has no results file, and its
+`## Threads` table has one line per thread. Read the Queue, then only your thread's row:
+
+```bash
+grep -F '| `<thread>`' README.md
+```
+
+Do not read the rest of the table or other threads' briefs and results. Then read the one brief
+the row names, and inventory `hur-wifi-test-scripts/` on the rig before building anything.
 
 ## Subagent model routing
 
 When part of a round is delegated with the `Agent` tool, the model is chosen by the kind of work,
-never by habit. Opus is the strongest model on this machine and is not reserved for code planning,
-which a round rarely needs: it is the model for every verdict. Effort is not a per-call argument
-(there is no `.claude/agents/` directory, so each agent runs its definition's default), and a
-`fork` always runs on the host model whatever `model` says.
+and the point is token spend: a web search or a log grep never needs Opus. Opus is the strongest
+model on this machine and is not reserved for code planning, which a round rarely needs: it is the
+model for every verdict, and for nothing routine. Two cost facts decide most cases. Every spawned
+agent reloads its orientation, so an agent is cheaper than the host only when it keeps bulk *out*
+of the host's context; a grep whose output is a few lines runs in Bash in the host, cheaper than
+any agent. And a `fork` copies the whole conversation at the host model's rate, so it is never a
+saving. Effort is not a per-call argument here (no `.claude/agents/` directory, so every agent runs
+its definition's default).
 
 | Work | Model | How it is set |
 |---|---|---|
-| External lookup: an `adb` or `gradle` error message, an Android API or `dumpsys` field, a vendor ROM or chipset fact, an Android Auto release note | **Haiku** | `Agent(model: "haiku")` |
-| **Volume:** counting landmarks in a capture with the greps a brief names, md5s and `git log` listings for the header block, inventorying `hur-wifi-test-scripts/` and `evidence/`, running the build and the unit tests, drafting the per-run tables of a results file from measured numbers, locating a file or a caller in the app worktree | **Sonnet** | `Agent(model: "sonnet")`, the default for any pass over many files, captures or devices; fan out freely, one agent per capture is fine |
-| **Judgement:** assigning a run its verdict, reading a FAIL capture end to end, deciding whether a log string that does not match means the brief or the build is wrong, deciding whether a code change a round needs is within scope, writing the Setup notes and the closing section, editing the README's thread row | **Opus** | `Agent(model: "opus")`, never in a fan-out wider than 2, or the host session itself when it is already Opus; prefer `subagent_type: "fork"` when the agent needs the brief and the round so far |
+| External lookup: an `adb` or `gradle` error message, an Android API or `dumpsys` field, a vendor ROM or chipset fact, an Android Auto release note | **Haiku** | `Agent(model: "haiku")`, always; search results are large and never belong in the host |
+| **Volume:** counting landmarks in a capture with the greps a brief names, md5s and `git log` listings for the header block, inventorying `hur-wifi-test-scripts/` and `evidence/`, running the build and the unit tests, drafting the per-run tables of a results file from measured numbers, locating a file or a caller in the app worktree | **Sonnet** | `Agent(model: "sonnet")`; one agent per capture carrying every grep the brief names, never one agent per grep |
+| **Judgement:** assigning a run its verdict, reading a FAIL capture end to end, deciding whether a log string that does not match means the brief or the build is wrong, deciding whether a code change a round needs is within scope, writing the Setup notes and the closing section, editing the README's thread row | **Opus** | in the host session, which already runs Opus; `Agent(model: "opus")` only when the read needs a capture the host must not load, never in a fan-out wider than 2 |
 | Reading the brief, choosing the run order, a change to the clean-run protocol, the commit and the push | **Opus** | the host session only, never delegated |
 | **Refusal fallback:** an Opus prompt that stops on a classifier refusal is re-run once in the host session with the prompt narrowed to the capture at hand | **Opus** | the host session, and say so in Setup notes |
 
-Two rules the table implies. A Sonnet pass returns counts, timestamps and excerpts, never a
-verdict: a run is PASS or FAIL only after the Opus step reads what the pass found, so a round of
-five runs is five Sonnet grep passes feeding one Opus read, not five Opus agents. And Haiku never
-touches a device or the tree: it answers what the outside world says, and a Sonnet agent or the
-host checks that against the rig.
+Three rules the table implies. **A capture is never opened with Read or `cat` in the host**: one
+is about 140k tokens and is re-sent on every turn after, so grep it with Bash, or hand the file to
+a Sonnet agent that returns counts, timestamps and excerpts. A Sonnet pass never returns a verdict:
+a run is PASS or FAIL only after the Opus step reads what the pass found, so a round of five runs
+is five Sonnet grep passes feeding one Opus read, not five Opus agents. And Haiku never touches a
+device or the tree: it answers what the outside world says, and a Sonnet agent or the host checks
+that against the rig.
 
 ## Modifying app code
 
