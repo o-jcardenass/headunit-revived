@@ -41,6 +41,7 @@ A brief with no results file of the same name. Add a line here when a brief is p
 in the commit that pushes the results. Four older briefs have no same-named results because they
 were reported under another filename, and are listed so the pairing rule does not re-queue them.
 
+- `zlink-media-usb-and-carlink-brief.md`, PC only, static analysis of the extractions already on the rig; no build, no device
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
@@ -114,6 +115,7 @@ by `bssid-round1-results.md` and its addendum.
 | `link-stall-periodic-scan` | **QUEUED** | link-stall-periodic-scan-round5-results.md; round 5 PASS, mechanism absent on this rig. Round 4 (2.4GHz + constrained memory) still queued via link-stall-periodic-scan-round4-brief.md. |
 | `media-key-routing` | **MERGED** | media-key-routing-round1-results.md; merged upstream. Nothing queued. |
 | `external-bt-zbt` / `zlink-wpp-channel` | **IN FLIGHT** | external-bt-tcp-link-findings.md; candidate b64912805, 8 commits on main. Pending: speak-first fallback, Type 4/1 retransmits, daemon-reachability gate, rmnet* exclusion from soft-AP pick. |
+| `zlink-media-usb-and-carlink` | **QUEUED** | zlink-media-usb-and-carlink-brief.md; PC-only strings pass over the vendor library: audio codec and video profile on 2.4 GHz, Bluetooth after handoff, its USB path for the dongle, CarLink. |
 | `qf001-firmware-teardown` | **DONE** | qf001-firmware-teardown-results.md; answered. Nothing queued. |
 | `headunit-reloaded-decompile` | **CLOSED** | headunit-reloaded-decompile-findings.md; PC-only decompile comparison, no rig time. Nothing copied; their Native AA wireless path closely matches ours. |
 | `gemini-research-video-optimization` | **CLOSED** | gemini-research-video-optimization-findings.md; PC-only fact-check, no rig time. Two open items: KEY_LOW_LATENCY and AudioTrack low-latency mode. |
