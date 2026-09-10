@@ -1,0 +1,2 @@
+  mDevice: XX:XX:XX:XX:4E:59(POCO X3 NFC) name=A2DPSinkStateMachine state=Connected
+    mCurrentDevice: XX:XX:XX:XX:4E:59(POCO X3 NFC) name=HeadsetClientStateMachine state=Connected

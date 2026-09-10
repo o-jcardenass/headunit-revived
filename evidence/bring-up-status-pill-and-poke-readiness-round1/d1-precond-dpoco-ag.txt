@@ -1,0 +1,13 @@
+  ==== StateMachine for XX:XX:XX:XX:33:59 ====
+    mCurrentDevice: XX:XX:XX:XX:33:59
+    mCurrentState: Connected
+    mPrevState: Connecting
+    mConnectionState: 2
+    mAudioState: 10
+    mNeedDialingOutReply: false
+    mSpeakerVolume: 10
+    mMicVolume: 0
+    mConnectingTimestampMs(uptimeMillis): 118733302
+    mHsClientAudioPolicy: BluetoothSinkAudioPolicy{mCallEstablishPolicy: 0, mConnectingTimePolicy: 0, mInBandRingtonePolicy: 0}
+    StateMachine: name=HeadsetStateMachine state=Connected
+    StateMachineLog:

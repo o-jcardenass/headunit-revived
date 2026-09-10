@@ -41,7 +41,6 @@ A brief with no results file of the same name. Add a line here when a brief is p
 in the commit that pushes the results. Four older briefs have no same-named results because they
 were reported under another filename, and are listed so the pairing rule does not re-queue them.
 
-- `bring-up-status-pill-and-poke-readiness-round1-brief.md`, candidate `fork/feat/bring-up-status-pill-and-poke-readiness` @ `ef66abbf`, two head units
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
@@ -124,7 +123,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **QUEUED** | bring-up-status-pill-and-poke-readiness-round1-brief.md; candidate @ ef66abbf, gate 1616/0. Pill (Part A) plus the wake poke behind a car kit's link and the auto-disconnect grace. Supersedes bring-up-status-pill-round1-brief.md. |
+| `bring-up-status-pill-and-poke-readiness` | **ROUND 1 DONE** | bring-up-status-pill-and-poke-readiness-round1-results.md; `ef66abbf`, gate 1616/0. W1/W1b PASS (gateway-role poke fires with car-kit HFP link up, reporter reproduced e2e); W2/W2b/W3, P1/P2/P4, D1/D2/D3 PASS. **P3 FAIL:** mode-3 pill latches on WAKING_PHONE, never returns to ARMED (poke loop has no give-up). D1 grace ref 9420 ms (< 15000). P6 INCONCLUSIVE (no USB host). |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
 matching results file is a round nobody has run yet. That pairing is the only queue there is, so
