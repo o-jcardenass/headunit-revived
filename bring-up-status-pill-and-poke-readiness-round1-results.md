@@ -314,3 +314,42 @@ Sequence for the broadcast's invocation (thread [73]):
 - **A repeating RFCOMM cleanup to the car kit** (`bt_btif_sock_rfcomm … cleanup_rfc_slot … device: …33:59` every ~5 s, `app_uid` = OHU) ran on D-POCO for the whole time a Part B session/handshake was active — consistent with the HFP-SLC-completion poke against the connected car kit (`native-aa-complete-hfp-slc=true` in D-POCO's prefs). Not investigated further; noted in case it is unexpected churn.
 - **Stray Galaxy S24+ (`24:A4:52:CF:70:EF`) bonded to D-POCO** is live and AA-capable in RF range. `native-poke-all-paired=true` reaches it and it completes full AA sessions against our advertised head unit identity — worth knowing the fallback is that broad, and worth un-bonding it from D-POCO before the next `all-paired` round on this rig.
 - **D-HU logd clock freeze** (Setup notes) affected P1/P3/P5 timing precision. Line-order is intact; absolute timestamps in the first ~25 s of a D-HU capture are not.
+
+---
+
+## Addendum 2026-09-10 — the pill is covered by the WiFi Direct 5 GHz toast
+
+Post-round observation on the rig screen, then confirmed against the P1 and P5 captures. Filed as a
+follow-up commit, not a rewrite of the runs above.
+
+**The status pill is visually hidden during bring-up by `WifiDirectManager`'s own `Toast.LENGTH_LONG`
+toasts**, which announce the 5 GHz band request. It is not a pill-state change (`renderStagePill`
+never logs `hidden` during a bring-up) — the toast is simply drawn bottom-centre, the same place the
+`auto_connect_pill` sits (`[565,625][874,696]` on this 1440×720 display), and covers it.
+
+Source: `WifiDirectManager.notifyNativeGroupStarted()` → `showToast("Native AA WiFi Direct: 5GHz
+(<freq>), <mode>")`, plus `showToast("Native AA WiFi Direct started on 2.4GHz. Retrying 5GHz...")`
+when the driver brings the group up on 2.4 GHz first, plus the client-unfriendly-channel toast. All
+`Toast.LENGTH_LONG` (~3.5 s each). This rig has `wifi-direct-band = 5 GHz only, set by the user`, so
+the 5 GHz-request toast fires on **every** Native AA bring-up here.
+
+Correlation in the captures (D-HU, `show-toast-messages=true`):
+
+| run | toast log line | `Toast#… visible=1` layer | pill stage then |
+|---|---|---|---|
+| P1 | `Native AA WiFi Direct: 5GHz (5220 MHz), unknown` @ 17:01:00.424 | `Toast#219` @ 17:01:00.681 | `WAKING_PHONE` (17:01:00.503) |
+| P1 | `Native AA WiFi Direct: 5GHz (5805 MHz), 5GHz requested` @ 17:01:01.149 | `Toast#222` @ 17:01:04.734 | still `WAKING_PHONE` |
+| P5 | `Native AA WiFi Direct: 5GHz (5745 MHz), unknown` @ 17:10:30.009 | `Toast#383` @ 17:10:30.199 | `WAKING_PHONE` (17:10:30.048) |
+| P5 | `Native AA WiFi Direct: 5GHz (5765 MHz), 5GHz requested` @ 17:10:30.701 | `Toast#386` @ 17:10:34.287 | still `WAKING_PHONE` |
+
+Two back-to-back `LENGTH_LONG` toasts cover the pill for roughly **7–8 s** across the
+`CREATING_NETWORK` → `WAKING_PHONE` window — the exact stretch the pill exists to narrate.
+
+**This also explains the "faint second rounded-rect behind the pill" noted under P5.** The P5
+screenshot was taken at ~17:10:33, in the ~0.6 s gap between `Toast#383` expiring and `Toast#386`
+appearing; the faint shape is a toast fading, not a pill artifact. The pill design itself is fine.
+
+Not a P-run verdict change. For the coding side: on a unit with the 5 GHz band pinned, the pill and
+these toasts compete for the same screen real estate on every connect. Options are to suppress the
+`notifyNativeGroupStarted` toast when the pill is showing, move the pill clear of the toast anchor,
+or fold the band/frequency into the pill's own second line.
