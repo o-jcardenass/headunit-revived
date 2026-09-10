@@ -4,8 +4,9 @@ This branch carries test briefs and results between the session that writes the 
 that runs it on hardware. Orphan branch: no shared history with `main` or any feature branch, and
 nothing here is ever merged.
 
-Its name still says `hotspot-unreadable-config` because that is the round it was created for. It is
-now the general channel; the name is left alone so existing links keep working.
+It is `transfer/rig-rounds`. Until 2026-09-10 it was named after the round it was created for,
+`transfer/hotspot-unreadable-config-results-20260807`; links into that name are dead, so cite files
+here by path.
 
 ## Read this, in this order, and stop there
 

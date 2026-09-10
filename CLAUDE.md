@@ -9,6 +9,26 @@ before touching a device, and re-read it if a round feels unfamiliar; this file 
 does not: how to change app code when a round needs that, and how to commit and report back on this
 branch.
 
+## What changed on 2026-09-10, read before the next round
+
+Three commits landed on this branch without a round in between, so the checkout on the rig is
+behind them and its scripts name a branch that no longer exists.
+
+- **The branch is `transfer/rig-rounds`.** The old name was deleted on `fork`. Re-point the rig's
+  worktree once, and change every script that names the old branch:
+
+  ```bash
+  git fetch fork
+  git branch -m transfer/hotspot-unreadable-config-results-20260807 transfer/rig-rounds
+  git branch -u fork/transfer/rig-rounds
+  ```
+
+- **`README.md` is a router again.** Its 67 thread rows were condensed to one line each and a
+  `## Queue` section lists every unrun brief. Read the Queue and your own row, nothing else; the
+  rows as they stood are in `archive/threads-table-through-2026-09-10.md`.
+- **Subagent model routing is below.** Opus takes verdicts only; a grep or a lookup goes to Sonnet
+  or Haiku, and a capture is never read whole into the host session.
+
 ## Layout
 
 Two worktrees of one repository, sharing an object store:
@@ -16,8 +36,9 @@ Two worktrees of one repository, sharing an object store:
 - `/home/ocardenas/projects/ohu-project/code-review-ohu/open-headunit`: the app, `main` and
   feature branches. All code changes happen here.
 - `/home/ocardenas/projects/ohu-project/code-review-ohu/ohu-transfer`: this worktree, the
-  `transfer/hotspot-unreadable-config-results-20260807` branch. Nothing here is ever merged into
-  the app; it is a message channel, not a codebase.
+  `transfer/rig-rounds` branch (until 2026-09-10 it was
+  `transfer/hotspot-unreadable-config-results-20260807`). Nothing here is ever merged into the
+  app; it is a message channel, not a codebase.
 
 Remotes on the shared object store: `origin` is `andreknieriem/open-headunit` (upstream, read-only
 in practice), `fork` is `o-jcardenass/open-headunit` (where our branches, including this transfer
