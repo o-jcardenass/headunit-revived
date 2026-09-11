@@ -41,7 +41,6 @@ A brief with no results file of the same name. Add a line here when a brief is p
 in the commit that pushes the results. Four older briefs have no same-named results because they
 were reported under another filename, and are listed so the pairing rule does not re-queue them.
 
-- `bring-up-status-pill-and-poke-readiness-round8-brief.md` (candidate `e466171a`, gate 1829/0)
 - `zlink-aa-sink-decision-brief.md`, PC only, the descriptor decode and disassembly part two could not run; tools are in `tools/zbt/`
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
@@ -130,7 +129,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 8 queued on `e466171a` (gate 1829/0): is the give-up bound safe from a recreation and a sleep (A2/A2b/A2c), does `ACTION_START_WIRELESS` re-arm after a disconnect (D2), does AUTO leave a 5 GHz station for a 2.4 GHz group (C6). |
+| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round8-results.md: **A2b FAIL** (recreation via a real device rotation never re-arms the watchdog for the native-driver auto-connect trigger — `beginAutoConnect()` never gets called again). D2/C2/C4/F1 PASS, C6 PASS w/ finding (stalled at PHONE_JOINING once, clean 6s connect on the identical config in F1 minutes later), A2/A2c PASS, A4 UNTESTABLE. C1/C3/C5 still not run, need D-MOTO's hand-operated 2.4 GHz hotspot. |
 | `bring-up-status-pill-and-poke-readiness (round 7)` | **DONE** | round 7 no FAIL: R1/A1/A3/B2/C1-C5/E5 PASS and the offer's ASK arm reached the screen at last. Three defects found, all fixed on `e466171a`. See round7-results.md. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
