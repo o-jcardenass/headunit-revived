@@ -45,6 +45,7 @@ were reported under another filename, and are listed so the pairing rule does no
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
+- `bring-up-status-pill-and-poke-readiness-round6-brief.md`
 
 Superseded, do not run: `bring-up-status-pill-round1-brief.md` is folded into
 `bring-up-status-pill-and-poke-readiness-round1-brief.md` as its Part A, and
@@ -119,7 +120,7 @@ by `bssid-round1-results.md` and its addendum.
 | `external-bt-zbt` / `zlink-wpp-channel` | **IN FLIGHT** | external-bt-tcp-link-findings.md; candidate b64912805, 8 commits on main. Pending: speak-first fallback, Type 4/1 retransmits, daemon-reachability gate, rmnet* exclusion from soft-AP pick. |
 | `zlink-media-usb-and-carlink` | **DONE** | zlink-media-usb-and-carlink-results.md; PC-only. AA sink can announce AAC (runtime `get_is_AA_AAC_audiotype`); no video branch on `CHANNELS_24GHZ_ONLY`; no BT link action after `AA_wait_port ok`. Wired AA = libusb AOA; wired CarPlay = USB-gadget NCM + libusbmuxd; no Android USB filter. CarLink = BLE-GATT mode, disjoint from AA. Descriptor decode blocked (script absent). Response: zlink-media-usb-and-carlink-response.md (Q4's AP-host line corrected: the vendor head unit hosts the SoftAP). |
 | `zlink-aa-sink-decision` | **QUEUED** | zlink-aa-sink-decision-brief.md; PC-only, part three: descriptor decode plus disassembly of `get_is_AA_AAC_audiotype`, `max_unacked` and the offered video list. Scripts shipped in `tools/zbt/`. |
-| `aac-audio` | **DONE** | Answered by bring-up-status-pill-and-poke-readiness-round5-results.md Part D; AAC1/AAC2/AAC4 PASS (~62-63kB/s AAC vs 187kB/s PCM baseline, zero errors), AAC3 INCONCLUSIVE (D-MOTO's AA bound to D-HU, not a codec issue). Nothing queued. |
+| `aac-audio` | **ROUND 6 QUEUED** | Media path settled by bring-up-status-pill-and-poke-readiness-round5-results.md Part D (62-63kB/s AAC vs 187kB/s PCM). Round 6 Part F takes the rest: the 2.4 GHz cap arm, AAC3 redone, and the 16 kHz guidance channel. |
 | `qf001-firmware-teardown` | **DONE** | qf001-firmware-teardown-results.md; answered. Nothing queued. |
 | `headunit-reloaded-decompile` | **CLOSED** | headunit-reloaded-decompile-findings.md; PC-only decompile comparison, no rig time. Nothing copied; their Native AA wireless path closely matches ours. |
 | `gemini-research-video-optimization` | **CLOSED** | gemini-research-video-optimization-findings.md; PC-only fact-check, no rig time. Two open items: KEY_LOW_LATENCY and AudioTrack low-latency mode. |
@@ -129,7 +130,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | bring-up-status-pill-and-poke-readiness-round5-results.md; P1/B1/AAC1/AAC2/AAC4 PASS, A2/AAC3 INCONCLUSIVE, A1/C1/C2 FAIL. A1: accept loop never reopens after a BT bounce. C2: offer dialog window-leaks before the user can answer. Needs a source-level pass before next round. |
+| `bring-up-status-pill-and-poke-readiness` | **ROUND 6 QUEUED** | bring-up-status-pill-and-poke-readiness-round6-brief.md; candidate testing/status-pill-aac-zbt rebuilt on the round 5 fixes. Grades the offer, the lost Android Auto listener, the stand-down mode, the module route and the cap. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
 matching results file is a round nobody has run yet. That pairing is the only queue there is, so

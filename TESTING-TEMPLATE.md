@@ -183,6 +183,16 @@ adb shell am start -a com.andrerinas.openheadunit.ACTION_STOP_SERVICE
 adb shell am start -a com.andrerinas.openheadunit.ACTION_SET_NIGHT_MODE --es state on
 ```
 
+**An `am broadcast -a <action>` aimed at the app's own receivers is dropped unless it names the
+package.** Without `-p com.andrerinas.headunitrevived` the shell's broadcast is refused at enqueue as
+a background execution, and `am` still prints `Broadcast completed: result=0`, so the run reads as
+the app having ignored it. Measured on the Android 14 D-HU in round 5 of the status-pill thread:
+`dumpsys activity broadcasts history` showed the one matching manifest receiver as
+`SKIPPED terminal ... reason: skipped by policy at enqueue: Background execution not allowed`, with
+the app alive and not force-stopped. Adding the package fixed every broadcast in that round,
+including `ACTION_QUERY_STATE`. The `am start` forms above are not affected, and neither is
+`am start-foreground-service`.
+
 `headunit://disconnect` is the scripted equivalent of the user pressing Exit, which is what the
 `isUserExit` code paths are gated on. Prefer it over any UI route.
 
@@ -792,6 +802,25 @@ when a quirk changes a run.
   received for`) did not appear at all on `17.3.662854`, on a run where the phone-side behaviour they
   describe demonstrably happened. Confirm any phone-side string against the build in front of you,
   and report the Gearhead version in Setup notes so a later reader can tell absence from drift.
+- **`headunit://exit` does nothing to an app that is already force-stopped.** Sent to a dead process
+  it cold-launches the app through `AutomationActivity`, which then runs its own auto-connect and can
+  form a brand new group: the opposite of the "confirm no group" the exit was for. Send it to a
+  *running* app, then confirm with `dumpsys wifip2p`.
+- **A phone can be left hosting its own WiFi Direct group from an earlier round.** A unit that played
+  head unit keeps `isGroupOwner: true` on a `DIRECT-` network, and while that stands a phone-role
+  connection to the real head unit stalls forever at `PHONE_JOINING`: the RFCOMM handshake completes,
+  credentials go out, and `WirelessServer: Incoming connection detected` never appears. Check every
+  phone with `dumpsys wifip2p | grep isGroupOwner` before the round starts. On a rooted unit
+  `cmd wifip2p remove-group` clears it; on an unrooted one that call is refused with a
+  `SecurityException` and a `svc wifi disable`/`enable` cycle is the lever.
+- **The external Bluetooth module route can be reached on a unit that has no module, with root.**
+  `ExternalBtPolicy.detect` accepts the system property `rw.zlink.bt.type=extra` (case-insensitive)
+  as evidence, alongside the `/dev/rf_serial` and `/dev/zj_bt_serial` nodes. `setprop
+  rw.zlink.bt.type extra` therefore puts the app on its real detection path, which is the only way to
+  see the module settings rows, the probe and the refusal dialogs on ordinary hardware.
+  `BluetoothHelper.externalBtEvidence` is a `by lazy`, so the property has to be written with the app
+  force-stopped and read on the next launch. Native AA is refused while it is set, so do this last in
+  a round and clear it with `setprop rw.zlink.bt.type ""` plus a force-stop afterwards.
 
 ---
 
