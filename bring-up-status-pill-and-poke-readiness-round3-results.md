@@ -8,7 +8,8 @@ round 1/2's P3 FAIL)      **Baseline:** none (unchanged from brief §1; no `main
 (`com.andrerinas.headunitrevived_3.4.0-beta1_debug.apk`, versionCode 106)
 **Unit:** D-HU = UNISOC MT50 (`MT50_YT610E4GFPSL_U`, Android 14, single BT radio, adbd root), bonded
 name "Navegadortz2" `11:46:03:10:33:59`. D-POCO = POCO X3 NFC (`M2007J20CG`, Android 11, not rooted)
-`DC:B7:2E:5E:4E:59`, phone role for Part A. D-MOTO not used this round.
+`DC:B7:2E:5E:4E:59`, phone role for Part A, head unit role for D1. D-MOTO = motorola edge 30 neo
+(`miami`, not rooted) `A0:46:5A:97:E4:95`, phone role for D1 (added by addendum, see below).
 **Date:** 2026-09-10
 
 ## Setup notes
@@ -20,16 +21,23 @@ since round 2 graded `ef66abbf`: `0f2a65ce5` (pill grows a third line, absorbing
 that round 1/2 found covering it) and `fe8b91e2` (a `ConnectionStageTracker.retreat()` call meant to
 fix P3's FAIL — the pill latching on `WAKING_PHONE` forever when the phone never answers). Both
 commits only touch pill/UI display and the poke retry loop's stage reporting, not poke targeting,
-credential handling, or auto-disconnect. **Scope decision:** re-ran R0, P1, P2, P3, P4, and P5
-(everything Part A, the only section either commit can affect); did not re-run Part B (W1/W1b/W2/
-W2b/W3) or Part C (D1/D2/D3) or P6. Part B/C exercise the exact same poke-loop and auto-disconnect
+credential handling, or auto-disconnect. **Scope decision, first pass:** ran R0, P1, P2, P3, P4, and
+P5 (everything Part A, the only section either commit can affect); did not run Part B (W1/W1b/W2/
+W2b/W3), Part C (D1/D2/D3), or P6. Part B/C exercise the exact same poke-loop and auto-disconnect
 code paths already PASSed twice on `ef66abbf` and are graded on poke/session lines, never the pill,
 so neither commit changes what they measure; D2/D3 were blocked last round by an unrelated D-HU
 network condition this branch does not touch; P6 has no USB host on this rig regardless.
 
+**Addendum: Part C (D1/D2/D3) run after all, on request** (this file's first push, `e48417479`,
+covered only R0-P5/WB1). The reasoning above for skipping Part C still holds — neither commit touches
+auto-disconnect — but re-confirming `OWN_SOCKET_CLOSE_GRACE_MS` against the current build was asked
+for directly rather than left inferred from round 1/2's numbers, so D1/D2/D3 were run against this
+same `fe8b91e2` candidate and are appended below as their own subsection. Part B (W1/W1b/W2/W2b/W3)
+and P6 are still not re-run; nothing in this addendum changes that reasoning for them.
+
 ### Scripts used (`hur-wifi-test-scripts/`, a sibling dir, not this repo)
-`build_hur.sh`, `run_unit_tests.sh` (R0), `set_hu_settings_host.py` (D-HU, rooted). No new script
-needed.
+`build_hur.sh`, `run_unit_tests.sh` (R0), `set_hu_settings_host.py` (D-HU, rooted),
+`set_hu_settings_runas.py` (D-POCO, run-as, used for D1). No new script needed.
 
 ### Deviations from protocol
 
@@ -53,6 +61,31 @@ needed.
 4. Both D-HU's `settings.xml` and D-POCO's radios were restored (D-HU: pre-round backup pushed back;
    D-POCO: both radios re-enabled and verified `enabled: true` / `Wi-Fi is enabled`) before ending the
    round.
+5. **D2's first attempt was void — self-inflicted, discarded, not counted.** D1 (below) had D-POCO
+   as head unit and was ended with `am force-stop` rather than a graceful `headunit://exit`, which
+   skips `WifiDirectManager.stop()` and left D-POCO's own `p2p0` still up as a stale Group Owner
+   (`inet 192.168.49.1/24`, confirmed via `dumpsys wifip2p` showing `GroupCreatedState` never exited).
+   Switching D-POCO to the phone role for D2 without clearing that meant it could never actually join
+   D-HU's group: D-POCO kept completing the WPP RFCOMM handshake in a ~3s loop (Type 1→2→3→7/6,
+   `Handling handshake for POCO X3 NFC` repeating) but never reached `WirelessServer: Incoming
+   connection detected`, because its radio was still bound to its own phantom group. Fixed by
+   launching D-POCO's app once more and sending it `headunit://exit` (confirmed `p2p0` state DOWN,
+   no IP), then re-running D2 from a clean launch. The void capture is kept as
+   `evidence/d2-dhu-round3-attempt1-stale-group-discard.txt.gz` for the record; the numbers below are
+   from the clean re-run. **Lesson for future rounds:** end a session that used `am force-stop`
+   between P2P-group roles with an explicit `headunit://exit` first, not just a force-stop, whenever
+   the same device changes role from head unit to phone (or vice versa) within one round.
+6. **D2's toggle landed later than the brief's ~20s, and needed a second lever.** The first toggle
+   (`svc bluetooth disable` at SSL+~32s) self-reverted within ~11s — consistent with the known
+   `svc bluetooth disable` self-revert quirk, previously measured at ~4s on this same phone, now
+   measured slower — and the session survived via the reconnect-within-5s path (`AapService: ...is
+   back; the pending disconnect is cancelled`), not the `stayed away` path D2 wants. Re-ran the toggle
+   on the same still-live session using `cmd connectivity airplane-mode enable` (drops WiFi too, as
+   expected), which held for the full duration; that second toggle is what is reported as D2 below.
+7. **D3's toggle landed at SSL+~8s, not the brief's SSL+3s**, purely from this session's own
+   round-trip latency issuing the command (checking the clock, then issuing `cmd connectivity
+   airplane-mode enable`, took longer than intended). Reported as measured, not relabelled to "+3s";
+   see D3 below for why the actual timing still produced a meaningful, on-the-boundary result.
 
 ## R0 — build and unit-test gate
 
@@ -275,12 +308,103 @@ round 2's brief asked either. Evidence: `evidence/wb1-dhu.txt.gz`.
 
 ---
 
-## Part B / Part C — not re-run this round
+## Part B — not re-run this round
 
-See Setup notes for the scope decision. `W1/W1b/W2/W2b/W3` (poke targeting under a car-kit link) and
-`D1/D2/D3` (auto-disconnect grace) exercise code neither `0f2a65ce5` nor `fe8b91e2` touches, and both
-passed twice already on `ef66abbf` (round 1 and round 2 results). Re-running them would not exercise
-either new commit.
+See Setup notes for the scope decision. `W1/W1b/W2/W2b/W3` (poke targeting under a car-kit link)
+exercise code neither `0f2a65ce5` nor `fe8b91e2` touches, and passed twice already on `ef66abbf`
+(round 1 and round 2 results). Re-running it would not exercise either new commit.
+
+## Part C — auto-disconnect ignores only our own socket closes (addendum, see Setup notes)
+
+Run against the same `fe8b91e2` candidate (D-POCO reinstalled with the round 3 apk, md5
+`f35b083c…`, matching D-HU's).
+
+### D1 — the lag this round sets the constant from (D-POCO head unit, D-MOTO phone)
+
+**PASS**
+
+- Settings (D-POCO): `wifi-connection-mode=3`, `log-level=2`, `native-poke-bt-macs={A0:46:5A:97:E4:95}`
+  (D-MOTO), `native-poke-all-paired=true`, `auto-start-bt-macs` empty,
+  `auto-disconnect-bt-macs={A0:46:5A:97:E4:95}`, `auto-disconnect-bt-delay-seconds=5`,
+  `native-preferred-device-mac` deleted. D-HU force-stopped throughout, its gateway-role link to
+  D-POCO confirmed `Connected` on D-POCO's `HeadsetStateMachine` before launch.
+- Radio: D-MOTO Bluetooth off at launch (23:09:21), on 8s after `ACTIVELY LISTENING`/`createGroup
+  SUCCESS` (both ~23:09:22-23), confirmed on at 23:09:44.
+- Session formed via a successful poke this time (not dial-back, unlike round 2's D1): two poke
+  rounds (`Attempting active poke to device: motorola edge 30 neo` at 23:09:24.040 and 23:09:49.588)
+  then `Successfully poked motorola edge 30 neo via HFP-AG` (23:09:52.765) → `Connection accepted`
+  (23:09:58.153) → `SSL handshake complete` (23:10:08.059). **Touched nothing for 90s afterward.**
+- Discard-rule check: clean — `MATCH!`=0, `createGroup SUCCESS`=1, `Magic Garbage`=0, `SSL`=1, no
+  `p2p-wlan0-N` bump at all (single group, no stale teardown this run).
+- `stayed away; ending the session` count: **0** ✓.
+- One `not ending the session for` line: `AapService: Bluetooth auto-disconnect: not ending the
+  session for A0:46:5A:97:E4:95 (up=true, ownCloseMs=9253).` — numeric, **< 15000** ✓.
+
+**Report data:**
+- Only `went away; ending the session in` line: 23:10:12.195.
+- Nearest preceding own-close line: `NativeAA: BT Handshake socket closed.` at 23:10:07.945.
+- **Gap: 4.250s.**
+- `ownCloseMs` on the matching `not ending` line: **9253**.
+- **Number this run measures for `OWN_SOCKET_CLOSE_GRACE_MS`: 9253ms** — a third independent
+  measurement, consistent with round 1's 9420ms and round 2's 9807ms. All three land in a tight
+  ~9.2-9.8s band, comfortably under the 15000ms constant, and look like a real property of this
+  device pairing's Bluetooth stack rather than noise.
+
+### D2 — a real disconnect ends the session (D-HU head unit, D-POCO phone)
+
+**PASS** (on a re-run; see Setup notes items 5-6 for the void first attempt and the toggle-method
+change)
+
+- Settings (D-HU): `wifi-connection-mode=3`, `log-level=2`, `auto-disconnect-bt-macs={DC:B7:2E:5E:4E:59}`
+  (D-POCO), `auto-disconnect-bt-delay-seconds=5`, `auto-start-bt-macs` empty, `native-preferred-device-mac`
+  deleted. **Precondition confirmed** before launch: D-POCO's `A2DPSinkStateMachine` and
+  `HeadsetClientStateMachine` both `Connected` on D-HU.
+- Session formed via dial-back: `createGroup SUCCESS` (23:15:16.357) → `Connection accepted from POCO
+  X3 NFC` (23:15:20.814) → `SSL handshake complete` (23:15:27.769). Link re-confirmed `Connected` on
+  both profiles at 23:15:51.938 (~24s post-SSL, past the brief's ~10s check).
+- At 23:16:00.050, `svc bluetooth disable` on D-POCO — **self-reverted within ~11s**, session
+  survived via the reconnect-in-time path (`went away` 23:16:01.778 → `is back; the pending
+  disconnect is cancelled` 23:16:05.790, 4.012s later). Not the condition D2 asks for, so re-armed:
+  at 23:17:15.453, `cmd connectivity airplane-mode enable` on D-POCO (confirmed BT and WiFi both off,
+  held off for the full watched window).
+- **PASS conditions, all met:**
+  1. `went away; ending the session in 5000ms unless it comes back.` — 23:17:17.701 (2.25s after the
+     toggle).
+  2. `stayed away; ending the session the way the Exit button does.` — 23:17:22.703, **exactly
+     5.002s** after the `went away` line.
+  3. `session state disconnected (user_exit)` — 23:17:22.725; `WifiDirectManager.stop` follows
+     (23:17:23.929); no reconnect or second session anywhere afterward in the capture.
+- Discard-rule check: clean (`MATCH!`=0, `createGroup SUCCESS`=1, `SSL`=1; the one `p2p-wlan0-0`→`1`
+  bump happened at group-formation time, before the single `createGroup SUCCESS`, the documented
+  stale-interface-rename pattern, not contamination).
+- Wall-clock, toggle to `stayed away`: **7.25s** (2.25s detection + 5.00s grace). On `main` this run
+  is documented to leave the session running until the 60s mark; that gap is the fix, reconfirmed.
+
+### D3 — known limit, a disconnect shortly after SSL (D-HU head unit, D-POCO phone)
+
+**PASS, and closer to the edge than rounds 1/2 measured**
+
+- Setup as D2, fresh launch. Session: `SSL handshake complete` at 23:19:36.047; `NativeAA: BT
+  Handshake socket closed.` at 23:19:35.844 (**203ms before SSL**, not after — the handshake socket
+  closes essentially at handoff time on this build, not some seconds into the session, on both this
+  run and D1).
+- Toggle (`cmd connectivity airplane-mode enable` on D-POCO) issued at 23:19:44.061 — **SSL+8.0s /
+  own-close+8.2s**, not the brief's SSL+3s (Setup notes item 7).
+- `went away; ending the session in 5000ms` at 23:19:45.641 (1.58s after the toggle). At the 5s
+  deadline, 23:19:50.645: `not ending the session for DC:B7:2E:5E:4E:59 (up=true,
+  ownCloseMs=14803).` **14803 < 15000 — the session survives, but by only 197ms of margin**, the
+  closest any of the three rounds' measurements (9253/9420/9807ms) has come to the 15000ms ceiling.
+  Had the actual toggle landed at the intended SSL+3s instead of SSL+8s, `ownCloseMs` at the 5s check
+  would have read roughly 5s smaller (comfortably clear); landing 5s later than intended is what
+  produced the near-miss, not a new finding about the constant itself — but it is a real data point
+  that the constant's safety margin narrows quickly as the gap grows, and 15000ms is not generously
+  oversized for this device's own ~9-10s baseline.
+- As anticipated by the brief: the auto-disconnect grace kept the **session** alive, but the
+  underlying **connection** separately ended via `link_lost` at 23:19:59.131 (D-POCO's WiFi was also
+  down from `airplane-mode enable`, so the TCP/AAP link itself could not survive indefinitely). This
+  is the documented, allowed outcome ("it may separately end via link_lost if WiFi also died — that's
+  fine, not a FAIL"), not a second FAIL.
+- Discard-rule check: clean (`MATCH!`=0, `createGroup SUCCESS`=1, `SSL`=1).
 
 ## Report-back summary
 
@@ -303,6 +427,29 @@ either new commit.
    splash instead. Confirmed pre-existing on `ef66abbf` as well, so not a regression from either of
    this round's commits, but a real gap this branch's own subject matter should probably close before
    or alongside it.
+6. **Part C (addendum) confirms `OWN_SOCKET_CLOSE_GRACE_MS` a third time, on this candidate.** D1
+   measured 9253ms (vs round 1's 9420ms, round 2's 9807ms — a tight, consistent ~9.2-9.8s band). D2
+   PASSes cleanly (toggle → `stayed away` in 7.25s). D3 PASSes but landed much closer to the ceiling
+   than intended (`ownCloseMs=14803`, 197ms of margin) because the toggle fired at SSL+8s instead of
+   the brief's SSL+3s — a timing miss on this session's part, not a new defect, but worth a cleaner
+   re-measurement at the intended timing before treating 15000ms as comfortably oversized.
+
+## Verdict roll-up
+
+| Run | Round 1/2 (`ef66abbf`) | Round 3 (`fe8b91e2`) | Notes |
+|---|---|---|---|
+| R0 | PASS (1616/0) | **PASS** (1626/0) | +10 tests from this branch's two commits |
+| P1 | PASS | **FAIL** (intermittent, 1/2) | new regression from `fe8b91e2`'s `retreat()` |
+| P2 | PASS | **PASS** | pill grew 309×71→352×105, still clears |
+| P3 | FAIL (both rounds) | **FAIL** (different reason) | latch fixed, never reaches `ARMED` |
+| P4 | PASS | **PASS** | unaffected, as expected |
+| P5 | no verdict | no verdict | toast-over-pill finding resolved |
+| P6 | INCONCLUSIVE | not re-run | pre-registered, unaffected |
+| WB1 | not tested | **FAIL** (new) | pre-existing on `ef66abbf` too |
+| W1/W1b/W2/W2b/W3 | PASS (round 2) | not re-run | unaffected by either commit |
+| D1 | PASS (9420/9807ms) | **PASS** (9253ms) | third consistent measurement |
+| D2 | PASS (round 1) / INCONCLUSIVE (round 2, IPv6 bind) | **PASS** | IPv6-only bind did not recur |
+| D3 | PASS (round 1) / INCONCLUSIVE (round 2) | **PASS** (14803ms, near ceiling) | timing landed at +8s not +3s |
 
 ## Anything the brief did not ask about
 
@@ -317,8 +464,16 @@ either new commit.
   listeners are still open and a poke is still being retried), the brief's P3 condition should be
   updated rather than the fix pushed to actually reach `ARMED` mid-retry-loop, which would itself
   misrepresent that the group and listeners are still live.
-- Round 1/2's FX Plus classifier gap and D2/D3 IPv6-only bind finding are untouched by this round
-  (neither is exercised by Part A) and remain open follow-ups from round 2's results file.
+- Round 1/2's FX Plus classifier gap remains an open follow-up from round 2's results file, untouched
+  by anything in this round.
+- **Round 2's D2/D3 IPv6-only `WirelessServer` bind did not recur this round** — both D2 and D3
+  bound normally and formed real IPv4 sessions (`WirelessServer: Incoming connection detected from
+  /192.168.49.50`, `/192.168.49.53`). This isn't proof the bug is gone; round 2's own write-up
+  correlated it with D-HU's station WiFi holding a concurrent primary connection at the time, and this
+  round didn't check whether that condition was present. Still open as a follow-up, just not
+  reproduced here.
+- **D3's near-ceiling `ownCloseMs=14803` is worth a clean re-measurement at the intended SSL+3s**,
+  not the SSL+8s this round actually landed at (Setup notes item 7) — see report-back item 6.
 - **WB1's gap is worth folding into whatever fixes P1's regression.** Both are about which UI element
   shows connection progress and when: P1 is "the pill moves when it should hold still", WB1 is "the
   pill never shows up at all for a manual connect". A future brief should probably grade the WiFi
