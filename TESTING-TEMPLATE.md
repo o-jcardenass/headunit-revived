@@ -821,6 +821,40 @@ when a quirk changes a run.
   `BluetoothHelper.externalBtEvidence` is a `by lazy`, so the property has to be written with the app
   force-stopped and read on the next launch. Native AA is refused while it is set, so do this last in
   a round and clear it with `setprop rw.zlink.bt.type ""` plus a force-stop afterwards.
+- **The settings-screen module probe and the real module route log under different prefixes, and
+  never both.** `ZbtProbe` is the diagnostic behind the "Test the head unit's Bluetooth module" row
+  and every line it writes is `ZbtProbe:`-prefixed; on an unreachable daemon it writes the raw
+  exception (`ZbtProbe: ConnectException: ...`) and the row itself reads "Nothing is listening on
+  port 3152. This unit has no vendor Bluetooth daemon to talk to." The `NativeAA: [ZBT]` lines,
+  including `nothing is listening on 127.0.0.1:3152`, come from `ZbtDaemonReachability` and
+  `ZbtAaCarrier`, which run only during a real Native AA handshake attempt. A brief that quotes a
+  `NativeAA: [ZBT]` line for a probe run is asking for a line that cannot appear.
+- **`enable-audio-sink` gates the media and speech channels, and a `false` left by an earlier round
+  looks like a broken build.** With it off the app logs "Audio sink is off in Settings. Skipping the
+  media and speech audio channels - the phone will not send audio and this is not a fault", and the
+  only channel set up is the always-on Audio2 (System Sounds) one, so no `AudioDecoder.start:` ever
+  appears for music. Read it back `true` before any run that grades an audio channel.
+- **D-MOTO is not rooted, so its hotspot cannot be scripted.** `cmd wifi start-softap` and
+  `cmd wifi get-softap-config` both refuse with `SecurityException: Uid 2000 does not have access`,
+  and this build has no non-root tethering shell command. A run that needs D-MOTO to host a network
+  is hand-operated: the operator sets the band, reads off the SSID and password, and says so in
+  Setup notes.
+- **A spaced SSID needs its quotes escaped so they survive adb's argv join.** `adb -s $HU shell cmd
+  wifi connect-network \"SSID With Spaces\" wpa2 psk` works; a plain locally-quoted `"SSID With
+  Spaces"` is re-split on the far side and fails with `Unknown network type <second word>`.
+- **The device-protected auto-start mirror is `shared_prefs/settings_device_protected.xml`**, under
+  `/data/user_de/0/com.andrerinas.headunitrevived/`, and it exists only once the app has written it
+  at least once. Check both it and the host `settings.xml` whenever a run grades an auto-start key.
+- **Clearing the auto-start device and testing a Bluetooth arrival are mutually exclusive on one
+  unit.** A run that proves `auto-start-bt-macs` is cleared when two phones are paired removes the
+  MAC a real arrival would have to match, so any run downstream of it that needs `ACTION_BT_AUTO_START`
+  from a real arrival has nothing left to arrive against. Put the two on different units, or fire the
+  action at the service component directly and say in the results that the receiver-side arrival was
+  not the trigger.
+- **`headunit://disconnect` stops the Native AA launcher, and a Bluetooth arrival is not the only way
+  back.** `ACTION_START_WIRELESS` re-arms the stack directly, and `ACTION_NATIVE_AA_POKE` on a stopped
+  manager starts it and logs why it had not started. A brief that needs a session re-armed mid-run
+  should name one of those rather than wait for a phone.
 
 ---
 

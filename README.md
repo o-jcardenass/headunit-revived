@@ -45,6 +45,7 @@ were reported under another filename, and are listed so the pairing rule does no
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
+- `bring-up-status-pill-and-poke-readiness-round7-brief.md`
 
 Superseded, do not run: `bring-up-status-pill-round1-brief.md` is folded into
 `bring-up-status-pill-and-poke-readiness-round1-brief.md` as its Part A, and
@@ -119,7 +120,7 @@ by `bssid-round1-results.md` and its addendum.
 | `external-bt-zbt` / `zlink-wpp-channel` | **IN FLIGHT** | external-bt-tcp-link-findings.md; candidate b64912805, 8 commits on main. Pending: speak-first fallback, Type 4/1 retransmits, daemon-reachability gate, rmnet* exclusion from soft-AP pick. |
 | `zlink-media-usb-and-carlink` | **DONE** | zlink-media-usb-and-carlink-results.md; PC-only. AA sink can announce AAC (runtime `get_is_AA_AAC_audiotype`); no video branch on `CHANNELS_24GHZ_ONLY`; no BT link action after `AA_wait_port ok`. Wired AA = libusb AOA; wired CarPlay = USB-gadget NCM + libusbmuxd; no Android USB filter. CarLink = BLE-GATT mode, disjoint from AA. Descriptor decode blocked (script absent). Response: zlink-media-usb-and-carlink-response.md (Q4's AP-host line corrected: the vendor head unit hosts the SoftAP). |
 | `zlink-aa-sink-decision` | **QUEUED** | zlink-aa-sink-decision-brief.md; PC-only, part three: descriptor decode plus disassembly of `get_is_AA_AAC_audiotype`, `max_unacked` and the offered video list. Scripts shipped in `tools/zbt/`. |
-| `aac-audio` | **IN FLIGHT** | bring-up-status-pill-and-poke-readiness-round6-results.md Part F: F2 (second decoder vendor) PASS clean, F1's band/cap detection PASS but its own AAC-decoder-start condition unconfirmed (forced-2.4GHz test lever destabilized the session, not seen on the automatic-band positive control), F3 (16kHz guidance) not run, time budget. Follow-up round should test the cap's radio-detected arm rather than the forced-band lever. |
+| `aac-audio` | **IN FLIGHT** | round 7 brief queued. Round 6: F2 PASS clean on a second decoder vendor; F1's band detection, AAC announce and 720p30 cap PASS, its decoder-start condition unreachable. Round 7 redoes it, adds F1b (cap off, same forced band) and still owes F3. |
 | `qf001-firmware-teardown` | **DONE** | qf001-firmware-teardown-results.md; answered. Nothing queued. |
 | `headunit-reloaded-decompile` | **CLOSED** | headunit-reloaded-decompile-findings.md; PC-only decompile comparison, no rig time. Nothing copied; their Native AA wireless path closely matches ours. |
 | `gemini-research-video-optimization` | **CLOSED** | gemini-research-video-optimization-findings.md; PC-only fact-check, no rig time. Two open items: KEY_LOW_LATENCY and AudioTrack low-latency mode. |
@@ -129,7 +130,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | bring-up-status-pill-and-poke-readiness-round6-results.md; round 5's fixes confirmed (A1, B1, B2, C1-C5, E1-E4 all PASS). Two new findings: R1 pill never logs STARTING_PROJECTION (traced to MainActivity, not this candidate's diff), A2/A3 auto-start offer can never give up when the target phone never answers at all (MainActivity's watchdog only arms once the overlay is shown). D1/D2 INCONCLUSIVE, F3 not run. |
+| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 7 brief queued against `77df7f6b`, gate 1818/0. Round 6 confirmed round 5's fixes and found one real defect: an auto-connect nothing answers never ended, so the offer stayed suppressed. Fixed. Part C is re-run. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
 matching results file is a round nobody has run yet. That pairing is the only queue there is, so
