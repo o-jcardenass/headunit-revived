@@ -130,7 +130,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 7 brief queued against `77df7f6b`, gate 1818/0. Round 6 confirmed round 5's fixes and found one real defect: an auto-connect nothing answers never ended, so the offer stayed suppressed. Fixed. Part C is re-run. |
+| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 7 brief queued against `ec9352d5`, gate 1818/0. Round 6 confirmed round 5's fixes and found one defect: an auto-connect nothing answers never ended, so the offer stayed suppressed. Fixed. E5 regrades the reworded dialogs. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
 matching results file is a round nobody has run yet. That pairing is the only queue there is, so

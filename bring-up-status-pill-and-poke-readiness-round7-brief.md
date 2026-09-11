@@ -1,6 +1,6 @@
 # bring-up-status-pill-and-poke-readiness: round 7 brief
 
-**Candidate:** `fork/testing/status-pill-aac-zbt` @ `77df7f6b`
+**Candidate:** `fork/testing/status-pill-aac-zbt` @ `ec9352d5`
 **Baseline:** none needed. See §1.
 **Gate:** 1818 tests / 0 failures
 **Read `TESTING-TEMPLATE.md` first.** This brief only says what is different about this round.
@@ -72,7 +72,7 @@ certainly right, but F1b is what makes it a measurement.
 
 ```bash
 git fetch fork
-git checkout testing/status-pill-aac-zbt   # 77df7f6b
+git checkout testing/status-pill-aac-zbt   # ec9352d5
 ```
 
 That branch is `main` with `feat/bring-up-status-pill-and-poke-readiness`,
@@ -91,6 +91,7 @@ Two commits are new since `d8198612`, both on the pill branch:
 |---|---|
 | `97c291cd` | A pill step the overlay hides is named in the log instead of dropped |
 | `61c1dd82` | Every auto-connect mode bounds its own attempt; the offer's gate asks about the overlay, not the flag |
+| `0b8624f0` | Amended, not new: the two module dialogs reworded. Same subject and same file set as before, strings only. See Part E |
 
 `AutoConnectAttemptPolicy` is the new pure object. Its bound for a pill is **150 s**, three wake
 passes at the poke's 30 s hold plus 15 s gap; the overlay keeps its own 30 s. A pill timeout
@@ -378,6 +379,36 @@ rather than waiting for a Bluetooth arrival, then connect.
 
 ---
 
+### Part E - the module dialogs, reworded
+
+Round 6 passed E1 to E4 and nothing about the route has changed. What changed is the copy: round 6's
+screenshots were read, and the two dialogs a user meets when they pick Native were too long, carried
+em dashes, asked the owner to export a log, and let somebody with any external Bluetooth module read
+the route as theirs. It only ever works on units running a ZJ/ZLink service on `127.0.0.1:3152`; the
+rest of that hardware class reach their module over Binder and cannot use it at all. One of the two
+could also state something untrue, claiming the module's service "answered when this app asked" on a
+path where it was never asked.
+
+**E5, evidence only, no verdict.** Set the property and relaunch exactly as round 6's Part E did
+(`setprop rw.zlink.bt.type extra` with the app force-stopped; §7a has the whole lever, and it must be
+cleared afterwards the same way). Then screenshot both dialogs with their body text readable:
+
+1. With `external-bt-zbt-transport` **off**, choose Native. Expect the title
+   `Native Wireless cannot work on this head unit` and a two-paragraph body that names the evidence,
+   says this app can only reach the module through a ZJ/ZLink service, and says this unit is not
+   running one.
+2. With `external-bt-zbt-transport` **on**, choose Native. Expect the title
+   `Native Wireless through the ZJ/ZLink module` and a body that says the handshake **will be sent**
+   through the module's ZJ/ZLink service. **It must not say the service answered or was asked**,
+   because on this rig it never was: the toggle short-circuits the dial. If it still claims the
+   service answered, say so, and that is the one thing in this run worth reporting as wrong.
+
+Neither dialog should contain an em dash or ask you to export a log. Report the two screenshots and
+whether the wording matches. Everything past the dialogs stays UNTESTABLE on a unit with no module,
+as it was in round 6.
+
+---
+
 ### Part F - the AAC branch's remainder
 
 **F1, the cap fires on the band the session is on.** Round 6 passed conditions 1, 2, 4 and 5 and
@@ -441,7 +472,8 @@ minutes.
 ## 6. Do not re-run
 
 - Everything round 6 passed and nothing here touches: B1, E1 to E4, F2, F4. The listener reopen, the
-  module route's whole settings surface, and the second decoder vendor are settled.
+  module route's whole settings surface, and the second decoder vendor are settled. E5 above is the
+  one exception, and it grades wording rather than the route.
 - Round 5's P2 to P6, W2, WB1, WB1b, its D1 to D3, A1 conditions 1/2/4, A2's soft-AP wait, and
   AAC1/AAC2/AAC4.
 - `AutoStartOfferPolicy`, `AutoConnectAttemptPolicy`, `AaListenerRecoveryPolicy`,
