@@ -41,6 +41,8 @@ A brief with no results file of the same name. Add a line here when a brief is p
 in the commit that pushes the results. Four older briefs have no same-named results because they
 were reported under another filename, and are listed so the pairing rule does not re-queue them.
 
+- `zlink-aa-sink-decision-brief.md`, PC only, the descriptor decode and disassembly part two could not run; tools are in `tools/zbt/`
+- `aac-audio-round1-brief.md`, rig, the AAC sink path with the setting forced on
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
@@ -114,7 +116,9 @@ by `bssid-round1-results.md` and its addendum.
 | `link-stall-periodic-scan` | **QUEUED** | link-stall-periodic-scan-round5-results.md; round 5 PASS, mechanism absent on this rig. Round 4 (2.4GHz + constrained memory) still queued via link-stall-periodic-scan-round4-brief.md. |
 | `media-key-routing` | **MERGED** | media-key-routing-round1-results.md; merged upstream. Nothing queued. |
 | `external-bt-zbt` / `zlink-wpp-channel` | **IN FLIGHT** | external-bt-tcp-link-findings.md; candidate b64912805, 8 commits on main. Pending: speak-first fallback, Type 4/1 retransmits, daemon-reachability gate, rmnet* exclusion from soft-AP pick. |
-| `zlink-media-usb-and-carlink` | **DONE** | zlink-media-usb-and-carlink-results.md; PC-only. AA sink can announce AAC (runtime `get_is_AA_AAC_audiotype`); no video branch on `CHANNELS_24GHZ_ONLY`; no BT link action after `AA_wait_port ok`. Wired AA = libusb AOA; wired CarPlay = USB-gadget NCM + libusbmuxd; no Android USB filter. CarLink = BLE-GATT mode, disjoint from AA. Descriptor decode blocked (script absent). |
+| `zlink-media-usb-and-carlink` | **DONE** | zlink-media-usb-and-carlink-results.md; PC-only. AA sink can announce AAC (runtime `get_is_AA_AAC_audiotype`); no video branch on `CHANNELS_24GHZ_ONLY`; no BT link action after `AA_wait_port ok`. Wired AA = libusb AOA; wired CarPlay = USB-gadget NCM + libusbmuxd; no Android USB filter. CarLink = BLE-GATT mode, disjoint from AA. Descriptor decode blocked (script absent). Response: zlink-media-usb-and-carlink-response.md (Q4's AP-host line corrected: the vendor head unit hosts the SoftAP). |
+| `zlink-aa-sink-decision` | **QUEUED** | zlink-aa-sink-decision-brief.md; PC-only, part three: descriptor decode plus disassembly of `get_is_AA_AAC_audiotype`, `max_unacked` and the offered video list. Scripts shipped in `tools/zbt/`. |
+| `aac-audio` | **QUEUED** | aac-audio-round1-brief.md; rig, the AAC decode path with `use-aac-audio` forced on, both focus modes, PCM baseline. Decides the experimental label and the narrow-band default. |
 | `qf001-firmware-teardown` | **DONE** | qf001-firmware-teardown-results.md; answered. Nothing queued. |
 | `headunit-reloaded-decompile` | **CLOSED** | headunit-reloaded-decompile-findings.md; PC-only decompile comparison, no rig time. Nothing copied; their Native AA wireless path closely matches ours. |
 | `gemini-research-video-optimization` | **CLOSED** | gemini-research-video-optimization-findings.md; PC-only fact-check, no rig time. Two open items: KEY_LOW_LATENCY and AudioTrack low-latency mode. |
