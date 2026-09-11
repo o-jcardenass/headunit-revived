@@ -841,7 +841,26 @@ when a quirk changes a run.
   Setup notes.
 - **A spaced SSID needs its quotes escaped so they survive adb's argv join.** `adb -s $HU shell cmd
   wifi connect-network \"SSID With Spaces\" wpa2 psk` works; a plain locally-quoted `"SSID With
-  Spaces"` is re-split on the far side and fails with `Unknown network type <second word>`.
+  Spaces"` is re-split on the far side and fails with `Unknown network type <second word>`. Round 7
+  found even the escaped form unreliable from some shells and added
+  `hur-wifi-test-scripts/connect_hotspot.sh`, pushed to `/data/local/tmp` and run on the unit, which
+  sidesteps the join entirely. Prefer the script for any run that joins a named hotspot.
+- **There is no non-destructive way to make D-HU leave a network it prefers.** Its `cmd wifi` build
+  has `forget-network` but no `disable-network`, and its home network is both stronger and
+  higher-priority than any temporary hotspot, so it wins a reconnect race. Round 7 joined the
+  hotspot and launched the app back-to-back, faster than the roam-back; that worked every time but
+  it is a race, so a run that depends on the station's network should read the frequency back rather
+  than assume it.
+- **D-MOTO can be behind a PIN rather than a swipe, and adb has no way past one.** Round 7 met both
+  states in the same round with no adb action in between, so it is session-dependent (a trust-agent
+  grace window). A run that needs D-MOTO's screen unattended should confirm the lock state first,
+  or be scheduled where a person can unlock it once.
+- **Mocking GPS does not reach Android Auto's own navigation.** `cmd location providers
+  set-test-provider-location` against the raw `gps` provider drives Google Maps on the phone itself
+  (round 7 watched it compute a route and count an ETA down), but the projected session still
+  reported `0 km/h` and never advanced past the first maneuver across ten minutes of fixes. Android
+  Auto's nav rendering consumes Play Services' fused location, which this method does not feed. Do
+  not brief a run that grades projected turn-by-turn against this lever.
 - **The device-protected auto-start mirror is `shared_prefs/settings_device_protected.xml`**, under
   `/data/user_de/0/com.andrerinas.headunitrevived/`, and it exists only once the app has written it
   at least once. Check both it and the host `settings.xml` whenever a run grades an auto-start key.
@@ -852,9 +871,15 @@ when a quirk changes a run.
   action at the service component directly and say in the results that the receiver-side arrival was
   not the trigger.
 - **`headunit://disconnect` stops the Native AA launcher, and a Bluetooth arrival is not the only way
-  back.** `ACTION_START_WIRELESS` re-arms the stack directly, and `ACTION_NATIVE_AA_POKE` on a stopped
-  manager starts it and logs why it had not started. A brief that needs a session re-armed mid-run
-  should name one of those rather than wait for a phone.
+  back, but on a build before the round 8 candidate `ACTION_START_WIRELESS` is not the lever.**
+  `wifiLauncherManager.stop()` leaves the stopped launcher in place, so `setActive` answers "WiFi
+  Mode NATIVE.mode with same start-configuration is already initialized" and arms nothing. Measured
+  in round 7's D2, where it produced no session at all, and the refusal was at DEBUG so an INFO
+  capture showed nothing whatever. `ACTION_NATIVE_AA_POKE` on a stopped manager does start it and
+  logs why it had not started, but it costs a full RFCOMM handshake, and a `headunit://disconnect`
+  issued just before will tear the reopened listeners down about 1.3 s later. From the round 8
+  candidate on, the guard asks whether the launcher is still running and `ACTION_START_WIRELESS`
+  re-arms; the refusal is at INFO, so a brief can grade its absence.
 
 ---
 
