@@ -45,7 +45,6 @@ were reported under another filename, and are listed so the pairing rule does no
 - `audio-focus-round11-brief.md`
 - `link-stall-periodic-scan-round4-brief.md` (2.4 GHz plus constrained memory; round 5 ran first and PASSed)
 - `video-dropped-frame-keyframe-round7-brief.md` (R1 is a desk check, R2 optional)
-- `bring-up-status-pill-and-poke-readiness-round7-brief.md`
 
 Superseded, do not run: `bring-up-status-pill-round1-brief.md` is folded into
 `bring-up-status-pill-and-poke-readiness-round1-brief.md` as its Part A, and
@@ -130,7 +129,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 7 brief queued against `ec9352d5`, gate 1818/0. Round 6 confirmed round 5's fixes and found one defect: an auto-connect nothing answers never ended, so the offer stayed suppressed. Fixed. E5 regrades the reworded dialogs. |
+| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round 7 (`77df7f6b`/`ec9352d5`) no FAIL, two real findings: A2's give-up watchdog never fires (offer still reaches screen via a separate gate) and `ACTION_START_WIRELESS` no-ops right after a disconnect. F1/F3 still INCONCLUSIVE; S1 measured AUTO stuck vs. ALWAYS stable on the same 5GHz-station/2.4GHz-group split. See round7-results.md. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
 matching results file is a round nobody has run yet. That pairing is the only queue there is, so
