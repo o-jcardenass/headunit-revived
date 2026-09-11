@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <int name="cached-surface-settings-hash" value="-1838338814" />
+    <boolean name="attach_hw_dsp_equalizer" value="false" />
+    <boolean name="allow-external-configuration" value="false" />
+    <set name="connection-modes" />
+    <int name="wifi-connection-mode" value="3" />
+    <boolean name="debug-video-low-latency" value="false" />
+    <boolean name="fake_speed" value="true" />
+    <int name="screen-orientation" value="3" />
+    <int name="floating-button-x-percent" value="0" />
+    <string name="video-codec">H.265</string>
+    <string name="head-unit-model">Desktop Head Unit</string>
+    <int name="audio-latency-multiplier" value="2" />
+    <string name="bt-address"></string>
+    <boolean name="wifi-direct-stable-identity" value="true" />
+    <int name="mic-sample-rate" value="16000" />
+    <boolean name="use-head-unit-microphone" value="false" />
+    <int name="hotspot-band" value="0" />
+    <boolean name="use-libusb" value="true" />
+    <boolean name="wifi-direct-rotation-pending" value="false" />
+    <string name="last-connection-ip">192.168.49.48</string>
+    <int name="navigation-volume-offset" value="0" />
+    <int name="wifi-5ghz-channel" value="0" />
+    <int name="onboarding-version" value="2" />
+    <string name="last-connection-type">wifi</string>
+    <boolean name="enable-audio-sink" value="true" />
+    <int name="helper-connection-strategy" value="2" />
+    <long name="connection-issue-hotspot-config" value="1788916896849" />
+    <string name="last-connection-usb-device"></string>
+    <boolean name="advanced-settings-active" value="true" />
+    <int name="wifi-direct-band" value="1" />
+    <int name="cached-surface-width" value="2400" />
+    <int name="media-key-routing" value="0" />
+    <boolean name="enable-rotary" value="false" />
+    <boolean name="has-accepted-disclaimer" value="true" />
+    <string name="vehicle-display-name">Open Headunit</string>
+    <string name="wifi-direct-last-group-bssid">D2:C7:57:67:AD:D6</string>
+    <int name="floating-button-opacity-percent" value="80" />
+    <boolean name="use-aac-audio" value="false" />
+    <boolean name="wait-for-wifi-before-wifi-direct" value="false" />
+    <int name="vehicle-type" value="3" />
+    <boolean name="native-aa-ignore-external-bt" value="false" />
+    <string name="vehicle-year">2025</string>
+    <int name="native-driver-selection-timeout" value="10" />
+    <boolean name="mic-noise-suppressor" value="false" />
+    <boolean name="gps-navigation" value="true" />
+    <boolean name="log-capture-enabled" value="false" />
+    <string name="vehicle-model">Desktop Head Unit</string>
+    <string name="head-unit-make">Google</string>
+    <boolean name="stretch_to_fill" value="true" />
+    <boolean name="raise-projection-during-call" value="true" />
+    <long name="last-loc-latitude" value="4618785280557770322" />
+    <string name="vehicle-id">headlessunit-001</string>
+    <boolean name="static-audio-focus" value="false" />
+    <int name="cached-surface-height" value="1080" />
+    <int name="inset-left" value="0" />
+    <boolean name="auto-resume-playback-on-reconnect" value="false" />
+    <boolean name="hud_mirroring" value="false" />
+    <boolean name="mic-echo-canceler" value="false" />
+    <string name="wifi-direct-group-name">DIRECT-MW-Navegadortz</string>
+    <int name="pixel-aspect-ratio-e4" value="10000" />
+    <string name="hotspot-interface"></string>
+    <boolean name="hide-battery-level" value="false" />
+    <string name="hotspot-password"></string>
+    <boolean name="narrow-band-profile-cap" value="true" />
+    <boolean name="show-navigation-notifications" value="false" />
+    <boolean name="sync-media-session-aa-metadata" value="false" />
+    <set name="auto-start-bt-macs" />
+    <boolean name="kill-on-disconnect" value="false" />
+    <boolean name="auto-enable-hotspot" value="false" />
+    <string name="vehicle-make">Google</string>
+    <int name="view-mode" value="2" />
+    <string name="static-bssid">0</string>
+    <int name="inset-top" value="0" />
+    <int name="dpi-pixel-density" value="320" />
+    <boolean name="native-wifi-version-exchange" value="false" />
+    <int name="log-level" value="0" />
+    <string name="last-connected-native-mac">A0:46:5A:97:E4:95</string>
+    <int name="floating-button-size-dp" value="60" />
+    <set name="native-poke-bt-macs">
+        <string>A0:46:5A:97:E4:95</string>
+    </set>
+    <int name="native-driver-selection-mode" value="1" />
+    <int name="resolutionId" value="3" />
+    <boolean name="mic-auto-gain-control" value="false" />
+    <long name="last-loc-longitude" value="-4588354226530640834" />
+    <int name="mic-input-source" value="0" />
+    <int name="audio-queue-capacity" value="20" />
+    <int name="wait-for-wifi-timeout" value="10" />
+    <int name="software-video-decoder" value="1" />
+    <int name="video-fit-mode" value="0" />
+    <int name="floating-button-y-percent" value="54" />
+    <int name="fullscreen-mode" value="1" />
+    <int name="playback-focus-mode" value="0" />
+    <int name="assistant-volume-offset" value="0" />
+    <boolean name="native-aa-complete-hfp-slc" value="true" />
+    <string name="app-language"></string>
+    <boolean name="optimize-ultrawide" value="false" />
+    <string name="bluetooth-manager-service-name">bluetooth_manager</string>
+    <boolean name="hide-clock" value="false" />
+    <boolean name="forced_scale" value="false" />
+    <boolean name="use_measured_touch_surface" value="false" />
+    <boolean name="show-fps-counter" value="true" />
+    <int name="inset-right" value="0" />
+    <string name="hotspot-ssid"></string>
+    <boolean name="hide-phone-signal" value="false" />
+    <boolean name="right-hand-drive" value="false" />
+    <boolean name="force-software-decoding" value="false" />
+    <boolean name="show-toast-messages" value="true" />
+    <string name="wifi-direct-group-passphrase">QPBtjimYrRvD</string>
+    <int name="media-volume-offset" value="0" />
+    <int name="fps-limit" value="60" />
+    <int name="inset-bottom" value="0" />
+    <string name="native-preferred-device-mac"></string>
+    <string name="wifi-direct-last-group-ssid">DIRECT-MW-Navegadortz</string>
+    <boolean name="enable-floating-button" value="false" />
+    <boolean name="keep-dummy-vpn-during-session" value="false" />
+    <boolean name="gesture_hint_shown" value="true" />
+    <int name="native-ap-transport" value="0" />
+</map>

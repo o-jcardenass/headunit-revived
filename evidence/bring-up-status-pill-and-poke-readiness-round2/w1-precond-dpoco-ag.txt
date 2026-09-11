@@ -1,0 +1,1574 @@
+Bluetooth Status
+  enabled: true
+  state: ON
+  address: XX:XX:XX:XX:4E:59
+  name: POCO X3 NFC
+  time since enabled: 00:02:32.618
+
+Enable log:
+  09-10 17:04:03.786 	Package [android] requested to [Disable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:08:43.357 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:10:22.041 	Package [android] requested to [Disable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:11:45.700 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:41:43.282 	Package [android] requested to [Disable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:41:45.979 	Package [com.google.android.projection.gearhead] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:43:02.805 	Package [BluetoothSystemServer] requested to [Disable]. 	Reason is AIRPLANE_MODE
+  09-10 17:43:38.878 	Package [android] requested to [Enable]. 	Reason is AIRPLANE_MODE
+  09-10 17:43:40.912 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:44:47.066 	Package [BluetoothSystemServer] requested to [Disable]. 	Reason is AIRPLANE_MODE
+  09-10 17:45:34.478 	Package [android] requested to [Enable]. 	Reason is AIRPLANE_MODE
+  09-10 17:45:36.521 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 17:50:08.749 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 18:13:47.537 	Package [com.android.systemui] requested to [Disable]. 	Reason is APPLICATION_REQUEST
+  09-10 18:14:46.342 	Package [com.android.systemui] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 21:03:31.440 	Package [com.android.systemui] requested to [Disable]. 	Reason is APPLICATION_REQUEST
+  09-10 21:43:15.592 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+  09-10 21:44:21.070 	Package [BluetoothSystemServer] requested to [Disable]. 	Reason is AIRPLANE_MODE
+  09-10 21:50:42.314 	Package [android] requested to [Enable]. 	Reason is AIRPLANE_MODE
+  09-10 21:50:42.355 	Package [android] requested to [Enable]. 	Reason is APPLICATION_REQUEST
+
+Bluetooth crashed 0 times
+
+Number of Ble app registered: 0
+
+BluetoothManagerService:
+  mEnable:true
+  mQuietEnable:false
+  mEnableExternal:true
+  mQuietEnableExternal:false
+
+🚩Flag dump:
+	[■]: a2dp_aidl_encoding_interval
+	[■]: a2dp_broadcast_connection_state_when_turned_off
+	[■]: a2dp_check_lea_iso_channel
+	[■]: a2dp_clear_pending_start_on_session_restart
+	[■]: a2dp_fix_codec_type_in_java
+	[ ]: a2dp_ignore_started_when_responder
+	[ ]: a2dp_lhdc_api
+	[■]: a2dp_service_looper
+	[■]: a2dp_source_threading_fix
+	[ ]: a2dp_variable_aac_capability
+	[ ]: abs_volume_sdp_conflict
+	[■]: adapter_properties_looper
+	[ ]: adapter_suspend_mgmt
+	[■]: adm_always_fallback_to_available_device
+	[■]: adm_fallback_when_wired_audio_disconnected
+	[■]: adm_fix_disconnect_of_set_member
+	[■]: adm_verify_active_fallback_device
+	[ ]: aics_api
+	[ ]: allow_free_last_scn
+	[■]: allow_switching_hid_and_hogp
+	[■]: android_headtracker_service
+	[■]: android_os_identifier
+	[■]: api_get_connection_state_using_identity_address
+	[■]: asha_encrypted_l2c_coc
+	[■]: associate_browse_l2cap_request_with_active_control_channel
+	[■]: asymmetric_phy_for_unidirectional_cis
+	[■]: audio_port_binder_inherit_rt
+	[ ]: auto_connect_on_multiple_hfp_when_no_a2dp_device
+	[■]: av_stream_reconfigure_fix
+	[■]: avdt_discover_seps_as_acceptor
+	[ ]: avdt_handle_suspend_cfm_bad_state
+	[ ]: avdt_prioritize_mandatory_codec
+	[■]: avdtp_error_codes
+	[ ]: avoid_l2c_processing_while_stack_shutdown
+	[ ]: avrcp16_default
+	[■]: avrcp_connect_a2dp_with_delay
+	[■]: avrcp_sdp_records
+	[■]: ble_check_data_length_on_legacy_advertising
+	[■]: ble_context_map_remove_fix
+	[■]: ble_gatt_server_use_address_type_in_connection
+	[■]: ble_scan_adv_metrics_redesign
+	[ ]: bluetooth_power_telemetry
+	[■]: bond_transport_after_bond_cancel_fix
+	[■]: break_uhid_polling_early
+	[ ]: browsing_refactor
+	[ ]: bt_offload_socket_api
+	[ ]: bt_socket_api_l2cap_cid
+	[■]: bt_system_context_report
+	[ ]: bta_ag_cmd_brsf_allow_uint32
+	[■]: bta_av_use_peer_codec
+	[ ]: bta_dm_defer_device_discovery_state_change_until_rnr_complete
+	[■]: bta_dm_discover_both
+	[■]: btsec_avdt_msg_ind_type_confusion
+	[■]: btsec_check_valid_discovery_database
+	[ ]: btsec_cycle_irks
+	[■]: cancel_open_discovery_client
+	[■]: cancel_pairing_only_on_disconnected_transport
+	[■]: channel_sounding
+	[ ]: channel_sounding25q2_apis
+	[ ]: channel_sounding_in_stack
+	[■]: choose_wrong_hfp_codec_in_specific_config
+	[■]: clear_auth_collision_state_on_pairing_complete
+	[ ]: clear_pairing_state_when_no_devrec
+	[ ]: close_hid_if_uhid_ready_too_slow
+	[■]: close_hid_only_if_connected
+	[ ]: connect_hap_on_other_profile_connect
+	[■]: default_gatt_transport
+	[■]: device_iot_config_logging
+	[ ]: directed_advertising_api
+	[■]: disconnect_on_encryption_failure
+	[■]: donot_push_error_code_to_app_when_connected
+	[ ]: donot_queue_dup_rnr
+	[■]: donot_update_sec_flags_on_csrk_save
+	[■]: donot_validate_bond_state_from_profiles
+	[ ]: dont_send_hci_disconnect_repeatedly
+	[ ]: dont_send_hid_set_idle
+	[■]: drop_acl_fragment_on_disconnect
+	[ ]: enable_hap_by_default
+	[ ]: encrypted_advertising_data
+	[ ]: encryption_change_broadcast
+	[■]: encryption_change_v2
+	[■]: enforce_resolve_system_service_behavior
+	[■]: fix_add_device_properties
+	[ ]: fix_avdt_rconfig_not_setting_l2cap
+	[ ]: fix_hfp_qual19
+	[■]: fix_le_evt_cancelling_sdp_discovery
+	[■]: fix_nonconnectable_scannable_advertisement
+	[■]: fix_sco_command_status_handling
+	[ ]: floss_separate_host_privacy_and_llprivacy
+	[■]: forward_get_set_report_failure_to_uhid
+	[ ]: gatt_callback_on_failure
+	[ ]: gatt_clear_cache_on_factory_reset
+	[■]: gatt_client_dynamic_allocation
+	[■]: gatt_disconnect_fix
+	[■]: gatt_fix_multiple_direct_connect
+	[ ]: gatt_queue_cleanup_connected
+	[■]: gatt_rediscover_on_canceled
+	[■]: gatt_server_requests_fix
+	[ ]: get_all_element_attributes_empty
+	[■]: get_name_and_address_as_callback
+	[■]: get_profile_use_lock
+	[■]: get_state_from_system_server
+	[■]: guard_bonded_device_properties
+	[■]: guest_mode_bond
+	[ ]: handle_delivery_sending_failure_events
+	[■]: hap_connect_only_requested_device
+	[ ]: hci_vendor_specific_extension
+	[■]: headset_client_am_hf_volume_symmetric
+	[■]: headtracker_codec_capability
+	[■]: headtracker_sdu_size
+	[ ]: hfp_allow_volume_change_without_sco
+	[ ]: hfp_client_disconnecting_state
+	[ ]: hfp_software_datapath
+	[■]: hid_report_queuing
+	[ ]: hogp_reconnection
+	[■]: identity_address_null_if_not_known
+	[ ]: identity_address_type_api
+	[ ]: identity_retention_on_restart
+	[ ]: ignore_auth_req_when_collision_timer_active
+	[ ]: ignore_notify_when_already_connected
+	[ ]: ignore_unrelated_cancel_bond
+	[■]: improve_create_connection_for_already_connecting_device
+	[ ]: initial_conn_params_p1
+	[■]: initiate_multiple_hid_connections
+	[ ]: is_sco_managed_by_audio
+	[ ]: key_missing_as_ordered_broadcast
+	[■]: key_missing_classic_device
+	[ ]: key_missing_public
+	[ ]: kill_instead_of_exit
+	[ ]: l2cap_fcs_option_fix
+	[■]: l2cap_le_do_not_adjust_min_interval
+	[■]: l2cap_p_ccb_check_rewrite
+	[ ]: l2cap_tx_complete_cb_info
+	[■]: l2cap_update_existing_conn_interval_with_base_interval
+	[■]: le_ase_read_multiple_variable
+	[■]: le_audio_base_ecosystem_interval
+	[■]: le_audio_support_unidirectional_voice_assistant
+	[ ]: le_enc_on_reconnection
+	[ ]: le_impl_ack_pause_disarmed
+	[■]: le_inquiry_duration
+	[ ]: le_scan_msft_support
+	[ ]: le_scan_remove_non_oneway_binder_calls
+	[■]: le_scan_use_address_type
+	[■]: le_scan_use_uid_for_importance
+	[ ]: leaudio_add_aics_support
+	[ ]: leaudio_add_opus_codec_type
+	[ ]: leaudio_allow_leaudio_only_devices
+	[■]: leaudio_allowed_context_mask
+	[■]: leaudio_big_depends_on_audio_state
+	[ ]: leaudio_broadcast_api_get_local_metadata
+	[ ]: leaudio_broadcast_api_manage_primary_group
+	[■]: leaudio_broadcast_assistant_peripheral_entrustment
+	[■]: leaudio_broadcast_destroy_after_timeout
+	[■]: leaudio_broadcast_extract_periodic_scanner_from_state_machine
+	[■]: leaudio_broadcast_monitor_source_sync_status
+	[ ]: leaudio_broadcast_primary_group_selection
+	[■]: leaudio_broadcast_resync_helper
+	[■]: leaudio_broadcast_update_metadata_callback
+	[■]: leaudio_broadcast_volume_control_for_connected_devices
+	[■]: leaudio_broadcast_volume_control_primary_group_only
+	[■]: leaudio_broadcast_volume_control_with_set_volume
+	[■]: leaudio_call_start_scan_directly
+	[■]: leaudio_codec_config_callback_order_fix
+	[ ]: leaudio_config_profile_enabling
+	[ ]: leaudio_dev_options_respect_profile_sysprops
+	[■]: leaudio_dynamic_spatial_audio
+	[■]: leaudio_getting_active_state_support
+	[ ]: leaudio_gmap_client
+	[■]: leaudio_hal_client_asrc
+	[■]: leaudio_improve_switch_during_phone_call
+	[ ]: leaudio_monitor_unicast_source_when_managed_by_broadcast_delegator
+	[■]: leaudio_mono_location_errata
+	[ ]: leaudio_mono_location_errata_api
+	[■]: leaudio_multicodec_aidl_support
+	[■]: leaudio_multiple_vocs_instances_api
+	[■]: leaudio_no_context_validate_streaming_request
+	[ ]: leaudio_set_codec_config_preference
+	[■]: leaudio_sort_scans_to_sync_by_fails
+	[■]: leaudio_speed_up_reconfiguration_between_call
+	[■]: leaudio_start_request_state_mutex_check
+	[ ]: leaudio_stop_updated_to_not_available_context_stream
+	[■]: leaudio_synchronize_start
+	[■]: leaudio_unicast_no_available_contexts
+	[■]: leaudio_use_audio_mode_listener
+	[ ]: maintain_call_index_after_conference
+	[■]: map_limit_notification
+	[■]: mcp_allow_play_without_active_player
+	[■]: metadata_api_inactive_audio_device_upon_connection
+	[ ]: metadata_api_microphone_for_call_enabled
+	[ ]: msft_addr_tracking_quirk
+	[■]: name_discovery_for_le_pairing
+	[■]: non_wake_alarm_for_rpa_rotation
+	[ ]: nrpa_non_connectable_adv
+	[ ]: opp_check_content_uri_permissions
+	[■]: opp_fix_multiple_notifications_issues
+	[■]: opp_ignore_content_observer_after_service_stop
+	[ ]: opp_set_insets_for_edge_to_edge
+	[■]: opp_start_activity_directly_from_notification
+	[■]: override_context_to_specify_device_id
+	[■]: pairing_name_discovery_addresss_mismatch
+	[■]: pairing_on_unknown_transport
+	[■]: pan_use_identity_address
+	[ ]: pbap_client_contacts_caching
+	[ ]: pbap_client_storage_refactor
+	[ ]: pending_hid_connection_cancellation
+	[ ]: phy_to_native
+	[■]: prevent_duplicate_uuid_intent
+	[■]: prevent_hogp_reconnect_when_connected
+	[■]: prevent_service_connections_on_remove_bond
+	[■]: progress_acl_scheduler_upon_incoming_connection
+	[ ]: queue_dis_requests
+	[■]: read_le_appearance
+	[ ]: refactor_saving_messages_and_metadata
+	[■]: remove_address_map_on_unbond
+	[ ]: remove_device_in_main_thread
+	[■]: remove_dup_pairing_response_in_oob_pairing
+	[■]: remove_input_device_on_vup
+	[■]: remove_one_time_get_name_and_address
+	[■]: remove_pending_hid_connection
+	[■]: reset_ag_state_on_collision
+	[■]: respect_ble_scan_setting
+	[ ]: retry_esco_with_zero_retransmission_effort
+	[ ]: rfcomm_always_disc_initiator_in_disc_wait_ua
+	[■]: rfcomm_always_use_mitm
+	[■]: rfcomm_cancel_ongoing_sdp_on_close
+	[■]: rfcomm_prevent_unnecessary_collisions
+	[ ]: rnr_directly_call_gap_over_le
+	[ ]: rnr_store_device_type
+	[ ]: rnr_validate_page_scan_repetition_mode
+	[ ]: rpa_offload_to_bt_controller
+	[■]: run_ble_audio_ticks_in_worker_thread
+	[■]: run_clock_recovery_in_worker_thread
+	[■]: save_initial_hid_connection_policy
+	[■]: save_peer_csrk_after_ltk_gen
+	[ ]: scan_manager_refactor
+	[■]: scan_record_manufacturer_data_merge
+	[■]: sec_disconnect_on_le_key_missing
+	[■]: sec_dont_clear_keys_on_encryption_err
+	[■]: serialize_hogp_and_dis
+	[ ]: set_addressed_player
+	[ ]: set_max_data_length_for_lecoc
+	[■]: settings_can_control_hap_preset
+	[■]: signal_connecting_on_focus_gain
+	[ ]: skip_unknown_robust_caching
+	[■]: smp_state_machine_stuck_after_disconnection_fix
+	[■]: snoop_logger_tracing
+	[ ]: socket_settings_api
+	[ ]: stack_sdp_detect_nil_property_type
+	[■]: stop_on_offload_fail
+	[ ]: support_bluetooth_quality_report_v6
+	[■]: support_exclusive_manager
+	[ ]: support_metadata_device_types_apis
+	[ ]: support_remote_device_metadata
+	[■]: suppress_hid_rejection_broadcast
+	[ ]: system_server_messenger
+	[■]: temporary_pairing_device_properties
+	[■]: transmit_smp_packets_before_release
+	[ ]: trigger_sec_proc_on_inc_access_req
+	[■]: unbonded_profile_forbid_fix
+	[■]: uncache_player_when_browsed_player_changes
+	[■]: unix_file_socket_creation_failure
+	[■]: update_active_device_in_band_ringtone
+	[■]: update_sco_state_correctly_on_rfcomm_disconnect_during_codec_nego
+	[ ]: use_entire_message_handle
+	[ ]: use_le_shim_connection_map_guard
+	[■]: use_local_oob_extended_command
+	[ ]: vcp_mute_unmute
+	[■]: wait_for_disconnect_before_unbond
+	[ ]: wait_for_lea_disc_on_le_acl_stat
+
+
+AdapterProperties
+  Name: POCO X3 NFC
+  Address: XX:XX:XX:XX:4E:59
+  ConnectionState: STATE_CONNECTED
+  State: ON
+  MaxConnectedAudioDevices: 5
+  A2dpOffloadEnabled: true
+  Discovering: false
+  DiscoveryEndMs: 0
+  Bonded devices:
+    XX:XX:XX:XX:D6:FB [BR/EDR][ 0x240404 ] Magnetic Speaker
+    XX:XX:XX:XX:33:59 [ DUAL ][ 0x7E0408 ] Navegadortz2
+    XX:XX:XX:XX:E4:95 [ DUAL ][ 0x5A020C ] motorola edge 30 neo
+    XX:XX:XX:XX:0C:00 [BR/EDR][ 0x240420 ] BC8-Android
+    XX:XX:XX:XX:C7:1E [ DUAL ][ 0x001F00 ] FX Plus
+
+ScanMode: SCAN_MODE_CONNECTABLE
+Scan Mode Changes:
+    09-10 21:50:44.276 (processProfileServiceStateChanged) SCAN_MODE_CONNECTABLE
+
+sSnoopLogSettingAtEnable = EMPTY
+sDefaultSnoopLogSettingAtEnable = null
+
+Enabled Profile Services:
+  GATT
+  A2DP
+  AVRCP
+  BATTERY
+  HEADSET
+  HEARING_AID
+  HID_DEVICE
+  HID_HOST
+  MAP
+  OPP
+  PAN
+  PBAP
+  SAP
+
+AdapterState:
+ total records=4
+ rec[0]: time=09-10 21:50:44.082 processed=OffState org=OffState dest=TurningBleOnState what=3(0x3) BLE_TURN_ON
+ rec[1]: time=09-10 21:50:44.144 processed=TurningBleOnState org=TurningBleOnState dest=BleOnState what=7(0x7) BLE_STARTED
+ rec[2]: time=09-10 21:50:44.145 processed=BleOnState org=BleOnState dest=TurningOnState what=1(0x1) USER_TURN_ON
+ rec[3]: time=09-10 21:50:44.320 processed=TurningOnState org=TurningOnState dest=OnState what=5(0x5) BREDR_STARTED
+curState=OnState
+
+SilenceDeviceManager:
+  Address            | Is silenced?
+  XX:XX:XX:XX:33:59  | false
+  XX:XX:XX:XX:C7:1E  | false
+
+BluetoothDatabase:
+  Metadata Changes:
+
+Metadata:
+    XX:XX:XX:XX:33:59 last_active_time=8 {profile connection policy(A2DP=100|A2DP_SINK=-1|CSIP_SET_COORDINATOR=-1|HEADSET=100|HEADSET_CLIENT=-1|HID_HOST=-1|PAN=-1|PBAP=100|PBAP_CLIENT=-1|MAP=-1|MAP_CLIENT=-1|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=-1), optional codec(support=1|enabled=1), isActiveHfpDevice (true), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=Carkit|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null|exclusive_manager=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0), is_preferred_microphone_for_calls(true)}
+    XX:XX:XX:XX:E4:95 last_active_time=0 {profile connection policy(A2DP=-1|A2DP_SINK=-1|CSIP_SET_COORDINATOR=-1|HEADSET=-1|HEADSET_CLIENT=-1|HID_HOST=-1|PAN=100|PBAP=-1|PBAP_CLIENT=-1|MAP=-1|MAP_CLIENT=-1|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=-1), optional codec(support=-1|enabled=-1), isActiveHfpDevice (false), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=Carkit|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null|exclusive_manager=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0), is_preferred_microphone_for_calls(true)}
+    XX:XX:XX:XX:C7:1E last_active_time=5 {profile connection policy(A2DP=100|A2DP_SINK=-1|CSIP_SET_COORDINATOR=-1|HEADSET=100|HEADSET_CLIENT=-1|HID_HOST=-1|PAN=-1|PBAP=-1|PBAP_CLIENT=-1|MAP=-1|MAP_CLIENT=-1|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=100), optional codec(support=1|enabled=1), isActiveHfpDevice (false), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=null|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null|exclusive_manager=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0), is_preferred_microphone_for_calls(true)}
+    XX:XX:XX:XX:0C:00 last_active_time=0 {profile connection policy(A2DP=100|A2DP_SINK=-1|CSIP_SET_COORDINATOR=-1|HEADSET=100|HEADSET_CLIENT=-1|HID_HOST=-1|PAN=-1|PBAP=-1|PBAP_CLIENT=-1|MAP=-1|MAP_CLIENT=-1|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=-1), optional codec(support=0|enabled=-1), isActiveHfpDevice (false), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=null|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null|exclusive_manager=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0), is_preferred_microphone_for_calls(true)}
+    XX:XX:XX:XX:D6:FB last_active_time=0 {profile connection policy(A2DP=100|A2DP_SINK=-1|CSIP_SET_COORDINATOR=-1|HEADSET=100|HEADSET_CLIENT=-1|HID_HOST=-1|PAN=-1|PBAP=-1|PBAP_CLIENT=-1|MAP=-1|MAP_CLIENT=-1|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=-1), optional codec(support=0|enabled=-1), isActiveHfpDevice (false), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=null|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null|exclusive_manager=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0), is_preferred_microphone_for_calls(true)}
+
+Profile: GattService
+
+Registered App
+  Scanner:
+      app_if: 2, appName: com.google.uid.shared:10198, tag: nearby_connections
+      app_if: 3, appName: com.google.uid.shared:10198, tag: nearby_fast_pair
+      app_if: 1, appName: com.google.uid.shared:10198, tag: nearby_sharing
+  Client:
+      app_if: 47, appName: android.uid.bluetooth:1002
+  Server:
+
+
+GATT Scanner Map
+  Entries: 2
+
+  com.google.uid.shared:10198 (Registered)
+  LE scans (started/stopped)                                  : 4 / 1
+  Scan time in ms (active/suspend/total)                      : 451000 / 0 / 451000
+  Scan time with mode in ms (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 156268 / 0 / 0
+  Scan mode counter (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 2 / 0 / 294734
+  Score                                                       : 39067
+  Total number of results                                     : 22
+  Last 1 scans                                                :
+    09-10 21:50:44 - 6018ms Filter 0 results (1)  [nearby_sharing] CB Regular Scan
+      └ Scan Config: [ ScanMode=BALANCED, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fe2c-0000-1000-8000-00805f9b34fb ServiceData=[-4, 18, -114] ]
+      └ BluetoothLeScanFilter [ ServiceUuid=0000fe2c-0000-1000-8000-00805f9b34fb ]
+  Ongoing scans                                               :
+    09-10 21:50:50 - 144398ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=AMBIENT_DISCOVERY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fe2c-0000-1000-8000-00805f9b34fb ServiceData=[-4, 18, -114] ]
+      └ BluetoothLeScanFilter [ ServiceUuid=0000fe2c-0000-1000-8000-00805f9b34fb ]
+    09-10 21:50:44 - 150334ms Filter 22 results (2) CB Regular Scan
+      └ Scan Config: [ ScanMode=AMBIENT_DISCOVERY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceUuid=0000fef3-0000-1000-8000-00805f9b34fb ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fc73-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fef3-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+    09-10 21:50:44 - 150250ms Filter 0 results (3) CB Regular Scan
+      └ Scan Config: [ ScanMode=BALANCED, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000feaa-0000-1000-8000-00805f9b34fb ServiceData=[64] ServiceDataMask=[-16] ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fff6-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fe2c-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+  Application ID: 2, UUID: c76c0c49-0cbf-4d0b-88d2-5d4fce429b4a, Tag: nearby_connections
+  Application ID: 3, UUID: cfa0e413-956a-4227-af68-9ebf20468346, Tag: nearby_fast_pair
+  Application ID: 1, UUID: 72426143-e092-43dc-adf5-1bfa2b7434a1, Tag: nearby_sharing
+
+  com.spotify.music
+  LE scans (started/stopped)                                  : 1 / 1
+  Scan time in ms (active/suspend/total)                      : 35468 / 0 / 35468
+  Scan time with mode in ms (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 35468 / 0 / 0
+  Scan mode counter (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 1 / 0 / 0
+  Score                                                       : 8867
+  Total number of results                                     : 0
+  Last 1 scans                                                :
+    09-10 21:50:47 - 35468ms Filter 0 results (4) CB Regular Scan
+      └ Scan Config: [ ScanMode=BALANCED, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceUuid=3e1d50cd-7e3e-427d-8e1c-b78aa87fe624 ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=3e1d50cd-7e3e-427d-8e1c-b78aa87fe624 ServiceData=[] ]
+
+GATT Advertiser Map
+  Total number of ongoing advertising                   : 1
+  Ongoing advertising:
+    com.google.uid.shared:10198
+     Tag                                                : nearby_connections
+     Advertising ID                                     : 0
+      1:
+        └Start time                                     : 09-10 21:50:44
+        └Elapsed time                                   : 150308ms
+        └Duration(10ms unit)                            : 0
+        └Maximum number of extended advertising events  : 0
+      └Advertising:
+        └Interval(0.625ms)                              : 400
+        └TX POWER(dbm)                                  : 1
+        └Primary Phy                                    : LE_1M
+        └Secondary Phy                                  : LE_1M
+        └Legacy                                         : true
+        └Anonymous                                      : false
+        └Connectable                                    : false
+        └Scannable                                      : false
+        └Advertise Data:
+          └Include Device Name                          : false
+          └Include Tx Power Level                       : false
+          └Service Data(UUID, length of data)           : 
+            [0000fef3-xxxx-xxxx-xxxx-xxxxxxxxxxxx, 27]
+
+GATT Client Map
+  Entries: 1
+
+GATT Server Map
+  Entries: 0
+
+GATT Handle Map
+  Entries: 0
+  Requests: 0
+
+Profile: A2dpService
+  mActiveDevice: XX:XX:XX:XX:33:59
+  mMaxConnectedAudioDevices: 5
+  codecConfigPriorities:
+    SBC: 1001
+    AAC: 2001
+    aptX: 3001
+    aptX HD: 4001
+    LDAC: 5001
+    Opus: 7001
+  mA2dpOffloadEnabled: true
+  codecConfigOffloading:
+  === A2dpStateMachine for XX:XX:XX:XX:33:59 (Active) ===
+    getConnectionPolicy: 100
+    mConnectionState: STATE_CONNECTED, mLastConnectionState: STATE_CONNECTING
+    mIsPlaying: true
+    getSupportsOptionalCodecs: 1, getOptionalCodecsEnabled: 1
+    mCodecConfig: {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+    mCodecsSelectableCapabilities:
+      {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+      {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+    StateMachine: name=A2dpStateMachine state=Connected
+    StateMachineLog:
+      A2dpStateMachine:
+       total records=6
+       rec[0]: time=09-10 21:51:18.413 processed=Disconnected org=Disconnected dest=Connecting what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CONNECTION_STATE_CHANGED, device:XX:XX:XX:XX:33:59, value1:STATE_CONNECTING}
+       rec[1]: time=09-10 21:51:18.563 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CODEC_CONFIG_CHANGED, device:XX:XX:XX:XX:33:59, value1:0, codecStatus:{mCodecConfig:{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0},mCodecsLocalCapabilities:[{codecName:LDAC,mCodecType:4,mCodecPriority:5001,mSampleRate:0xf(44100|48000|88200|96000),mBitsPerSample:0x7(16|24|32),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX HD,mCodecType:3,mCodecPriority:4001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x2(24),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX,mCodecType:2,mCodecPriority:3001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}],mCodecsSelectableCapabilities:[{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}]}}
+       rec[2]: time=09-10 21:51:18.590 processed=Connecting org=Connecting dest=Connected what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CONNECTION_STATE_CHANGED, device:XX:XX:XX:XX:33:59, value1:STATE_CONNECTED}
+       rec[3]: time=09-10 21:51:18.612 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CODEC_CONFIG_CHANGED, device:XX:XX:XX:XX:33:59, value1:0, codecStatus:{mCodecConfig:{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0},mCodecsLocalCapabilities:[{codecName:LDAC,mCodecType:4,mCodecPriority:5001,mSampleRate:0xf(44100|48000|88200|96000),mBitsPerSample:0x7(16|24|32),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX HD,mCodecType:3,mCodecPriority:4001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x2(24),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX,mCodecType:2,mCodecPriority:3001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}],mCodecsSelectableCapabilities:[{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}]}}
+       rec[4]: time=09-10 21:51:18.620 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CODEC_CONFIG_CHANGED, device:XX:XX:XX:XX:33:59, value1:0, codecStatus:{mCodecConfig:{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0},mCodecsLocalCapabilities:[{codecName:LDAC,mCodecType:4,mCodecPriority:5001,mSampleRate:0xf(44100|48000|88200|96000),mBitsPerSample:0x7(16|24|32),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX HD,mCodecType:3,mCodecPriority:4001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x2(24),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX,mCodecType:2,mCodecPriority:3001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}],mCodecsSelectableCapabilities:[{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}]}}
+       rec[5]: time=09-10 21:51:22.633 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_AUDIO_STATE_CHANGED, device:XX:XX:XX:XX:33:59, value1:STARTED}
+      curState=Connected
+  === A2dpStateMachine for XX:XX:XX:XX:C7:1E ===
+    getConnectionPolicy: 100
+    mConnectionState: STATE_CONNECTED, mLastConnectionState: STATE_CONNECTING
+    mIsPlaying: false
+    getSupportsOptionalCodecs: 1, getOptionalCodecsEnabled: 1
+    mCodecConfig: {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+    mCodecsSelectableCapabilities:
+      {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+      {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+    StateMachine: name=A2dpStateMachine state=Connected
+    StateMachineLog:
+      A2dpStateMachine:
+       total records=5
+       rec[0]: time=09-10 21:50:44.341 processed=Disconnected org=Disconnected dest=Connecting what=1(0x1) CONNECT: arg1=0, arg2=0, obj=null
+       rec[1]: time=09-10 21:50:47.085 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CONNECTION_STATE_CHANGED, device:XX:XX:XX:XX:C7:1E, value1:STATE_CONNECTING}
+       rec[2]: time=09-10 21:50:47.495 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CODEC_CONFIG_CHANGED, device:XX:XX:XX:XX:C7:1E, value1:0, codecStatus:{mCodecConfig:{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0},mCodecsLocalCapabilities:[{codecName:LDAC,mCodecType:4,mCodecPriority:5001,mSampleRate:0xf(44100|48000|88200|96000),mBitsPerSample:0x7(16|24|32),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX HD,mCodecType:3,mCodecPriority:4001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x2(24),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX,mCodecType:2,mCodecPriority:3001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}],mCodecsSelectableCapabilities:[{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}]}}
+       rec[3]: time=09-10 21:50:47.582 processed=Connecting org=Connecting dest=Connected what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CONNECTION_STATE_CHANGED, device:XX:XX:XX:XX:C7:1E, value1:STATE_CONNECTED}
+       rec[4]: time=09-10 21:50:47.622 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=A2dpStackEvent {type:EVENT_TYPE_CODEC_CONFIG_CHANGED, device:XX:XX:XX:XX:C7:1E, value1:0, codecStatus:{mCodecConfig:{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0},mCodecsLocalCapabilities:[{codecName:LDAC,mCodecType:4,mCodecPriority:5001,mSampleRate:0xf(44100|48000|88200|96000),mBitsPerSample:0x7(16|24|32),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX HD,mCodecType:3,mCodecPriority:4001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x2(24),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:aptX,mCodecType:2,mCodecPriority:3001,mSampleRate:0x3(44100|48000),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}],mCodecsSelectableCapabilities:[{codecName:AAC,mCodecType:1,mCodecPriority:2001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x2(STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}, {codecName:SBC,mCodecType:0,mCodecPriority:1001,mSampleRate:0x1(44100),mBitsPerSample:0x1(16),mChannelMode:0x3(MONO|STEREO),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}]}}
+      curState=Connected
+
+Profile: AvrcpTargetService:
+  AVRCP version: 1.5
+  List of MediaControllers: size=4
+  <Active>   Media Player 1: com.spotify.music
+    MediaController (com.spotify.music@95aeb88) Verona, Muse, Will Of The People
+    Current Data:
+      Song: { mediaId="currsong" title="Verona" artist="Muse" album="Will Of The People" genre="" duration=298000 trackPosition=1/1 image=<Image source=2> }
+      PlayState: PlaybackState {state=PLAYING(3), position=159, buffered position=0, speed=1.0, updated=226588593, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+      Queue: size=50
+        { mediaId="NowPlayingId6" title="Verona" artist="Muse" album="" genre="" duration=0 trackPosition=1/50 image=null }
+        { mediaId="NowPlayingId7" title="Cracker Island (feat. Thundercat)" artist="Gorillaz, Thundercat" album="" genre="" duration=0 trackPosition=2/50 image=null }
+        { mediaId="NowPlayingId8" title="#BrooklynBloodPop!" artist="SyKo" album="" genre="" duration=0 trackPosition=3/50 image=null }
+        { mediaId="NowPlayingId9" title="A Gallant Gentleman" artist="We Lost The Sea" album="" genre="" duration=0 trackPosition=4/50 image=null }
+        { mediaId="NowPlayingId10" title="пластинки" artist="Дурной Вкус" album="" genre="" duration=0 trackPosition=5/50 image=null }
+        { mediaId="NowPlayingId11" title="I Don't Care" artist="VIOLENT VIRA" album="" genre="" duration=0 trackPosition=6/50 image=null }
+        { mediaId="NowPlayingId12" title="Sunroof" artist="Nicky Youre, hey daisy" album="" genre="" duration=0 trackPosition=7/50 image=null }
+        { mediaId="NowPlayingId13" title="Lost In Yesterday" artist="Tame Impala" album="" genre="" duration=0 trackPosition=8/50 image=null }
+        { mediaId="NowPlayingId14" title="Trilogy" artist="Silent Planet" album="" genre="" duration=0 trackPosition=9/50 image=null }
+        { mediaId="NowPlayingId15" title="Satanized" artist="Ghost" album="" genre="" duration=0 trackPosition=10/50 image=null }
+        { mediaId="NowPlayingId16" title="Mr. Fear" artist="SIAMES" album="" genre="" duration=0 trackPosition=11/50 image=null }
+        { mediaId="NowPlayingId17" title="Secrets" artist="The Weeknd" album="" genre="" duration=0 trackPosition=12/50 image=null }
+        { mediaId="NowPlayingId18" title="Are You What You Want to Be?" artist="Foster The People" album="" genre="" duration=0 trackPosition=13/50 image=null }
+        { mediaId="NowPlayingId19" title="Sign 'O' the Times" artist="Steven Wilson" album="" genre="" duration=0 trackPosition=14/50 image=null }
+        { mediaId="NowPlayingId20" title="Outlaw" artist="Fatum" album="" genre="" duration=0 trackPosition=15/50 image=null }
+        { mediaId="NowPlayingId21" title="Shedding" artist="The fin." album="" genre="" duration=0 trackPosition=16/50 image=null }
+        { mediaId="NowPlayingId22" title="Abyss - from Kaiju No. 8" artist="YUNGBLUD" album="" genre="" duration=0 trackPosition=17/50 image=null }
+        { mediaId="NowPlayingId23" title="Another Way" artist="GIGI D'AGOSTINO" album="" genre="" duration=0 trackPosition=18/50 image=null }
+        { mediaId="NowPlayingId24" title="Lluvia Con Nieve - En Vivo" artist="Puerto Candelaria" album="" genre="" duration=0 trackPosition=19/50 image=null }
+        { mediaId="NowPlayingId25" title="Ayo Mba" artist="Yamê" album="" genre="" duration=0 trackPosition=20/50 image=null }
+        { mediaId="NowPlayingId26" title="Why'd You Only Call Me When You're High?" artist="Arctic Monkeys" album="" genre="" duration=0 trackPosition=21/50 image=null }
+        { mediaId="NowPlayingId27" title="Propaganda" artist="Muse" album="" genre="" duration=0 trackPosition=22/50 image=null }
+        { mediaId="NowPlayingId28" title="Undercover Martyn" artist="Two Door Cinema Club" album="" genre="" duration=0 trackPosition=23/50 image=null }
+        { mediaId="NowPlayingId29" title="La Virgen de La Humanidad" artist="Vetusta Morla" album="" genre="" duration=0 trackPosition=24/50 image=null }
+        { mediaId="NowPlayingId30" title="Lovely (feat. Charlotte Buchholz)" artist="Time, The Valuator, Charlotte Buchholz" album="" genre="" duration=0 trackPosition=25/50 image=null }
+        { mediaId="NowPlayingId31" title="Be My Fire" artist="The Blue Stones" album="" genre="" duration=0 trackPosition=26/50 image=null }
+        { mediaId="NowPlayingId32" title="MIDDLE OF THE NIGHT" artist="Loveless" album="" genre="" duration=0 trackPosition=27/50 image=null }
+        { mediaId="NowPlayingId33" title="The Creator Has A Mastertape - Live" artist="Steven Wilson" album="" genre="" duration=0 trackPosition=28/50 image=null }
+        { mediaId="NowPlayingId34" title="Pray" artist="I Prevail" album="" genre="" duration=0 trackPosition=29/50 image=null }
+        { mediaId="NowPlayingId35" title="Around the World" artist="Daft Punk" album="" genre="" duration=0 trackPosition=30/50 image=null }
+        { mediaId="NowPlayingId36" title="Emerald Star" artist="Lord Huron" album="" genre="" duration=0 trackPosition=31/50 image=null }
+        { mediaId="NowPlayingId37" title="Objects Outlive Us" artist="Steven Wilson" album="" genre="" duration=0 trackPosition=32/50 image=null }
+        { mediaId="NowPlayingId38" title="Find You" artist="Zedd, Matthew Koma, Miriam Bryant" album="" genre="" duration=0 trackPosition=33/50 image=null }
+        { mediaId="NowPlayingId39" title="Radio" artist="Rammstein" album="" genre="" duration=0 trackPosition=34/50 image=null }
+        { mediaId="NowPlayingId40" title="Everlast - Extended Mix" artist="Rub!k" album="" genre="" duration=0 trackPosition=35/50 image=null }
+        { mediaId="NowPlayingId41" title="Ends of the Earth" artist="Lord Huron" album="" genre="" duration=0 trackPosition=36/50 image=null }
+        { mediaId="NowPlayingId42" title="Flying Whales" artist="Gojira" album="" genre="" duration=0 trackPosition=37/50 image=null }
+        { mediaId="NowPlayingId43" title="Distopía" artist="Mad Tree" album="" genre="" duration=0 trackPosition=38/50 image=null }
+        { mediaId="NowPlayingId44" title="True Friends - Live at the Royal Albert Hall" artist="Bring Me The Horizon" album="" genre="" duration=0 trackPosition=39/50 image=null }
+        { mediaId="NowPlayingId45" title="Duele Si Te Vas" artist="TELEBIT" album="" genre="" duration=0 trackPosition=40/50 image=null }
+        { mediaId="NowPlayingId46" title="12 THINGS I FORGOT" artist="Steven Wilson" album="" genre="" duration=0 trackPosition=41/50 image=null }
+        { mediaId="NowPlayingId47" title="We Are Fucking Fucked" artist="Muse" album="" genre="" duration=0 trackPosition=42/50 image=null }
+        { mediaId="NowPlayingId48" title="Major Rotation" artist="Griffin Benton" album="" genre="" duration=0 trackPosition=43/50 image=null }
+        { mediaId="NowPlayingId49" title="Staring" artist="Tipling Rock" album="" genre="" duration=0 trackPosition=44/50 image=null }
+        { mediaId="NowPlayingId50" title="Easy Way Out" artist="Low Roar" album="" genre="" duration=0 trackPosition=45/50 image=null }
+        { mediaId="NowPlayingId51" title="This Is War" artist="Thirty Seconds To Mars" album="" genre="" duration=0 trackPosition=46/50 image=null }
+        { mediaId="NowPlayingId52" title="Sunburn" artist="Muse" album="" genre="" duration=0 trackPosition=47/50 image=null }
+        { mediaId="NowPlayingId53" title="The Solitary Path of a Convicted Man" artist="Bruce Soord" album="" genre="" duration=0 trackPosition=48/50 image=null }
+        { mediaId="NowPlayingId54" title="Fake Lies" artist="JON T" album="" genre="" duration=0 trackPosition=49/50 image=null }
+        { mediaId="NowPlayingId55" title="Ugo" artist="The Dead Pirates" album="" genre="" duration=0 trackPosition=50/50 image=null }
+    BTAudio Playback State change Event:
+      09-10 21:52:48.593 onPlaybackStateChanged(): com.spotify.music : PlaybackState {state=PLAYING(3), position=128, buffered position=0, speed=1.0, updated=226588561, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+      09-10 21:52:48.626 onPlaybackStateChanged(): com.spotify.music : PlaybackState {state=PLAYING(3), position=154, buffered position=0, speed=1.0, updated=226588588, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+      09-10 21:52:48.770 onPlaybackStateChanged(): com.spotify.music : PlaybackState {state=PLAYING(3), position=301, buffered position=0, speed=1.0, updated=226588737, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+      09-10 21:52:48.927 onPlaybackStateChanged(): com.spotify.music : PlaybackState {state=PLAYING(3), position=438, buffered position=0, speed=1.0, updated=226588891, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+      09-10 21:52:48.930 onPlaybackStateChanged(): com.spotify.music : PlaybackState {state=PLAYING(3), position=444, buffered position=0, speed=1.0, updated=226588895, actions=3025843, custom actions=[Action:mName='Toggle shuffle, mIcon=2131233639, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Remove from collection, mIcon=2131233598, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start radio, mIcon=2131233646, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Start repeating one track, mIcon=2131233633, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=6, error=null}
+  
+    Media Player 2: org.videolan.vlc
+    MediaController (org.videolan.vlc@2a9e921) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not provided" artist="" album="" genre="" duration=0 trackPosition=1/1 image=null }
+      PlayState: PlaybackState {state=NONE(0), position=0, buffered position=0, speed=1.0, updated=226081302, actions=4210508, custom actions=[Action:mName='Rewind, mIcon=2131231002, mExtras=Bundle[mParcelledData.dataSize=144], Action:mName='Fast forward, mIcon=2131230985, mExtras=Bundle[mParcelledData.dataSize=144]], active item id=-1, error=null}
+      Queue: size=0
+    BTAudio Playback State change Event:
+  
+    Media Player 3: org.lineageos.twelve
+    MediaController (org.lineageos.twelve@65f6ec1) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not provided" artist="" album="" genre="" duration=0 trackPosition=1/1 image=null }
+      PlayState: PlaybackState {state=NONE(0), position=0, buffered position=0, speed=0.0, updated=226464256, actions=7339653, custom actions=[Action:mName='Shuffle off, mIcon=2131231107, mExtras=Bundle[mParcelledData.dataSize=164], Action:mName='Repeat off, mIcon=2131231102, mExtras=Bundle[mParcelledData.dataSize=172]], active item id=0, error=null}
+      Queue: size=0
+    BTAudio Playback State change Event:
+  
+    Media Player 4: com.maxmpz.audioplayer
+    MediaController (com.maxmpz.audioplayer@4a72666) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not provided" artist="" album="" genre="" duration=0 trackPosition=1/1 image=null }
+      PlayState: PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=1.0, updated=226464417, actions=2621439, custom actions=[Action:mName='Shuffle Songs, mIcon=2130838800, mExtras=null, Action:mName='Close, mIcon=2130838811, mExtras=null, Action:mName='Play Single Song, mIcon=2130838792, mExtras=null, Action:mName='-10, mIcon=2130838807, mExtras=null, Action:mName='+10, mIcon=2130838808, mExtras=null], active item id=-1, error=null}
+      Queue: size=0
+    BTAudio Playback State change Event:
+  
+  List of Browsers: size=3
+    Browsable Package Name: org.videolan.vlc
+       Cached Media ID's: "//org.videolan.vlc/r", 
+  
+    Browsable Package Name: org.lineageos.twelve
+       Cached Media ID's: "[root]", 
+  
+    Browsable Package Name: com.maxmpz.audioplayer
+       Cached Media ID's: "/", 
+  
+  BTAudio Active Player Events:
+    09-10 21:50:44.599 setActivePlayer(): setting player to com.spotify.music
+  
+  BTAudio Audio Playback State Events:
+  
+  BTAudio Media Key Events:
+  
+  AvrcpVolumeManager:
+    mCurrentDevice: XX:XX:XX:XX:33:59
+    Current System Volume: 25
+    Device Volume Memory Map:
+      Device Address    : Device Name    : Vol : AbsVol
+      11:47:9D:51:0C:00 : BC8-Android    :  22 : NotConnected
+      11:46:03:10:33:59 : Navegadortz2   :  25 : false
+      2E:F0:03:99:D6:FB : Magnetic Sp... :   9 : NotConnected
+      D0:D9:4F:C2:C7:1E : FX Plus        :  12 : true
+    BTAudio Volume Events:
+      09-10 21:50:50.034 switchVolumeDevice: Updating device volume: avrcpVolume=61
+      09-10 21:51:21.623 storeVolume: Storing stream volume level for device XX:XX:XX:XX:33:59 : 25
+
+Profile: BatteryService
+  mDevice: XX:XX:XX:XX:C7:1E
+    StateMachine: name=BatteryStateMachine state=Connecting
+    BluetoothGatt: android.bluetooth.BluetoothGatt@2af123d
+    StateMachineLog:
+      BatteryStateMachine:
+       total records=1
+       rec[0]: time=09-10 21:50:53.103 processed=Disconnected org=Disconnected dest=Connecting what=1(0x1)
+      curState=Connecting
+
+Profile: HeadsetService
+  mMaxHeadsetConnections: 5
+  DefaultMaxHeadsetConnections: 5
+  mActiveDevice: XX:XX:XX:XX:33:59
+  isInbandRingingEnabled: false
+  isInbandRingingSupported: true
+  mInbandRingingRuntimeDisable: true
+  mAudioRouteAllowed: true
+  mVoiceRecognitionStarted: false
+  mVoiceRecognitionTimeoutEvent: null
+  mVirtualCallStarted: false
+  mDialingOutTimeoutEvent: null
+  mForceScoAudio: false
+  AudioManager.isBluetoothScoOn(): false
+  Telecom.isInCall(): false
+  Telecom.isRinging(): false
+  ==== StateMachine for XX:XX:XX:XX:33:59 ====
+    mCurrentDevice: XX:XX:XX:XX:33:59
+    mCurrentState: Connected
+    mPrevState: Connecting
+    mConnectionState: 2
+    mAudioState: 10
+    mNeedDialingOutReply: false
+    mSpeakerVolume: 10
+    mMicVolume: 0
+    mConnectingTimestampMs(uptimeMillis): 130273202
+    mHsClientAudioPolicy: BluetoothSinkAudioPolicy{mCallEstablishPolicy: 0, mConnectingTimePolicy: 0, mInBandRingtonePolicy: 0}
+    StateMachine: name=HeadsetStateMachine state=Connected
+    StateMachineLog:
+      HeadsetStateMachine:
+       total records=15
+       rec[0]: time=09-10 21:51:18.177 processed=Disconnected org=Disconnected dest=Connecting what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_CONNECTION_STATE_CHANGED[1], valInt=1, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[1]: time=09-10 21:51:18.182 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_CONNECTION_STATE_CHANGED[1], valInt=2, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[2]: time=09-10 21:51:18.255 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_WBS[17], valInt=2, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[3]: time=09-10 21:51:18.255 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_SWB[21], valInt=0, valInt2=1, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[4]: time=09-10 21:51:18.293 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_AT_CIND[12], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[5]: time=09-10 21:51:18.318 processed=Connecting org=Connecting dest=Connected what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_CONNECTION_STATE_CHANGED[1], valInt=3, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[6]: time=09-10 21:51:18.349 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIA[20], valInt=0, valInt2=0, valString=null, valObject=HeadsetAgIndicatorEnableState[service=true, roam=true, signal=true, battery=true], device=XX:XX:XX:XX:33:59
+       rec[7]: time=09-10 21:51:18.349 processed=Connected org=Connected dest=<null> what=13(0xd) UNKNOWN(13): arg1=0, arg2=0, obj=null
+       rec[8]: time=09-10 21:51:18.428 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_NOISE_REDUCTION[9], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[9]: time=09-10 21:51:18.434 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_UNKNOWN_AT[15], valInt=0, valInt2=0, valString=+ANDROID=?, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[10]: time=09-10 21:51:18.610 processed=Connected org=Connected dest=<null> what=13(0xd) UNKNOWN(13): arg1=0, arg2=0, obj=null
+       rec[11]: time=09-10 21:51:18.619 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_AT_COPS[13], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[12]: time=09-10 21:51:18.665 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_VOLUME_CHANGED[6], valInt=0, valInt2=10, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[13]: time=09-10 21:51:18.675 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_SUBSCRIBER_NUMBER_REQUEST[11], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+       rec[14]: time=09-10 21:51:18.699 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_AT_CLCC[14], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:33:59
+      curState=Connected
+  ==== StateMachine for XX:XX:XX:XX:C7:1E ====
+    mCurrentDevice: XX:XX:XX:XX:C7:1E
+    mCurrentState: Connected
+    mPrevState: Connecting
+    mConnectionState: 2
+    mAudioState: 10
+    mNeedDialingOutReply: false
+    mSpeakerVolume: 0
+    mMicVolume: 0
+    mConnectingTimestampMs(uptimeMillis): 130239359
+    mHsClientAudioPolicy: BluetoothSinkAudioPolicy{mCallEstablishPolicy: 0, mConnectingTimePolicy: 0, mInBandRingtonePolicy: 0}
+    StateMachine: name=HeadsetStateMachine state=Connected
+    StateMachineLog:
+      HeadsetStateMachine:
+       total records=23
+       rec[0]: time=09-10 21:50:46.766 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_WBS[17], valInt=2, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[1]: time=09-10 21:50:46.766 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_SWB[21], valInt=0, valInt2=1, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[2]: time=09-10 21:50:46.809 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_AT_CIND[12], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[3]: time=09-10 21:50:47.006 processed=Connecting org=Connecting dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIND[18], valInt=0, valInt2=0, valString=1,2, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[4]: time=09-10 21:50:47.083 processed=Connecting org=Connecting dest=Connected what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_CONNECTION_STATE_CHANGED[1], valInt=3, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[5]: time=09-10 21:50:47.115 processed=Connected org=Connected dest=<null> what=13(0xd) UNKNOWN(13): arg1=0, arg2=0, obj=null
+       rec[6]: time=09-10 21:50:47.115 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_NOISE_REDUCTION[9], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[7]: time=09-10 21:50:47.115 processed=Connected org=Connected dest=<null> what=10(0xa) DEVICE_STATE_CHANGED: arg1=0, arg2=0, obj=HeadsetDeviceState[hasCellularService=1, isRoaming=0, signalStrength0, batteryCharge=4]
+       rec[8]: time=09-10 21:50:47.115 processed=Connected org=Connected dest=<null> what=10(0xa) DEVICE_STATE_CHANGED: arg1=0, arg2=0, obj=HeadsetDeviceState[hasCellularService=1, isRoaming=0, signalStrength5, batteryCharge=4]
+       rec[9]: time=09-10 21:50:47.215 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_VOLUME_CHANGED[6], valInt=0, valInt2=13, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[10]: time=09-10 21:50:47.410 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIEV[19], valInt=2, valInt2=93, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[11]: time=09-10 21:50:47.468 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIEV[19], valInt=2, valInt2=93, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[12]: time=09-10 21:50:47.495 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_AT_CLCC[14], valInt=0, valInt2=0, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[13]: time=09-10 21:50:47.532 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIA[20], valInt=0, valInt2=0, valString=null, valObject=HeadsetAgIndicatorEnableState[service=true, roam=false, signal=false, battery=false], device=XX:XX:XX:XX:C7:1E
+       rec[14]: time=09-10 21:50:47.533 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_UNKNOWN_AT[15], valInt=0, valInt2=0, valString=+CSRSF=0,0,0,1,0,0,0, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[15]: time=09-10 21:50:47.635 processed=Connected org=Connected dest=<null> what=13(0xd) UNKNOWN(13): arg1=1, arg2=0, obj=null
+       rec[16]: time=09-10 21:51:09.824 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIEV[19], valInt=2, valInt2=92, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[17]: time=09-10 21:51:18.349 processed=Connected org=Connected dest=<null> what=13(0xd) UNKNOWN(13): arg1=0, arg2=0, obj=null
+       rec[18]: time=09-10 21:52:09.806 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIEV[19], valInt=2, valInt2=91, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+       rec[19]: time=09-10 21:53:09.821 processed=Connected org=Connected dest=<null> what=101(0x65) STACK_EVENT: arg1=0, arg2=0, obj=EVENT_TYPE_BIEV[19], valInt=2, valInt2=91, valString=null, valObject=null, device=XX:XX:XX:XX:C7:1E
+      curState=Connected
+
+Profile: HearingAidService
+
+Profile: HidDeviceService
+
+Profile: HidHostService
+  mInputDevices:
+ XX:XX:XX:XX:C7:1E : Selected transport=0 HID connection state=0 HOGP connection state=0
+
+Profile: BluetoothMapService
+  mRemoteDevice: null
+  mState: 0
+  mAppObserver: com.android.bluetooth.map.BluetoothMapAppObserver@1c29da7
+  mIsWaitingAuthorization: false
+  mRemoveTimeoutMsg: false
+  mPermission: 0
+  mAccountChanged: false
+  mBluetoothMnsObexClient: null
+  mMasInstanceMap:
+    null : MasId: 0 Uri:null SMS/MMS:true
+  mEnabledAccounts:
+
+Profile: BluetoothOppService
+
+Profile: PanService
+  mMaxPanDevices: 5
+  mPanIfName: bt-pan
+  mTetherOn: false
+  mPanDevices:
+    XX:XX:XX:XX:33:59 : com.android.bluetooth.pan.PanService$BluetoothPanDevice@7e68146
+
+Profile: BluetoothPbapService
+
+Profile: SapService
+
+Connection Events:
+  None
+
+Bond Events: 
+  Total Number of events: 0
+
+Link Key Types:
+  xx:xx:xx:xx:d6:fb
+    BR: UNAUTH_COMB
+    LE:
+  xx:xx:xx:xx:33:59
+    BR: AUTH_COMB_P_256
+    LE: LE_KEY_PENC LE_KEY_PID LE_KEY_LENC LE_KEY_LCSRK LE_KEY_LID
+  xx:xx:xx:xx:e4:95
+    BR: AUTH_COMB_P_256
+    LE: LE_KEY_PENC LE_KEY_PID LE_KEY_PCSRK LE_KEY_LENC LE_KEY_LCSRK LE_KEY_LID
+  xx:xx:xx:xx:0c:00
+    BR: COMBINATION
+    LE:
+  xx:xx:xx:xx:c7:1e
+    BR: UNAUTH_COMB
+    LE:
+
+AVRCP Native State:
+  Devices (0 / 5):
+
+A2DP State:
+  TxQueue:
+  Counts (enqueue/dequeue/readbuf)                        : 4886 / 4839 / 9725
+  Last update time ago in ms (enqueue/dequeue/readbuf)    : 17 / 16 / 16
+  Frames per packet (total/max/ave)                       : 4839 / 1 / 0
+  Counts (flushed/dropped/dropouts)                       : 0 / 0 / 0
+  Counts (max dropped)                                    : 0
+  Last update time ago in ms (flushed/dropped)            : 0 / 0
+  Counts (underflow)                                      : 0
+  Bytes (underflow)                                       : 0
+  Last update time ago in ms (underflow)                  : 0
+  Enqueue deviation counts (overdue/premature)            : 2411 / 2451
+  Enqueue overdue scheduling time in ms (total/max/ave)   : 296 / 0 / 0
+  Enqueue premature scheduling time in ms (total/max/ave) : 296 / 0 / 0
+  Dequeue deviation counts (overdue/premature)            : 2544 / 2286
+  Dequeue overdue scheduling time in ms (total/max/ave)   : 1926 / 25 / 0
+  Dequeue premature scheduling time in ms (total/max/ave) : 869 / 22 / 0
+
+A2DP Codecs State:
+  Current Codec: AAC
+
+A2DP LDAC State:
+  Priority: 5001
+  Config: Invalid
+  Selectable: Invalid
+  Local capability: Rate=44100|48000|88200|96000 Bits=16|24|32 Mode=STEREO
+  LDAC quality mode                                       : HIGH
+  LDAC transmission bitrate (Kbps)                        : -1
+  LDAC saved transmit queue length                        : 0
+  Encoder interval (ms): 20
+  Effective MTU: 0
+  Packet counts (expected/dropped)                        : 0 / 0
+  PCM read counts (expected/actual)                       : 0 / 0
+  PCM read bytes (expected/actual)                        : 0 / 0
+
+A2DP aptX-HD State:
+  Priority: 4001
+  Config: Invalid
+  Selectable: Invalid
+  Local capability: Rate=44100|48000 Bits=24 Mode=STEREO
+  Encoder interval (ms): 0
+  Effective MTU: 0
+  Packet counts (expected/dropped)                        : 0 / 0
+  PCM read counts (expected/actual)                       : 0 / 0
+  PCM read bytes (expected/actual)                        : 0 / 0
+
+A2DP aptX State:
+  Priority: 3001
+  Config: Invalid
+  Selectable: Invalid
+  Local capability: Rate=44100|48000 Bits=16 Mode=STEREO
+  Encoder interval (ms): 0
+  Effective MTU: 0
+  Packet counts (expected/dropped)                        : 0 / 0
+  PCM read counts (expected/actual)                       : 0 / 0
+  PCM read bytes (expected/actual)                        : 0 / 0
+
+A2DP AAC State:
+  Priority: 2001
+  Config: Rate=44100 Bits=16 Mode=STEREO
+  Selectable: Rate=44100 Bits=16 Mode=STEREO
+  Local capability: Rate=44100 Bits=16 Mode=STEREO
+  AAC bitrate mode                                        : Constant (0x0)
+  Encoder interval (ms): 23
+  Effective MTU: 1012
+  Packet counts (expected/dropped)                        : 4839 / 0
+  PCM read counts (expected/actual)                       : 4839 / 4839
+  PCM read bytes (expected/actual)                        : 19820544 / 19820544
+
+A2DP SBC State:
+  Priority: 1001
+  Config: Invalid
+  Selectable: Rate=44100 Bits=16 Mode=MONO|STEREO
+  Local capability: Rate=44100 Bits=16 Mode=MONO|STEREO
+  Encoder interval (ms): 20
+  Effective MTU: 0
+  Packet counts (expected/dropped)                        : 0 / 0
+  PCM read counts (expected/actual)                       : 0 / 0
+  PCM read bytes (expected/actual)                        : 0 / 0
+  Frames counts (expected/dropped)                        : 0 / 0
+
+A2DP Peers State:
+  Source: active peer: xx:xx:xx:xx:33:59
+  Sink: active peer: null
+  Peer: xx:xx:xx:xx:c7:1e
+    Number of sinks: 2
+    Number of sources: 0
+    Number of SEPs: 4
+    Number of received sinks: 2
+    Number of received sources: 0
+    Number of supported sinks: 2
+    Number of supported sources: 0
+    Acceptor: false
+    Reconfig needed: false
+    Opened: true
+    MTU: 883
+    UUID to connect: 0x110b
+    BTA AV handle: 65
+  Peer: xx:xx:xx:xx:33:59
+    Number of sinks: 3
+    Number of sources: 0
+    Number of SEPs: 4
+    Number of received sinks: 3
+    Number of received sources: 0
+    Number of supported sinks: 3
+    Number of supported sources: 0
+    Acceptor: true
+    Reconfig needed: false
+    Opened: true
+    MTU: 1012
+    UUID to connect: 0x110b
+    BTA AV handle: 66
+
+A2DP Source State: Enabled
+  Active peer: xx:xx:xx:xx:33:59
+  Peers:
+  Peer: xx:xx:xx:xx:33:59
+    Connected: true
+    Streaming: true
+    SEP: 1(Sink)
+    State Machine: Started
+    Flags: 0x0(None)
+    OpenOnRcTimer: Not scheduled
+    BTA Handle: 0x42
+    Peer ID: 1
+    EDR: true
+    Support 3Mbps: true
+    Self Initiated Connection: false
+    Delay Reporting: 3000 (in 1/10 milliseconds) 
+    Codec Preferred: Optional
+  Peer: xx:xx:xx:xx:c7:1e
+    Connected: true
+    Streaming: false
+    SEP: 1(Sink)
+    State Machine: Opened
+    Flags: 0x0(None)
+    OpenOnRcTimer: Not scheduled
+    BTA Handle: 0x41
+    Peer ID: 0
+    EDR: true
+    Support 3Mbps: true
+    Self Initiated Connection: true
+    Delay Reporting: 2000 (in 1/10 milliseconds) 
+    Codec Preferred: Optional
+
+A2DP Sink State: Disabled
+
+BTA AV State:
+  State Machine State: INIT
+  SDP A2DP source handle: 65539
+  SDP A2DP sink handle: 0
+  Features: 0x865b
+  SDP handle: 65
+  Disabling: false
+  SCO occupied: false
+  Connected audio channels: 2
+  Connected audio channels mask: 0x3
+  Registered audio channels mask: 0x3f
+  Connected LCBs mask: 0x3
+  Offload start pending handle: 0
+  Offload started handle: 0
+
+  Link control block: 0 peer: xx:xx:xx:xx:c7:1e
+    Connected stream handle mask: 0x2
+    Index(+1) to LCB: 1
+
+  Link control block: 1 peer: xx:xx:xx:xx:33:59
+    Connected stream handle mask: 0x4
+    Index(+1) to LCB: 2
+
+  BTA ID: 0 peer: xx:xx:xx:xx:c7:1e
+    SDP discovery started: false
+    SEP ID: 0
+      SEP AVDTP handle: 1
+      Local SEP type: 0
+      Codec: SBC
+    SEP ID: 1
+      SEP AVDTP handle: 2
+      Local SEP type: 0
+      Codec: AAC
+    SEP ID: 2
+      SEP AVDTP handle: 3
+      Local SEP type: 0
+      Codec: aptX
+    SEP ID: 3
+      SEP AVDTP handle: 4
+      Local SEP type: 0
+      Codec: aptX-HD
+    SEP ID: 4
+      SEP AVDTP handle: 5
+      Local SEP type: 0
+      Codec: LDAC
+    BTA info tag: 0
+    API Open peer: 00:00:00:00:00:00
+      Use AVRCP: false
+      Switch result: 0
+      Initiator UUID: 0x0
+    Saved API Open peer: xx:xx:xx:xx:c7:1e
+      Use AVRCP: true
+      Switch result: 0
+      Initiator UUID: 0x110a
+  Link signalling timer: Not scheduled
+  Accept signalling timer: Not scheduled
+    L2CAP Channel ID: 70
+    Stream MTU: 883
+    AVDTP version: 0x103
+    Media type: 0
+    Congested: true
+    Open status: 0
+    Channel: 64
+    BTA handle: 0x41
+    Protocol service capabilities mask: 0x102
+    AVDTP handle: 2
+    Stream control block index: 0
+    State machine state: OPEN(3)
+    AVDTP label: 0x0
+    Application ID: 0
+    Role: 0x0
+    Queued L2CAP buffers: 0
+    AVRCP allowed: true
+    Stream started: false
+    Stream call-out started: 0
+    AVDTP Reconfig supported: true
+    AVDTP Suspend supported: true
+    Deregistering: false
+    SCO automatic Suspend: false
+    Incoming/outgoing connection collusion mask: 0x0
+    Wait mask: 0x0
+    Don't use RTP header: false
+    Intended UUID of Initiator to connect to: 0x110a
+
+  BTA ID: 1 peer: xx:xx:xx:xx:33:59
+    SDP discovery started: false
+    SEP ID: 0
+      SEP AVDTP handle: 13
+      Local SEP type: 0
+      Codec: SBC
+    SEP ID: 1
+      SEP AVDTP handle: 14
+      Local SEP type: 0
+      Codec: AAC
+    SEP ID: 2
+      SEP AVDTP handle: 15
+      Local SEP type: 0
+      Codec: aptX
+    SEP ID: 3
+      SEP AVDTP handle: 16
+      Local SEP type: 0
+      Codec: aptX-HD
+    SEP ID: 4
+      SEP AVDTP handle: 17
+      Local SEP type: 0
+      Codec: LDAC
+    BTA info tag: 3
+    API Open peer: 00:00:00:00:00:00
+      Use AVRCP: false
+      Switch result: 0
+      Initiator UUID: 0x0
+    Saved API Open peer: xx:xx:xx:xx:33:59
+      Use AVRCP: true
+      Switch result: 0
+      Initiator UUID: 0x110a
+  Link signalling timer: Not scheduled
+  Accept signalling timer: Not scheduled
+    L2CAP Channel ID: 86
+    Stream MTU: 1012
+    AVDTP version: 0x103
+    Media type: 0
+    Congested: false
+    Open status: 0
+    Channel: 64
+    BTA handle: 0x42
+    Protocol service capabilities mask: 0x102
+    AVDTP handle: 14
+    Stream control block index: 1
+    State machine state: OPEN(3)
+    AVDTP label: 0x6
+    Application ID: 1
+    Role: 0x0
+    Queued L2CAP buffers: 0
+    AVRCP allowed: true
+    Stream started: true
+    Stream call-out started: 1
+    AVDTP Reconfig supported: true
+    AVDTP Suspend supported: true
+    Deregistering: false
+    SCO automatic Suspend: false
+    Incoming/outgoing connection collusion mask: 0x0
+    Wait mask: 0x0
+    Don't use RTP header: false
+    Intended UUID of Initiator to connect to: 0x110a
+
+AVDTP Stack State:
+  AVDTP signalling L2CAP channel MTU: 672
+
+  Channel control block: 0 peer: xx:xx:xx:xx:c7:1e
+    Allocated: true
+    State: 2
+    Link-layer opened: true
+    Discover in progress: false
+    Congested: false
+    Reinitiate connection on idle: false
+    Command retransmission count: 0
+    BTA AV SCB index: 0
+
+    Stream control block: 1
+      SEP codec: AAC
+      SEP protocol service capabilities: 0x102
+      SEP type: 0x0
+      Media type: 0x0
+      MTU: 1005
+      AVDT SCB handle: 2
+      SCB index: 0
+      Configured codec: AAC
+      Requested codec: AAC
+      Transport channel connect timer: Not scheduled
+      Channel control block peer: xx:xx:xx:xx:c7:1e
+      Allocated: true
+      In use: true
+      Role: 0x3
+      Remove: false
+      State: 3
+      Peer SEID: 3
+      Current event: 43
+      Congested: false
+      Close response code: 0
+
+  Channel control block: 1 peer: xx:xx:xx:xx:33:59
+    Allocated: true
+    State: 2
+    Link-layer opened: true
+    Discover in progress: false
+    Congested: false
+    Reinitiate connection on idle: false
+    Command retransmission count: 0
+    BTA AV SCB index: 1
+
+    Stream control block: 1
+      SEP codec: AAC
+      SEP protocol service capabilities: 0x102
+      SEP type: 0x0
+      Media type: 0x0
+      MTU: 1005
+      AVDT SCB handle: 14
+      SCB index: 1
+      Configured codec: AAC
+      Requested codec: AAC
+      Transport channel connect timer: Not scheduled
+      Channel control block peer: xx:xx:xx:xx:33:59
+      Allocated: true
+      In use: true
+      Role: 0x2
+      Remove: false
+      State: 4
+      Peer SEID: 3
+      Current event: 1
+      Congested: false
+      Close response code: 0
+
+Socket Events: 
+  Time        	Address          	State             	Role              	Channel   	Type     	ServerName
+  21:52:33.004	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:33.254	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:38.288	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:38.611	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:43.653	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:43.998	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:49.024	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:49.293	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:54.334	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:54.551	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:59.586	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:52:59.841	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:53:04.872	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:53:05.111	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:53:10.155	xx:xx:xx:xx:33:59	STATE_CONNECTING   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+  21:53:10.396	xx:xx:xx:xx:33:59	STATE_DISCONNECTED   	ROLE_CONNECTION      	-1         	RFCOMM	4de17a00-52cb-11e6-bdf4-0800200c9a66
+
+
+AVRCP Target Native Service: 2 devices
+    xx:xx:xx:xx:c7:1e
+    Current Volume: 61
+    Current Browsed Player ID: -1
+    Registered Notifications:
+        Play Status
+    Last Play State: 
+    Last Song Sent ID: ""
+    Current Folder: ""
+    MTU Sizes: CTRL=669 BROWSE=332
+
+    xx:xx:xx:xx:33:59 <Active>
+    Current Volume: Absolute Volume not supported
+    Current Browsed Player ID: 0
+    Registered Notifications:
+        Track Changed
+        Play Status
+        Play Position
+        Player Setting Changed
+        Now Playing
+        Addressed Player
+        Available Players
+        UIDs Changed
+    Last Play State: 
+    Last Song Sent ID: ""
+    Current Folder: ""
+    MTU Sizes: CTRL=509 BROWSE=1005
+
+stack::gatt    last 0 tcb state transitions:
+TCB (GATT_MAX_PHY_CHANNEL: 8) in_use: 0
+
+BTA_GATTC_CB state BTA_GATTC_STATE_ENABLED 
+ ->conn_track (GATT_MAX_PHY_CHANNEL=16)
+  -- used: 0
+ ->bg_track (BTA_GATTC_KNOWN_SR_MAX=255)
+  -- used: 0
+ ->cl_rcb (dynamic)
+  client_if: 47  app uuids: a8ee1ebf-2353-bd97-4a4f-0a1006a6f2da  clcb_num: 1
+  client_if: 46  app uuids: ba6f6ad3-4811-8aa7-4150-7ac18891ae33  clcb_num: 0
+  client_if: 45  app uuids: 784489c0-4629-66ab-a95f-8f009588815f  clcb_num: 0
+  client_if: 44  app uuids: edd90a69-6f2a-e2ad-fa68-f81ecc4b646f  clcb_num: 0
+  -- used: 4
+ ->clcb (dynamic)
+  conn_id: 000000  address: xx:xx:xx:xx:c7:1e  transport: BT_TRANSPORT_LE  state: BTA_GATTC_W4_CONN_ST
+  -- used: 1
+ ->known_server (BTA_GATTC_KNOWN_SR_MAX=255)
+  server_address: xx:xx:xx:xx:c7:1e  mtu: 0  blocked_conn_id: 000000  num_clcb: 1  state: BTA_GATTC_SERV_IDLE  connected: 0  srvc_disc_count: 
+
+Bluetooth Iot Config:
+  Config Source: Original file
+  Devices loaded: 37
+  File created/tagged: 2026-04-06 13:49:28
+
+Bluetooth HF Client BTA Statistics
+
+Bluetooth Wakelock Statistics:
+  Is acquired                    : false
+  Acquired/released count        : 23 / 23
+  Acquired/released error count  : 0 / 0
+  Last acquire/release error code: 0 / 0
+  Last acquired time (ms)        : 286
+  Acquired time min/max/avg (ms) : 1 / 85882 / 3967
+  Total acquired time (ms)       : 91250
+  Total run time (ms)            : 147432
+
+Bluetooth Alarms Statistics:
+  Total Alarms: 1
+
+  Alarm : bta_dm.pm_timer (SINGLE)
+    Action counts (sched/resched/exec/cancel)      : 48 / 0 / 3 / 44
+    Deviation counts (overdue/premature)           : 0 / 0
+    Time in ms (since creation/interval/remaining) : 5210 / 7000 / 1790
+    Overdue scheduling time in ms (total/max/avg)  : 0 / 0 / 0
+    Premature scheduling time in ms (total/max/avg): 0 / 0 / 0
+
+Coordinated Set Service Client:
+
+Hearing Access Service Client:
+  no instance
+
+Hearing Aid Manager:
+  Hearing Aid Audio HAL:
+    Counts (underflow)                                      : 0
+    Bytes (underflow)                                       : 0
+    Last update time ago in ms (underflow)                  : 0
+
+Device Groups Manager:
+  Not initialized 
+LeAudio Manager: 
+  Not initialized 
+  LE AudioHalClient:
+    Counts (underflow)                                      : 0
+    Bytes (underflow)                                       : 0
+    Last update time ago in ms (underflow)                  : 0
+
+ AudioSetConfigurationProvider not initialized: config provider: 0, pimpl: 0 
+  ----------------
+   ISO Manager:
+    Available credits: 0
+    Controller buffer size: 0
+    Num of ISO traffic callbacks: 1
+    CISes:
+    BISes:
+  ----------------
+ 
+Le Audio Broadcaster:
+
+Volume Control Manager:
+
+
+connection_manager state:
+	no Low Energy connection attempts
+
+BT Quality Report Events: 
+Event queue is empty.
+ ----- stack::avct -----
+stack::avct  Id: 0 profile_uuid:0x110e role:AVCT_ROLE_ACCEPTOR control:0x47
+stack::avct   Link  : peer:xx:xx:xx:xx:c7:1e lcid:0x0049 sm_state:AVCT_LCB_OPEN_ST(0x2)    ch_state:AVCT_CH_OPEN(0x3) conflict_lcid:0x0000
+stack::avct   Browse: No browse channel
+stack::avct  Id: 1 profile_uuid:0x110e role:AVCT_ROLE_ACCEPTOR control:0x47
+stack::avct   Link  : peer:xx:xx:xx:xx:33:59 lcid:0x0059 sm_state:AVCT_LCB_OPEN_ST(0x2)    ch_state:AVCT_CH_OPEN(0x3) conflict_lcid:0x0000
+stack::avct   Browse: peer:xx:xx:xx:xx:33:59 lcid:0x005b sm_state:AVCT_LCB_OPEN_ST(0x2)    ch_state:AVCT_CH_OPEN(0x3) conflict_lcid:0x0000
+stack::avct  Id: 2 profile_uuid:0x110e role:AVCT_ROLE_ACCEPTOR control:0x47
+stack::avct   Link  : No link channel
+stack::avct   Browse: No browse channel
+ ----- shim::legacy::pan -----
+shim::legacy::pan Connections:0 roles configured:C.N[0x5] current:..N[0x4] previous:...[0x0]
+shim::legacy::pan service_name_user:"Android Network User"
+shim::legacy::pan service_name_nap:"Android Network Access Point"
+ ----- shim::legacy::hid -----
+shim::legacy::hid status:BTIF_HH_ENABLED num_devices:0
+shim::legacy::hid status:BTIF_HH_ENABLED
+ ----- shim::legacy::bta::dm -----
+shim::legacy::bta::dm  last 4 discovery state transitions
+shim::legacy::bta::dm    2026-09-10 21:50:47.672 state:     BTA_DM_DISCOVER_IDLE event:BTA_DM_API_DISCOVER_EVT
+shim::legacy::bta::dm    2026-09-10 21:50:48.043 state:   BTA_DM_DISCOVER_ACTIVE event:BTA_DM_DISCOVERY_RESULT_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:18.698 state:     BTA_DM_DISCOVER_IDLE event:BTA_DM_API_DISCOVER_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:18.858 state:   BTA_DM_DISCOVER_ACTIVE event:BTA_DM_DISCOVERY_RESULT_EVT
+shim::legacy::bta::dm  current bta_dm_discovery_state:BTA_DM_DISCOVER_IDLE
+shim::legacy::bta::dm  last 22 search state transitions
+shim::legacy::bta::dm    2026-09-10 21:51:18.279 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:23.414 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:28.756 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:34.048 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:39.375 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:44.723 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:50.059 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:51:55.469 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:00.854 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:06.367 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:11.722 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:17.071 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:22.348 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:27.627 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:33.002 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:38.286 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:43.651 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:49.023 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:54.331 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:52:59.584 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:53:04.870 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm    2026-09-10 21:53:10.149 state:       BTA_DM_SEARCH_IDLE event:BTA_DM_API_SEARCH_CANCEL_EVT
+shim::legacy::bta::dm  current bta_dm_search_state:BTA_DM_SEARCH_IDLE
+shim::legacy::bta::dm  last 0 gatt history entries
+ ----- shim::legacy::sdp -----
+shim::legacy::sdp max_attribute_list_size:1008 max_records_per_search:21
+shim::legacy::sdp peer:xx:xx:xx:xx:33:59 discovery_state:SDP_DISC_WAIT_SEARCH_ATTR
+shim::legacy::sdp   connection_state:tSDP_STATE::IDLE(0x0) connection_flags:0x01 mtu:1024 l2cap_cid:112
+shim::legacy::sdp peer:xx:xx:xx:xx:33:59 discovery_state:SDP_DISC_WAIT_SEARCH_ATTR
+shim::legacy::sdp   connection_state:tSDP_STATE::IDLE(0x0) connection_flags:0x01 mtu:0 l2cap_cid:90
+shim::legacy::sdp peer:xx:xx:xx:xx:33:59 discovery_state:SDP_DISC_WAIT_SEARCH_ATTR
+shim::legacy::sdp   connection_state:tSDP_STATE::IDLE(0x0) connection_flags:0x01 mtu:0 l2cap_cid:90
+shim::legacy::sdp peer:xx:xx:xx:xx:33:59 discovery_state:SDP_DISC_WAIT_SEARCH_ATTR
+shim::legacy::sdp   connection_state:tSDP_STATE::IDLE(0x0) connection_flags:0x01 mtu:0 l2cap_cid:90
+ ----- shim::record -----
+shim::record 001 xx:xx:xx:xx:d6:fb BR_EDR cod:2400-4-4 remote_info:UNKNOWN        sm4:0x00 SecureConn:F name:"Magnetic Speaker"sec_prop:bredr_linkkey_known:T,le_linkkey_known:F,bond_type:BOND_TYPE_PERSISTENT,bredr_linkkey_type:UNAUTH_COMB,ble_enc_key_size:0,bredr_authenticated:F,le_authenticated:F,16_digit_key_authenticated:F,bredr_encrypted:F,le_encrypted:F
+shim::record 002 xx:xx:xx:xx:33:59   DUAL cod:7e00-4-8 remote_info:09-02048-01855 sm4:0x11 SecureConn:T name:"Navegadortz2"sec_prop:bredr_linkkey_known:T,le_linkkey_known:T,bond_type:BOND_TYPE_PERSISTENT,bredr_linkkey_type:AUTH_COMB_P_256,ble_enc_key_size:16,bredr_authenticated:T,le_authenticated:F,16_digit_key_authenticated:T,bredr_encrypted:T,le_encrypted:F
+shim::record 003 xx:xx:xx:xx:e4:95   DUAL cod:5a00-2-c remote_info:UNKNOWN        sm4:0x00 SecureConn:F name:"motorola edge 30 neo"sec_prop:bredr_linkkey_known:T,le_linkkey_known:T,bond_type:BOND_TYPE_PERSISTENT,bredr_linkkey_type:AUTH_COMB_P_256,ble_enc_key_size:0,bredr_authenticated:F,le_authenticated:F,16_digit_key_authenticated:T,bredr_encrypted:F,le_encrypted:F
+shim::record 004 xx:xx:xx:xx:0c:00 BR_EDR cod:2400-4-20 remote_info:UNKNOWN        sm4:0x00 SecureConn:F name:"BC8-Android"sec_prop:bredr_linkkey_known:T,le_linkkey_known:F,bond_type:BOND_TYPE_PERSISTENT,bredr_linkkey_type:COMBINATION,ble_enc_key_size:0,bredr_authenticated:F,le_authenticated:F,16_digit_key_authenticated:F,bredr_encrypted:F,le_encrypted:F
+shim::record 005 xx:xx:xx:xx:c7:1e   DUAL cod:0-1f-0 remote_info:09-14100-00010 sm4:0x11 SecureConn:F name:"FX Plus"sec_prop:bredr_linkkey_known:T,le_linkkey_known:F,bond_type:BOND_TYPE_PERSISTENT,bredr_linkkey_type:UNAUTH_COMB,ble_enc_key_size:16,bredr_authenticated:T,le_authenticated:F,16_digit_key_authenticated:F,bredr_encrypted:T,le_encrypted:F
+ ----- shim::legacy::l2cap -----
+shim::legacy::l2cap link_state:LST_CONNECTED(0x4)
+shim::legacy::l2cap handle:0x0002
+shim::legacy::l2cap   active channel lcid:0x0043 rcid:0x4b83 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0046 rcid:0x4c44 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0049 rcid:0x4d05 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0041 rcid:0x4b02 is_ecoc:false in_use:true
+shim::legacy::l2cap link_state:LST_CONNECTED(0x4)
+shim::legacy::l2cap handle:0x0003
+shim::legacy::l2cap   active channel lcid:0x0055 rcid:0x0049 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0056 rcid:0x004a is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0059 rcid:0x004d is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x004e rcid:0x0042 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0053 rcid:0x0046 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x005b rcid:0x004f is_ecoc:false in_use:true
+ ----- shim::btm -----
+shim::btm  2026-09-10 21:50:44.105 Initialized btm history
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:2 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:3 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:4 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:5 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:6 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.181 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:7 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:8 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:9 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:10 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:11 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:12 scn:2 dlci:4 mtu:256
+shim::btm  2026-09-10 21:50:44.182 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:13 scn:3 dlci:6 mtu:256
+shim::btm  2026-09-10 21:50:44.217 PAN    Registered               : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:50:44.218 PAN    Role change              : 00:00:00:00:00:00 role:0x5
+shim::btm  2026-09-10 21:50:44.222 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:14 scn:4 dlci:8 mtu:990
+shim::btm  2026-09-10 21:50:44.232 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:15 scn:5 dlci:10 mtu:990
+shim::btm  2026-09-10 21:50:44.276 SCAN   Classic updated          : 00:00:00:00:00:00 inquiry_scan_enable:F page_scan_enable:F
+shim::btm  2026-09-10 21:50:44.276 SCAN   Classic updated          : 00:00:00:00:00:00 inquiry_scan_enable:F page_scan_enable:T
+shim::btm  2026-09-10 21:50:44.335 RFCOMM Server stopped           : 00:00:00:00:00:00 handle:2 scn:2 dlci:4 is_server:true
+shim::btm  2026-09-10 21:50:44.335 RFCOMM Server stopped           : 00:00:00:00:00:00 handle:3 scn:3 dlci:6 is_server:true
+shim::btm  2026-09-10 21:50:44.335 ACL    Initiated connection     : xx:xx:xx:xx:c7:1e classic
+shim::btm  2026-09-10 21:50:44.343 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:16 scn:6 dlci:12 mtu:990
+shim::btm  2026-09-10 21:50:44.523 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:17 scn:7 dlci:14 mtu:990
+shim::btm  2026-09-10 21:50:44.589 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:50:44.593 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.004 results:0  
+shim::btm  2026-09-10 21:50:44.594 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:50:44.680 RFCOMM Server started           : ff:ff:ff:ff:ff:ff handle:18 scn:8 dlci:16 mtu:990
+shim::btm  2026-09-10 21:50:44.694 ADV    Le advert started        : 00:00:00:00:00:00 reg_id:-2
+shim::btm  2026-09-10 21:50:46.452 ACL    Connection successful    : xx:xx:xx:xx:c7:1e classic Local initiated
+shim::btm  2026-09-10 21:50:46.453 ACL    Role change              : xx:xx:xx:xx:c7:1e classic New_role:PERIPHERAL(0x01) status:SUCCESS(0x00)
+shim::btm  2026-09-10 21:50:46.624 RFCOMM Connection opened        : xx:xx:xx:xx:c7:1e handle:19 scn:12 dlci:24 mtu:256
+shim::btm  2026-09-10 21:50:46.663 SEC    Encryption success       : xx:xx:xx:xx:c7:1e status:HCI_SUCCESS transport:BT_TRANSPORT_BR_EDR is_encrypted:T
+shim::btm  2026-09-10 21:50:46.719 ACL    Sniff subrating          : xx:xx:xx:xx:c7:1e max_latency:0.75 peer_timeout:0.00 local_timeout:0.00
+shim::btm  2026-09-10 21:50:47.581 ACL    Sniff subrating          : xx:xx:xx:xx:c7:1e max_latency:0.75 peer_timeout:0.00 local_timeout:0.00
+shim::btm  2026-09-10 21:50:47.581 A2DP   Stream opened            : xx:xx:xx:xx:c7:1e BTA_AV_OPEN_EVT(0x2)
+shim::btm  2026-09-10 21:50:47.672 API    Service discovery        : xx:xx:xx:xx:c7:1e transport:BT_TRANSPORT_AUTO
+shim::btm  2026-09-10 21:50:47.673 SDP    Discovery started        : xx:xx:xx:xx:c7:1e Transport:BT_TRANSPORT_BR_EDR
+shim::btm  2026-09-10 21:50:48.042 SDP    Discovery completed      : xx:xx:xx:xx:c7:1e Result:tSDP_STATUS::SDP_SUCCESS services_found:0xc10c0068 service_index:0x34
+shim::btm  2026-09-10 21:50:48.043 API    Discovered GATT services : xx:xx:xx:xx:c7:1e 
+shim::btm  2026-09-10 21:50:48.043 SDP    Discovered services      : xx:xx:xx:xx:c7:1e bta_status:BTA_SUCCESS sdp_uuids:9 eir_uuids:0
+shim::btm  2026-09-10 21:50:50.596 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 6.002 results:2  
+shim::btm  2026-09-10 21:50:50.598 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:50:54.583 ACL    Power mode change        : xx:xx:xx:xx:c7:1e immediate:active[0x00] ==> immediate:sniff[0x02]
+shim::btm  2026-09-10 21:51:16.820 ACL    Power mode change        : xx:xx:xx:xx:c7:1e immediate:active[0x00] ==> immediate:sniff[0x02]
+shim::btm  2026-09-10 21:51:17.731 ACL    Connection request       : xx:xx:xx:xx:33:59 gd_cod:7e0-4-08 legacy_dev_class:7e00-4-8
+shim::btm  2026-09-10 21:51:17.995 ACL    Connection successful    : xx:xx:xx:xx:33:59 classic Remote initiated
+shim::btm  2026-09-10 21:51:17.996 ACL    Role change              : xx:xx:xx:xx:33:59 classic New_role:CENTRAL(0x00) status:SUCCESS(0x00)
+shim::btm  2026-09-10 21:51:18.092 SEC    Encryption success       : xx:xx:xx:xx:33:59 status:HCI_SUCCESS transport:BT_TRANSPORT_BR_EDR is_encrypted:T
+shim::btm  2026-09-10 21:51:18.130 PAN    Disconnect               : xx:xx:xx:xx:33:59 
+shim::btm  2026-09-10 21:51:18.151 RFCOMM Server stopped           : 00:00:00:00:00:00 handle:4 scn:2 dlci:4 is_server:true
+shim::btm  2026-09-10 21:51:18.279 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:18.455 ACL    Role change              : xx:xx:xx:xx:c7:1e classic New_role:CENTRAL(0x00) status:SUCCESS(0x00)
+shim::btm  2026-09-10 21:51:18.457 SEC    Encryption success       : xx:xx:xx:xx:c7:1e status:HCI_SUCCESS transport:BT_TRANSPORT_BR_EDR is_encrypted:T
+shim::btm  2026-09-10 21:51:18.589 A2DP   Stream opened            : xx:xx:xx:xx:33:59 BTA_AV_OPEN_EVT(0x2)
+shim::btm  2026-09-10 21:51:18.698 API    Service discovery        : xx:xx:xx:xx:33:59 transport:BT_TRANSPORT_AUTO
+shim::btm  2026-09-10 21:51:18.698 SDP    Discovery started        : xx:xx:xx:xx:33:59 Transport:BT_TRANSPORT_BR_EDR
+shim::btm  2026-09-10 21:51:18.858 SDP    Discovery completed      : xx:xx:xx:xx:33:59 Result:tSDP_STATUS::SDP_SUCCESS services_found:0xc7ccc0c8 service_index:0x34
+shim::btm  2026-09-10 21:51:18.858 API    Discovered GATT services : xx:xx:xx:xx:33:59 
+shim::btm  2026-09-10 21:51:18.859 SDP    Discovered services      : xx:xx:xx:xx:33:59 bta_status:BTA_SUCCESS sdp_uuids:14 eir_uuids:0
+shim::btm  2026-09-10 21:51:22.628 A2DP   Stream started           : 00:00:00:00:00:00 BTA_AV_START_EVT(0x4)
+shim::btm  2026-09-10 21:51:23.414 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:28.756 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:34.048 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:39.375 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:44.723 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:50.059 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:51:55.469 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:00.854 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:06.367 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:11.722 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:16.802 ACL    Power mode change        : xx:xx:xx:xx:c7:1e immediate:active[0x00] ==> immediate:sniff[0x02]
+shim::btm  2026-09-10 21:52:17.071 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:22.348 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:27.627 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:33.002 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:38.286 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:43.651 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:49.023 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:54.331 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:52:59.584 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:53:04.870 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::btm  2026-09-10 21:53:10.149 API    Cancel discovery         : 00:00:00:00:00:00 
+shim::legacy::dumpsys Dumping shim legacy targets:1
+shim::stack Stack information ᛒᚼ
+shim::stack Classic inquiry:disabled
+shim::stack Le scan:enabled duration_s:144.431 results:20
+shim::stack Last 0 inquiry scans:
+ ----- shim::acl -----
+shim::acl Shadow le accept list              size:0   controller_max_size:128
+shim::acl Shadow le address resolution list  size:2   controller_max_size:32
+shim::acl   001 xx:xx:xx:xx:33:59[PUBLIC_DEVICE_ADDRESS(0x00)]
+shim::acl   002 xx:xx:xx:xx:e4:95[PUBLIC_DEVICE_ADDRESS(0x00)]
+shim::acl remote_addr:xx:xx:xx:xx:c7:1e handle:0x0002 transport:BT_TRANSPORT_BR_EDR
+shim::acl     link_up_issued: true
+shim::acl     flush_timeout:0x0000
+shim::acl     link_supervision_timeout:5.000 sec
+shim::acl     disconnect_reason:0x00
+shim::acl     peer_lmp_features[0] valid:true data:0xff 0xfe 0x8f 0xfe 0xdb 0xff 0x5b 0x87 
+shim::acl     peer_lmp_features[1] valid:true data:0x03 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::acl     peer_lmp_features[2] valid:true data:0x0f 0x03 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::acl     [classic] link_policy:0x0x0007 : role_switch  hold_mode  sniff_mode 
+shim::acl     [classic] sniff_subrating:true
+shim::acl     pkt_types_mask:0xcc18
+shim::acl     role:central
+shim::acl remote_addr:xx:xx:xx:xx:33:59 handle:0x0003 transport:BT_TRANSPORT_BR_EDR
+shim::acl     link_up_issued: true
+shim::acl     flush_timeout:0x0000
+shim::acl     link_supervision_timeout:5.000 sec
+shim::acl     disconnect_reason:0x00
+shim::acl     peer_lmp_features[0] valid:true data:0xbf 0xff 0x8d 0xfe 0xdb 0x3d 0x3b 0x87 
+shim::acl     peer_lmp_features[1] valid:true data:0x0b 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::acl     peer_lmp_features[2] valid:true data:0x30 0x0b 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::acl     [classic] link_policy:0x0x0002 : hold_mode 
+shim::acl     [classic] sniff_subrating:false
+shim::acl     pkt_types_mask:0xcc18
+shim::acl     role:central
+
+HCI Controller Dumpsys:
+    local_version_information:
+        hci_version: V_5_1(0x0a)
+        hci_revision: 0x0
+        lmp_version: V_5_1(0x0a)
+        lmp_subversion: 0x2be
+        manufacturer_name: 29
+    buffer_size:
+        acl_data_packet_length: 1024
+        total_num_acl_data_packets: 7
+        sco_data_packet_length: 60
+        total_num_sco_data_packets: 8
+    le_buffer_size:
+        le_acl_data_packet_length: 251
+        total_num_le_acl_data_packets: 16
+        iso_data_packet_length: 0
+        total_num_iso_data_packets: 0
+    le_maximum_data_length:
+        supported_max_tx_octets: 251
+        supported_max_tx_time: 17040
+        supported_max_rx_octets: 251
+        supported_max_rx_time: 17040
+    le_accept_list_size: 128
+    le_resolving_list_size: 32
+    le_maximum_advertising_data_length: 1650
+    le_suggested_default_data_length: 27
+    le_number_supported_advertising_sets: 16
+    le_periodic_advertiser_list_size: 3
+    le_supported_states: 0x000003ffffffffff
+    local_supported_features:
+        page0: 0x875b3fd8fe8ffeff
+        page1: 0x0000000000000002
+        page2: 0x0000000000000355
+    le_local_supported_features:
+        page0: 0x0000000008007dff
+    local_supported_commands: [
+        0xff, 0xff, 0xff, 0x03, 0xce, 0xff, 0xef, 0xff,
+        0xff, 0xff, 0xff, 0x7f, 0xf2, 0x0f, 0xe8, 0xfe,
+        0x3f, 0xf7, 0x83, 0xff, 0x1c, 0x00, 0x04, 0x00,
+        0x61, 0xff, 0xff, 0xff, 0x7f, 0xfe, 0x20, 0xf5,
+        0xff, 0xf0, 0xff, 0xff, 0xff, 0xff, 0xff, 0x07,
+        0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    ]
+    vendor_capabilities:
+        is_supported: 1
+        max_adv_instances: 16
+        offloaded_resolution_of_private_addresses: 1
+        total_scan_result_storage: 5120
+        max_irk_list_size: 32
+        filtering_support: 1
+        max_filter: 16
+        activity_energy_info_support: 1
+        version_supported: 98
+        total_num_of_advt_tracked: 16
+        extended_scan_support: 1
+        debug_logging_supported: 1
+        le_address_generation_offloading_support: 31
+        a2dp_source_offload_capability_mask: 0
+        bluetooth_quality_report_support: 0
+        dynamic_audio_buffer_support: 0
+        a2dp_offload_v2_support: 0
+
+ACL Manager Dumpsys:
+    le_connectability_state: "ConnectabilityState::DISARMED"
+    le_create_connection_timeout_alarms_count: 0
+    le_filter_accept_list_count: 0
+    le_filter_accept_list: [
+    ]
+
+Wakelock Dumpsys:
+    is_acquired: false
+    is_native: true
+    acquired_count: 1
+    released_count: 1
+    acquired_error_count: 0
+    released_error_count: 0
+    last_acquired_error_code: 0
+    last_released_error_code: 0
+    last_acquired_timestamp_ms: 1479
+    last_released_timestamp_ms: 226464021
+    last_interval_ms: 1479
+    max_interval_ms: 1479
+    min_interval_ms: 1479
+    avg_interval_ms: 1479
+    total_interval_ms: 1479
+    total_time_since_reeset_ms: 152461

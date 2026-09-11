@@ -1,0 +1,1422 @@
+Bluetooth Status
+  enabled: true
+  state: ON
+  address: 11:46:03:10:33:59
+  name: Navegadortz2
+  time since enabled: 00:14:19.908
+
+Enable log:
+  09-10 21:32:46.529  Enabled  due to SYSTEM_BOOT by android
+  09-10 21:51:05.436 Disabled  due to APPLICATION_REQUEST by android
+  09-10 21:51:15.932  Enabled  due to APPLICATION_REQUEST by com.zqc.tirepressure
+  09-10 21:59:36.037 Disabled  due to APPLICATION_REQUEST by android
+  09-10 21:59:46.758  Enabled  due to APPLICATION_REQUEST by com.zqc.tirepressure
+
+Bluetooth crashed 0 times
+
+0 BLE apps registered
+
+BluetoothManagerService:
+  mEnable:true
+  mQuietEnable:false
+  mEnableExternal:true
+  mQuietEnableExternal:false
+
+
+AdapterProperties
+  Name: Navegadortz2
+  Address: 11:46:03:10:33:59
+  ScanMode: SCAN_MODE_CONNECTABLE_DISCOVERABLE
+  ConnectionState: STATE_CONNECTED
+  State: ON
+  MaxConnectedAudioDevices: 1
+  A2dpOffloadEnabled: true
+  Discovering: false
+  DiscoveryEndMs: 0
+  Bonded devices:
+    DC:B7:2E:5E:4E:59 [ DUAL ] POCO X3 NFC
+
+  Scan Mode Changes:
+    09-10 21:59:47.715 (uid/pid=1002/21431) SCAN_MODE_CONNECTABLE
+    09-10 21:59:47.957 (uid/pid=1000/0) SCAN_MODE_CONNECTABLE_DISCOVERABLE
+sSnoopLogSettingAtEnable = FULL
+sDefaultSnoopLogSettingAtEnable = null
+
+Enabled Profile Services:
+  A2dpService
+  A2dpSinkService
+  AvrcpTargetService
+  AvrcpControllerService
+  BatteryService
+  HeadsetService
+  HeadsetClientService
+  HearingAidService
+  HidDeviceService
+  HidHostService
+  GattService
+  BluetoothMapService
+  MapClientService
+  BluetoothOppService
+  PanService
+  BluetoothPbapService
+  PbapClientService
+
+AdapterState:
+ total records=4
+ rec[0]: time=09-10 21:59:47.255 processed=OffState org=OffState dest=TurningBleOnState what=3(0x3) BLE_TURN_ON
+ rec[1]: time=09-10 21:59:47.357 processed=TurningBleOnState org=TurningBleOnState dest=BleOnState what=7(0x7) BLE_STARTED
+ rec[2]: time=09-10 21:59:47.365 processed=BleOnState org=BleOnState dest=TurningOnState what=1(0x1) USER_TURN_ON
+ rec[3]: time=09-10 21:59:47.717 processed=TurningOnState org=TurningOnState dest=OnState what=5(0x5) BREDR_STARTED
+curState=OnState
+
+SilenceDeviceManager:
+  Address            | Is silenced?
+
+BluetoothDatabase:
+  Metadata Changes:
+
+Metadata:
+    XX:XX:XX:XX:4E:59 last_active_time=2 {profile connection policy(A2DP=-1|A2DP_SINK=100|CSIP_SET_COORDINATOR=-1|HEADSET=-1|HEADSET_CLIENT=100|HID_HOST=-1|PAN=100|PBAP=-1|PBAP_CLIENT=100|MAP=-1|MAP_CLIENT=100|SAP=-1|HAP=-1|HEARING_AID=-1|LE_AUDIO=-1|VOLUME_CONTROL=-1|LE_CALL_CONTROL=-1|LE_BROADCAST_ASSISTANT=-1|BATTERY=-1), optional codec(support=-1|enabled=-1), custom metadata(manufacturer_name=null|model_name=null|software_version=null|hardware_version=null|companion_app=null|main_icon=null|is_untethered_headset=null|untethered_left_icon=null|untethered_right_icon=null|untethered_case_icon=null|untethered_left_battery=null|untethered_right_battery=null|untethered_case_battery=null|untethered_left_charging=null|untethered_right_charging=null|untethered_case_charging=null|enhanced_settings_ui_uri=null|device_type=null|main_battery=null|main_charging=null|main_low_battery_threshold=null|untethered_left_low_battery_threshold=null|untethered_right_low_battery_threshold=null|untethered_case_low_battery_threshold=null|spatial_audio=null|fastpair_customized=null|le_audio=null|gmcs_cccd=null|gtbs_cccd=null), hfp client audio policy(callEstablishAudioPolicy=0|connectingTimeAudioPolicy=0|inBandRingtoneAudioPolicy=0)}
+
+Profile: GattService
+  mAdvertisingServiceUuids:
+  mMaxScanFilters: 0
+
+Registered App
+  Scanner:
+      app_if: 2, appName: com.google.uid.shared:10101
+      app_if: 1, appName: android.uid.system:1000
+  Client:
+  Server:
+      app_if: 6, appName: android.uid.system:1000
+
+
+GATT Scanner Map
+  Entries: 2
+
+  com.google.uid.shared:10101 (Registered)
+  LE scans (started/stopped)                                  : 2 / 1
+  Scan time in ms (active/suspend/total)                      : 857529 / 0 / 857529
+  Scan time with mode in ms (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 857529 / 0 / 0
+  Scan mode counter (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 2 / 0 / 0
+  Score                                                       : 214382
+  Total number of results                                     : 3
+  Last 1 scans                                                :
+    09-10 21:59:48 - 16ms Filter 0 results (2) CB Regular Scan
+      └ Scan Config: [ ScanMode=BALANCED, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fff6-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fe2c-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+  Ongoing scans                                               :
+    09-10 21:59:49 - 857513ms Forced Filter 3 results (2) CB Regular Scan
+      └ Scan Config: [ ScanMode=BALANCED, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fff6-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+      └ BluetoothLeScanFilter [ ServiceDataUuid=0000fe2c-0000-1000-8000-00805f9b34fb ServiceData=[0] ServiceDataMask=[0] ]
+  Application ID                     : 2
+  UUID                               : 0b9321fd-880e-4271-8eb1-9dcc1d021d1b
+  Connections: 0
+
+  android.uid.system:1000 (Registered)
+  LE scans (started/stopped)                                  : 866 / 865
+  Scan time in ms (active/suspend/total)                      : 1614489 / 0 / 1614489
+  Scan time with mode in ms (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 0 / 1614489 / 0
+  Scan mode counter (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 0 / 866 / 0
+  Score                                                       : 1614489
+  Total number of results                                     : 0
+  Last 5 scans                                                :
+    09-10 22:14:02 - 994ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=TC.TPMS ]
+    09-10 22:13:34 - 30030ms Filter 0 results (3) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=GZ_KEY ]
+    09-10 22:14:03 - 993ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=TC.TPMS ]
+    09-10 22:14:04 - 993ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=TC.TPMS ]
+    09-10 22:14:05 - 994ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=TC.TPMS ]
+  Ongoing scans                                               :
+    09-10 22:14:06 - 155ms Filter 0 results (1) CB Regular Scan
+      └ Scan Config: [ ScanMode=LOW_LATENCY, callbackType=ALL_MATCHES ]
+      └ BluetoothLeScanFilter [ DeviceName=TC.TPMS ]
+  Application ID                     : 1
+  UUID                               : 9d102696-46bc-4e9c-a58a-4a5e5c527587
+  Connections: 0
+
+GATT Advertiser Map
+
+GATT Client Map
+  Entries: 0
+
+GATT Server Map
+  Entries: 1
+
+  android.uid.system:1000 (Registered)
+  LE scans (started/stopped)                                  : 0 / 0
+  Scan time in ms (active/suspend/total)                      : 0 / 0 / 0
+  Scan time with mode in ms (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 0 / 0 / 0
+  Scan mode counter (Opp/LowPower/Balanced/LowLatency/AmbientDiscovery):0 / 0 / 0 / 0 / 0
+  Score                                                       : 0
+  Total number of results                                     : 0
+  Application ID                     : 6
+  UUID                               : 3a22ca60-5854-4db6-93bd-0baa0447e867
+  Connections: 0
+
+GATT Handle Map
+  Entries: 0
+  Requests: 0
+
+Profile: A2dpService
+  mActiveDevice: null
+  mMaxConnectedAudioDevices: 1
+  codecConfigPriorities:
+    SBC: 1001
+    AAC: 2001
+    aptX: 3001
+    aptX HD: 4001
+    LDAC: 5001
+    Opus: 7001
+  mA2dpOffloadEnabled: true
+  codecConfigOffloading:
+    {codecName:SBC,mCodecType:0,mCodecPriority:0,mSampleRate:0x0(NONE),mBitsPerSample:0x0(NONE),mChannelMode:0x0(NONE),mCodecSpecific1:0,mCodecSpecific2:0,mCodecSpecific3:0,mCodecSpecific4:0}
+
+Profile: A2dpSinkService
+  Active Device = XX:XX:XX:XX:4E:59
+  Max Connected Devices = 1
+  Devices Tracked = 1
+  ==== StateMachine for XX:XX:XX:XX:4E:59 ====
+  mDevice: XX:XX:XX:XX:4E:59(POCO X3 NFC) name=A2DPSinkStateMachine state=Connected
+
+Profile: AvrcpTargetService:
+  AVRCP version: Invalid
+  List of MediaControllers: size=3
+    Media Player 1: com.zxbluelet
+    MediaController (com.zxbluelet@2fa93ab) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not Provided" artist="" album="" duration=0 trackPosition=1/1 image=null }
+      PlayState: null
+      Queue: size=0
+    BTAudio Playback State change Event:
+  
+  <Active>   Media Player 2: com.android.bluetooth
+    MediaController (com.android.bluetooth@ef12a08) A Gallant Gentleman, We Lost The Sea, null
+    Current Data:
+      Song: { mediaId="currsong" title="A Gallant Gentleman" artist="We Lost The Sea" album="null" duration=0 trackPosition=1/50 image=null }
+      PlayState: PlaybackState {state=PLAYING(3), position=0, buffered position=0, speed=1.0, updated=2476357, actions=16511, custom actions=[], active item id=0, error=null}
+      Queue: size=50
+        { mediaId="NowPlayingId0" title="A Gallant Gentleman" artist="" album="" duration=0 trackPosition=1/50 image=null }
+        { mediaId="NowPlayingId1" title="пластинки" artist="" album="" duration=0 trackPosition=2/50 image=null }
+        { mediaId="NowPlayingId2" title="I Don't Care" artist="" album="" duration=0 trackPosition=3/50 image=null }
+        { mediaId="NowPlayingId3" title="Sunroof" artist="" album="" duration=0 trackPosition=4/50 image=null }
+        { mediaId="NowPlayingId4" title="Lost In Yesterday" artist="" album="" duration=0 trackPosition=5/50 image=null }
+        { mediaId="NowPlayingId5" title="Trilogy" artist="" album="" duration=0 trackPosition=6/50 image=null }
+        { mediaId="NowPlayingId6" title="Satanized" artist="" album="" duration=0 trackPosition=7/50 image=null }
+        { mediaId="NowPlayingId7" title="Mr. Fear" artist="" album="" duration=0 trackPosition=8/50 image=null }
+        { mediaId="NowPlayingId8" title="Secrets" artist="" album="" duration=0 trackPosition=9/50 image=null }
+        { mediaId="NowPlayingId9" title="Are You What You Want to Be?" artist="" album="" duration=0 trackPosition=10/50 image=null }
+        { mediaId="NowPlayingId10" title="Sign 'O' the Times" artist="" album="" duration=0 trackPosition=11/50 image=null }
+        { mediaId="NowPlayingId11" title="Outlaw" artist="" album="" duration=0 trackPosition=12/50 image=null }
+        { mediaId="NowPlayingId12" title="Shedding" artist="" album="" duration=0 trackPosition=13/50 image=null }
+        { mediaId="NowPlayingId13" title="Abyss - from Kaiju No. 8" artist="" album="" duration=0 trackPosition=14/50 image=null }
+        { mediaId="NowPlayingId14" title="Another Way" artist="" album="" duration=0 trackPosition=15/50 image=null }
+        { mediaId="NowPlayingId15" title="Lluvia Con Nieve - En Vivo" artist="" album="" duration=0 trackPosition=16/50 image=null }
+        { mediaId="NowPlayingId16" title="Ayo Mba" artist="" album="" duration=0 trackPosition=17/50 image=null }
+        { mediaId="NowPlayingId17" title="Why'd You Only Call Me When You're High?" artist="" album="" duration=0 trackPosition=18/50 image=null }
+        { mediaId="NowPlayingId18" title="Propaganda" artist="" album="" duration=0 trackPosition=19/50 image=null }
+        { mediaId="NowPlayingId19" title="Undercover Martyn" artist="" album="" duration=0 trackPosition=20/50 image=null }
+        { mediaId="NowPlayingId20" title="La Virgen de La Humanidad" artist="" album="" duration=0 trackPosition=21/50 image=null }
+        { mediaId="NowPlayingId21" title="Lovely (feat. Charlotte Buchholz)" artist="" album="" duration=0 trackPosition=22/50 image=null }
+        { mediaId="NowPlayingId22" title="Be My Fire" artist="" album="" duration=0 trackPosition=23/50 image=null }
+        { mediaId="NowPlayingId23" title="MIDDLE OF THE NIGHT" artist="" album="" duration=0 trackPosition=24/50 image=null }
+        { mediaId="NowPlayingId24" title="The Creator Has A Mastertape - Live" artist="" album="" duration=0 trackPosition=25/50 image=null }
+        { mediaId="NowPlayingId25" title="Pray" artist="" album="" duration=0 trackPosition=26/50 image=null }
+        { mediaId="NowPlayingId26" title="Around the World" artist="" album="" duration=0 trackPosition=27/50 image=null }
+        { mediaId="NowPlayingId27" title="Emerald Star" artist="" album="" duration=0 trackPosition=28/50 image=null }
+        { mediaId="NowPlayingId28" title="Objects Outlive Us" artist="" album="" duration=0 trackPosition=29/50 image=null }
+        { mediaId="NowPlayingId29" title="Find You" artist="" album="" duration=0 trackPosition=30/50 image=null }
+        { mediaId="NowPlayingId30" title="Radio" artist="" album="" duration=0 trackPosition=31/50 image=null }
+        { mediaId="NowPlayingId31" title="Everlast - Extended Mix" artist="" album="" duration=0 trackPosition=32/50 image=null }
+        { mediaId="NowPlayingId32" title="Ends of the Earth" artist="" album="" duration=0 trackPosition=33/50 image=null }
+        { mediaId="NowPlayingId33" title="Flying Whales" artist="" album="" duration=0 trackPosition=34/50 image=null }
+        { mediaId="NowPlayingId34" title="Distopía" artist="" album="" duration=0 trackPosition=35/50 image=null }
+        { mediaId="NowPlayingId35" title="True Friends - Live at the Royal Albert Hall" artist="" album="" duration=0 trackPosition=36/50 image=null }
+        { mediaId="NowPlayingId36" title="Duele Si Te Vas" artist="" album="" duration=0 trackPosition=37/50 image=null }
+        { mediaId="NowPlayingId37" title="12 THINGS I FORGOT" artist="" album="" duration=0 trackPosition=38/50 image=null }
+        { mediaId="NowPlayingId38" title="We Are Fucking Fucked" artist="" album="" duration=0 trackPosition=39/50 image=null }
+        { mediaId="NowPlayingId39" title="Major Rotation" artist="" album="" duration=0 trackPosition=40/50 image=null }
+        { mediaId="NowPlayingId40" title="Staring" artist="" album="" duration=0 trackPosition=41/50 image=null }
+        { mediaId="NowPlayingId41" title="Easy Way Out" artist="" album="" duration=0 trackPosition=42/50 image=null }
+        { mediaId="NowPlayingId42" title="This Is War" artist="" album="" duration=0 trackPosition=43/50 image=null }
+        { mediaId="NowPlayingId43" title="Sunburn" artist="" album="" duration=0 trackPosition=44/50 image=null }
+        { mediaId="NowPlayingId44" title="The Solitary Path of a Convicted Man" artist="" album="" duration=0 trackPosition=45/50 image=null }
+        { mediaId="NowPlayingId45" title="Fake Lies" artist="" album="" duration=0 trackPosition=46/50 image=null }
+        { mediaId="NowPlayingId46" title="Ugo" artist="" album="" duration=0 trackPosition=47/50 image=null }
+        { mediaId="NowPlayingId47" title="Bad Memories (feat. Elley Duhé & FAST BOY)" artist="" album="" duration=0 trackPosition=48/50 image=null }
+        { mediaId="NowPlayingId48" title="Another Life" artist="" album="" duration=0 trackPosition=49/50 image=null }
+        { mediaId="NowPlayingId49" title="Disco Lies" artist="" album="" duration=0 trackPosition=50/50 image=null }
+    BTAudio Playback State change Event:
+      09-10 22:13:57.547 onPlaybackStateChanged(): com.android.bluetooth : PlaybackState {state=PLAYING(3), position=273636, buffered position=0, speed=1.0, updated=2486633, actions=16511, custom actions=[], active item id=0, error=null}
+      09-10 22:13:59.586 onPlaybackStateChanged(): com.android.bluetooth : PlaybackState {state=PLAYING(3), position=275684, buffered position=0, speed=1.0, updated=2488673, actions=16511, custom actions=[], active item id=0, error=null}
+      09-10 22:14:01.599 onPlaybackStateChanged(): com.android.bluetooth : PlaybackState {state=PLAYING(3), position=277710, buffered position=0, speed=1.0, updated=2490680, actions=16511, custom actions=[], active item id=0, error=null}
+      09-10 22:14:03.627 onPlaybackStateChanged(): com.android.bluetooth : PlaybackState {state=PLAYING(3), position=279734, buffered position=0, speed=1.0, updated=2492713, actions=16511, custom actions=[], active item id=0, error=null}
+      09-10 22:14:05.727 onPlaybackStateChanged(): com.android.bluetooth : PlaybackState {state=PLAYING(3), position=281824, buffered position=0, speed=1.0, updated=2494814, actions=16511, custom actions=[], active item id=0, error=null}
+  
+    Media Player 3: org.videolan.vlc
+    MediaController (org.videolan.vlc@1ad85a1) null
+    Current Data:
+      Song: { mediaId="currsong" title="Not Provided" artist="" album="" duration=0 trackPosition=1/1 image=null }
+      PlayState: PlaybackState {state=NONE(0), position=0, buffered position=0, speed=0.0, updated=1636809, actions=15872, custom actions=[], active item id=-1, error=null}
+      Queue: size=0
+    BTAudio Playback State change Event:
+  
+  List of Browsers: size=1
+    Browsable Package Name: org.videolan.vlc
+       Cached Media ID's: "//org.videolan.vlc/r", 
+  
+  BTAudio Active Player Events:
+    09-10 21:59:47.706 setActivePlayer(): setting player to com.android.bluetooth
+  
+  BTAudio Audio Playback State Events:
+  
+  BTAudio Media Key Events:
+  
+  AvrcpVolumeManager:
+    mCurrentDevice: null
+    Current System Volume: 25
+    Device Volume Memory Map:
+      Device Address    : Device Name    : Vol : AbsVol
+    BTAudio Volume Events:
+
+Profile: AvrcpControllerService
+  Devices Tracked = 1
+  Active Device = XX:XX:XX:XX:4E:59
+  ==== StateMachine for XX:XX:XX:XX:4E:59 ====
+  mDevice: XX:XX:XX:XX:4E:59(POCO X3 NFC) name=AvrcpControllerStateMachine state=Connected
+  isActive: true
+  Control: true
+  Browsing: true
+  Cover Art: false
+  Addressed Player ID: 0
+  Available Players (1): 
+  	(Addressed) <AvrcpPlayer id=0 name=Bluetooth Player track=AvrcpItem{mUuid=ea099c9a-8bda-4ec6-932c-e4bfaa5a2020, mUid=0, mItemType=3, mType=0, mDisplayableName=null, mTitle=A Gallant Gentleman mPlayingTime=0 mTrack=1/50, mPlayable=false, mBrowsable=false, mCoverArtHandle=null, mImageUuid=null, mImageUrinull} playState=PlaybackState {state=3, position=281824, buffered position=0, speed=1.0, updated=2494814, actions=16511, error code=0, error message=null, custom actions=[], active item id=0}>
+  Queue (50): [MediaItem{mFlags=2, mDescription=A Gallant Gentleman, null, null}, MediaItem{mFlags=2, mDescription=пластинки, null, null}, MediaItem{mFlags=2, mDescription=I Don't Care, null, null}, MediaItem{mFlags=2, mDescription=Sunroof, null, null}, MediaItem{mFlags=2, mDescription=Lost In Yesterday, null, null}, MediaItem{mFlags=2, mDescription=Trilogy, null, null}, MediaItem{mFlags=2, mDescription=Satanized, null, null}, MediaItem{mFlags=2, mDescription=Mr. Fear, null, null}, MediaItem{mFlags=2, mDescription=Secrets, null, null}, MediaItem{mFlags=2, mDescription=Are You What You Want to Be?, null, null}, MediaItem{mFlags=2, mDescription=Sign 'O' the Times, null, null}, MediaItem{mFlags=2, mDescription=Outlaw, null, null}, MediaItem{mFlags=2, mDescription=Shedding, null, null}, MediaItem{mFlags=2, mDescription=Abyss - from Kaiju No. 8, null, null}, MediaItem{mFlags=2, mDescription=Another Way, null, null}, MediaItem{mFlags=2, mDescription=Lluvia Con Nieve - En Vivo, null, null}, MediaItem{mFlags=2, mDescription=Ayo Mba, null, null}, MediaItem{mFlags=2, mDescription=Why'd You Only Call Me When You're High?, null, null}, MediaItem{mFlags=2, mDescription=Propaganda, null, null}, MediaItem{mFlags=2, mDescription=Undercover Martyn, null, null}, MediaItem{mFlags=2, mDescription=La Virgen de La Humanidad, null, null}, MediaItem{mFlags=2, mDescription=Lovely (feat. Charlotte Buchholz), null, null}, MediaItem{mFlags=2, mDescription=Be My Fire, null, null}, MediaItem{mFlags=2, mDescription=MIDDLE OF THE NIGHT, null, null}, MediaItem{mFlags=2, mDescription=The Creator Has A Mastertape - Live, null, null}, MediaItem{mFlags=2, mDescription=Pray, null, null}, MediaItem{mFlags=2, mDescription=Around the World, null, null}, MediaItem{mFlags=2, mDescription=Emerald Star, null, null}, MediaItem{mFlags=2, mDescription=Objects Outlive Us, null, null}, MediaItem{mFlags=2, mDescription=Find You, null, null}, MediaItem{mFlags=2, mDescription=Radio, null, null}, MediaItem{mFlags=2, mDescription=Everlast - Extended Mix, null, null}, MediaItem{mFlags=2, mDescription=Ends of the Earth, null, null}, MediaItem{mFlags=2, mDescription=Flying Whales, null, null}, MediaItem{mFlags=2, mDescription=Distopía, null, null}, MediaItem{mFlags=2, mDescription=True Friends - Live at the Royal Albert Hall, null, null}, MediaItem{mFlags=2, mDescription=Duele Si Te Vas, null, null}, MediaItem{mFlags=2, mDescription=12 THINGS I FORGOT, null, null}, MediaItem{mFlags=2, mDescription=We Are Fucking Fucked, null, null}, MediaItem{mFlags=2, mDescription=Major Rotation, null, null}, MediaItem{mFlags=2, mDescription=Staring, null, null}, MediaItem{mFlags=2, mDescription=Easy Way Out, null, null}, MediaItem{mFlags=2, mDescription=This Is War, null, null}, MediaItem{mFlags=2, mDescription=Sunburn, null, null}, MediaItem{mFlags=2, mDescription=The Solitary Path of a Convicted Man, null, null}, MediaItem{mFlags=2, mDescription=Fake Lies, null, null}, MediaItem{mFlags=2, mDescription=Ugo, null, null}, MediaItem{mFlags=2, mDescription=Bad Memories (feat. Elley Duhé & FAST BOY), null, null}, MediaItem{mFlags=2, mDescription=Another Life, null, null}, MediaItem{mFlags=2, mDescription=Disco Lies, null, null}]
+
+  sBrowseTree: Size: 3
+  Cover Artwork Enabled: True
+  CoverArtManager:
+    Download Scheme: thumbnail
+  CoverArtStorage:
+
+  BluetoothMediaBrowserService:
+    track={title=A Gallant Gentleman, artist=We Lost The Sea, album=null, track_number=1, total_tracks=50, genre=null, album_art=null}
+    playbackState=PlaybackState {state=3, position=0, buffered position=0, speed=1.0, updated=2495767, actions=16511, error code=0, error message=null, custom actions=[], active item id=0}
+    queue=[MediaSession.QueueItem {Description=A Gallant Gentleman, null, null, Id=0 }, MediaSession.QueueItem {Description=пластинки, null, null, Id=1 }, MediaSession.QueueItem {Description=I Don't Care, null, null, Id=2 }, MediaSession.QueueItem {Description=Sunroof, null, null, Id=3 }, MediaSession.QueueItem {Description=Lost In Yesterday, null, null, Id=4 }, MediaSession.QueueItem {Description=Trilogy, null, null, Id=5 }, MediaSession.QueueItem {Description=Satanized, null, null, Id=6 }, MediaSession.QueueItem {Description=Mr. Fear, null, null, Id=7 }, MediaSession.QueueItem {Description=Secrets, null, null, Id=8 }, MediaSession.QueueItem {Description=Are You What You Want to Be?, null, null, Id=9 }, MediaSession.QueueItem {Description=Sign 'O' the Times, null, null, Id=10 }, MediaSession.QueueItem {Description=Outlaw, null, null, Id=11 }, MediaSession.QueueItem {Description=Shedding, null, null, Id=12 }, MediaSession.QueueItem {Description=Abyss - from Kaiju No. 8, null, null, Id=13 }, MediaSession.QueueItem {Description=Another Way, null, null, Id=14 }, MediaSession.QueueItem {Description=Lluvia Con Nieve - En Vivo, null, null, Id=15 }, MediaSession.QueueItem {Description=Ayo Mba, null, null, Id=16 }, MediaSession.QueueItem {Description=Why'd You Only Call Me When You're High?, null, null, Id=17 }, MediaSession.QueueItem {Description=Propaganda, null, null, Id=18 }, MediaSession.QueueItem {Description=Undercover Martyn, null, null, Id=19 }, MediaSession.QueueItem {Description=La Virgen de La Humanidad, null, null, Id=20 }, MediaSession.QueueItem {Description=Lovely (feat. Charlotte Buchholz), null, null, Id=21 }, MediaSession.QueueItem {Description=Be My Fire, null, null, Id=22 }, MediaSession.QueueItem {Description=MIDDLE OF THE NIGHT, null, null, Id=23 }, MediaSession.QueueItem {Description=The Creator Has A Mastertape - Live, null, null, Id=24 }, MediaSession.QueueItem {Description=Pray, null, null, Id=25 }, MediaSession.QueueItem {Description=Around the World, null, null, Id=26 }, MediaSession.QueueItem {Description=Emerald Star, null, null, Id=27 }, MediaSession.QueueItem {Description=Objects Outlive Us, null, null, Id=28 }, MediaSession.QueueItem {Description=Find You, null, null, Id=29 }, MediaSession.QueueItem {Description=Radio, null, null, Id=30 }, MediaSession.QueueItem {Description=Everlast - Extended Mix, null, null, Id=31 }, MediaSession.QueueItem {Description=Ends of the Earth, null, null, Id=32 }, MediaSession.QueueItem {Description=Flying Whales, null, null, Id=33 }, MediaSession.QueueItem {Description=Distopía, null, null, Id=34 }, MediaSession.QueueItem {Description=True Friends - Live at the Royal Albert Hall, null, null, Id=35 }, MediaSession.QueueItem {Description=Duele Si Te Vas, null, null, Id=36 }, MediaSession.QueueItem {Description=12 THINGS I FORGOT, null, null, Id=37 }, MediaSession.QueueItem {Description=We Are Fucking Fucked, null, null, Id=38 }, MediaSession.QueueItem {Description=Major Rotation, null, null, Id=39 }, MediaSession.QueueItem {Description=Staring, null, null, Id=40 }, MediaSession.QueueItem {Description=Easy Way Out, null, null, Id=41 }, MediaSession.QueueItem {Description=This Is War, null, null, Id=42 }, MediaSession.QueueItem {Description=Sunburn, null, null, Id=43 }, MediaSession.QueueItem {Description=The Solitary Path of a Convicted Man, null, null, Id=44 }, MediaSession.QueueItem {Description=Fake Lies, null, null, Id=45 }, MediaSession.QueueItem {Description=Ugo, null, null, Id=46 }, MediaSession.QueueItem {Description=Bad Memories (feat. Elley Duhé & FAST BOY), null, null, Id=47 }, MediaSession.QueueItem {Description=Another Life, null, null, Id=48 }, MediaSession.QueueItem {Description=Disco Lies, null, null, Id=49 }]
+    internal_queue=[MediaSession.QueueItem {Description=A Gallant Gentleman, null, null, Id=0 }, MediaSession.QueueItem {Description=пластинки, null, null, Id=1 }, MediaSession.QueueItem {Description=I Don't Care, null, null, Id=2 }, MediaSession.QueueItem {Description=Sunroof, null, null, Id=3 }, MediaSession.QueueItem {Description=Lost In Yesterday, null, null, Id=4 }, MediaSession.QueueItem {Description=Trilogy, null, null, Id=5 }, MediaSession.QueueItem {Description=Satanized, null, null, Id=6 }, MediaSession.QueueItem {Description=Mr. Fear, null, null, Id=7 }, MediaSession.QueueItem {Description=Secrets, null, null, Id=8 }, MediaSession.QueueItem {Description=Are You What You Want to Be?, null, null, Id=9 }, MediaSession.QueueItem {Description=Sign 'O' the Times, null, null, Id=10 }, MediaSession.QueueItem {Description=Outlaw, null, null, Id=11 }, MediaSession.QueueItem {Description=Shedding, null, null, Id=12 }, MediaSession.QueueItem {Description=Abyss - from Kaiju No. 8, null, null, Id=13 }, MediaSession.QueueItem {Description=Another Way, null, null, Id=14 }, MediaSession.QueueItem {Description=Lluvia Con Nieve - En Vivo, null, null, Id=15 }, MediaSession.QueueItem {Description=Ayo Mba, null, null, Id=16 }, MediaSession.QueueItem {Description=Why'd You Only Call Me When You're High?, null, null, Id=17 }, MediaSession.QueueItem {Description=Propaganda, null, null, Id=18 }, MediaSession.QueueItem {Description=Undercover Martyn, null, null, Id=19 }, MediaSession.QueueItem {Description=La Virgen de La Humanidad, null, null, Id=20 }, MediaSession.QueueItem {Description=Lovely (feat. Charlotte Buchholz), null, null, Id=21 }, MediaSession.QueueItem {Description=Be My Fire, null, null, Id=22 }, MediaSession.QueueItem {Description=MIDDLE OF THE NIGHT, null, null, Id=23 }, MediaSession.QueueItem {Description=The Creator Has A Mastertape - Live, null, null, Id=24 }, MediaSession.QueueItem {Description=Pray, null, null, Id=25 }, MediaSession.QueueItem {Description=Around the World, null, null, Id=26 }, MediaSession.QueueItem {Description=Emerald Star, null, null, Id=27 }, MediaSession.QueueItem {Description=Objects Outlive Us, null, null, Id=28 }, MediaSession.QueueItem {Description=Find You, null, null, Id=29 }, MediaSession.QueueItem {Description=Radio, null, null, Id=30 }, MediaSession.QueueItem {Description=Everlast - Extended Mix, null, null, Id=31 }, MediaSession.QueueItem {Description=Ends of the Earth, null, null, Id=32 }, MediaSession.QueueItem {Description=Flying Whales, null, null, Id=33 }, MediaSession.QueueItem {Description=Distopía, null, null, Id=34 }, MediaSession.QueueItem {Description=True Friends - Live at the Royal Albert Hall, null, null, Id=35 }, MediaSession.QueueItem {Description=Duele Si Te Vas, null, null, Id=36 }, MediaSession.QueueItem {Description=12 THINGS I FORGOT, null, null, Id=37 }, MediaSession.QueueItem {Description=We Are Fucking Fucked, null, null, Id=38 }, MediaSession.QueueItem {Description=Major Rotation, null, null, Id=39 }, MediaSession.QueueItem {Description=Staring, null, null, Id=40 }, MediaSession.QueueItem {Description=Easy Way Out, null, null, Id=41 }, MediaSession.QueueItem {Description=This Is War, null, null, Id=42 }, MediaSession.QueueItem {Description=Sunburn, null, null, Id=43 }, MediaSession.QueueItem {Description=The Solitary Path of a Convicted Man, null, null, Id=44 }, MediaSession.QueueItem {Description=Fake Lies, null, null, Id=45 }, MediaSession.QueueItem {Description=Ugo, null, null, Id=46 }, MediaSession.QueueItem {Description=Bad Memories (feat. Elley Duhé & FAST BOY), null, null, Id=47 }, MediaSession.QueueItem {Description=Another Life, null, null, Id=48 }, MediaSession.QueueItem {Description=Disco Lies, null, null, Id=49 }]
+    session active state=true
+
+Profile: BatteryService
+
+Profile: HeadsetService
+  mMaxHeadsetConnections: 1
+  DefaultMaxHeadsetConnections: 1
+  mActiveDevice: null
+  isInbandRingingEnabled: false
+  isInbandRingingSupported: true
+  mInbandRingingRuntimeDisable: true
+  mAudioRouteAllowed: true
+  mVoiceRecognitionStarted: false
+  mVoiceRecognitionTimeoutEvent: null
+  mVirtualCallStarted: false
+  mDialingOutTimeoutEvent: null
+  mForceScoAudio: false
+  mCreated: true
+  mStarted: true
+  AudioManager.isBluetoothScoOn(): false
+  Telecom.isInCall(): false
+  Telecom.isRinging(): false
+
+Profile: HeadsetClientService
+  ==== StateMachine for XX:XX:XX:XX:4E:59 ====
+    mCurrentDevice: XX:XX:XX:XX:4E:59(POCO X3 NFC) name=HeadsetClientStateMachine state=Connected
+    mAudioState: 0
+    mAudioWbs: false
+    mIndicatorNetworkState: 1
+    mIndicatorNetworkType: 0
+    mIndicatorNetworkSignal: 5
+    mIndicatorBatteryLevel: 4
+    mOperatorName: Movistar
+    mSubscriberInfo: 3151710070
+    mAudioRouteAllowed: true
+    mAudioPolicyRemoteSupported: 10
+    mHsClientAudioPolicy: BluetoothSinkAudioPolicy{mCallEstablishPolicy: 0, mConnectingTimePolicy: 0, mInBandRingtonePolicy: 0}
+    mInBandRing: false
+    mCalls:
+    mCallsUpdate:
+    StateMachineLog:
+      HeadsetClientStateMachine:
+       total records=36
+       rec[0]: time=09-10 21:59:49.188 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_STATE, value1:1, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[1]: time=09-10 21:59:49.196 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_NETWORK_SIGNAL, value1:5, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[2]: time=09-10 21:59:49.225 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_ROAMING_STATE, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[3]: time=09-10 21:59:49.242 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_BATTERY_LEVEL, value1:4, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[4]: time=09-10 21:59:49.243 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CALLHELD, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[5]: time=09-10 21:59:49.243 processed=Connected org=Connected dest=<null> what=8(0x8) SET_SPEAKER_VOLUME: arg1=5, arg2=0, obj=null
+       rec[6]: time=09-10 21:59:49.243 processed=Connected org=Connected dest=<null> what=7(0x7) SET_MIC_VOLUME: arg1=15, arg2=0, obj=null
+       rec[7]: time=09-10 21:59:49.243 processed=Connected org=Connected dest=<null> what=52(0x34) SUBSCRIBER_INFO: arg1=0, arg2=0, obj=null
+       rec[8]: time=09-10 21:59:49.253 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_IN_BAND_RINGTONE, value1:1, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[9]: time=09-10 21:59:49.267 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_IN_BAND_RINGTONE, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[10]: time=09-10 21:59:49.268 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[11]: time=09-10 21:59:49.268 processed=Connected org=Connected dest=<null> what=22(0x16) SEND_BIEV: arg1=2, arg2=0, obj=null
+       rec[12]: time=09-10 21:59:49.268 processed=Connected org=Connected dest=<null> what=50(0x32) QUERY_CURRENT_CALLS: arg1=0, arg2=0, obj=null
+       rec[13]: time=09-10 21:59:49.292 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_OPERATOR_NAME, value1:0, value2:0, value3:0, value4:0, string: "Movistar", device:XX:XX:XX:XX:4E:59}
+       rec[14]: time=09-10 21:59:49.292 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[15]: time=09-10 21:59:49.292 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[16]: time=09-10 21:59:49.315 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_SUBSCRIBER_INFO, value1:1, value2:0, value3:0, value4:0, string: "3151710070", device:XX:XX:XX:XX:4E:59}
+       rec[17]: time=09-10 21:59:49.315 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[18]: time=09-10 21:59:49.336 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_CMD_RESULT, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+       rec[19]: time=09-10 21:59:49.436 processed=Connected org=Connected dest=<null> what=100(0x64) STACK_EVENT: arg1=0, arg2=0, obj=StackEvent {type:EVENT_TYPE_IN_BAND_RINGTONE, value1:0, value2:0, value3:0, value4:0, string: "null", device:XX:XX:XX:XX:4E:59}
+      curState=Connected
+
+  HfpClientConnectionService:
+    Devices:
+      <HfpClientDeviceBlock device=XX:XX:XX:XX:4E:59 account=[[ ] PhoneAccount: ComponentInfo{com.android.bluetooth/com.android.bluetooth.hfpclient.HfpClientConnectionService}, ***, UserHandle{0} Capabilities: CallProvider PlaceEmerg  Audio Routes: BESW Schemes: tel  Extras: null GroupId: ***] connections=[] conference=null>
+
+Profile: HearingAidService
+
+Profile: HidDeviceService
+
+Profile: HidHostService
+  mTargetDevice: null
+  mInputDevices:
+
+Profile: BluetoothMapService
+  mRemoteDevice: null
+  sRemoteDeviceName: null
+  mState: 0
+  mAppObserver: com.android.bluetooth.map.BluetoothMapAppObserver@11f23c6
+  mIsWaitingAuthorization: false
+  mRemoveTimeoutMsg: false
+  mPermission: 0
+  mAccountChanged: false
+  mBluetoothMnsObexClient: null
+  mMasInstanceMap:
+    null : MasId: 0 Uri:null SMS/MMS:true
+  mEnabledAccounts:
+
+Profile: MapClientService
+
+Profile: BluetoothOppService
+
+Profile: PanService
+  mMaxPanDevices: 5
+  mPanIfName: bt-pan
+  mTetherOn: false
+  mPanDevices:
+
+Profile: BluetoothPbapService
+
+Profile: PbapClientService
+  isAuthServiceReady: true
+  mCurrentDevice: DC:B7:2E:5E:4E:59(POCO X3 NFC) name=PbapClientStateMachine state=Connected
+
+Connection Events:
+  None
+
+Bond Events: 
+  Total Number of events: 0
+
+Link Key Types:
+  xx:xx:xx:xx:4e:59
+    BR: AUTH_COMB_P_256
+    LE: PENC PID PCSRK LENC LCSRK LID
+
+AVRCP Native State:
+  Devices (1 / 5):
+    xx:xx:xx:xx:4e:59:
+      Transaction Labels:
+        label=0 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=1 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_PLAY_POS_CHANGED) alarm=null
+        label=2 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=3 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_APP_SETTING_CHANGE) alarm=null
+        label=4 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_PLAY_STATUS_CHANGE) alarm=null
+        label=5 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_AVAL_PLAYERS_CHANGE) alarm=null
+        label=6 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_UIDS_CHANGE) alarm=null
+        label=7 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_ADDR_PLAYER_CHANGE) alarm=null
+        label=8 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_TRACK_CHANGE) alarm=null
+        label=9 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=10 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=11 in_use=true context=(opcode=AVRC_OP_VENDOR pdu_id=AVRC_PDU_REGISTER_NOTIFICATION event_id=AVRC_EVT_NOW_PLAYING_CHANGE) alarm=null
+        label=12 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=13 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=14 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+        label=15 in_use=false context=(opcode=AVRC_OP_INVALID) alarm=null
+
+A2DP State:
+  TxQueue:
+  Counts (enqueue/dequeue/readbuf)                        : 0 / 0 / 0
+  Last update time ago in ms (enqueue/dequeue/readbuf)    : 0 / 0 / 0
+  Frames per packet (total/max/ave)                       : 0 / 0 / 0
+  Counts (flushed/dropped/dropouts)                       : 0 / 0 / 0
+  Counts (max dropped)                                    : 0
+  Last update time ago in ms (flushed/dropped)            : 0 / 0
+  Counts (underflow)                                      : 0
+  Bytes (underflow)                                       : 0
+  Last update time ago in ms (underflow)                  : 0
+  Enqueue deviation counts (overdue/premature)            : 0 / 0
+  Enqueue overdue scheduling time in ms (total/max/ave)   : 0 / 0 / 0
+  Enqueue premature scheduling time in ms (total/max/ave) : 0 / 0 / 0
+  Dequeue deviation counts (overdue/premature)            : 0 / 0
+  Dequeue overdue scheduling time in ms (total/max/ave)   : 0 / 0 / 0
+  Dequeue premature scheduling time in ms (total/max/ave) : 0 / 0 / 0
+
+A2DP Codecs State:
+  Current Codec: AAC SINK
+
+A2DP SBC State:
+  Priority: 1001
+  Config: Invalid
+  Selectable: Invalid
+  Local capability: Rate=44100 Bits=16 Mode=MONO|STEREO
+  Encoder interval (ms): 20
+  Effective MTU: 0
+  Packet counts (expected/dropped)                        : 0 / 0
+  PCM read counts (expected/actual)                       : 0 / 0
+  PCM read bytes (expected/actual)                        : 0 / 0
+  Frames counts (expected/dropped)                        : 0 / 0
+
+A2DP Source State: Enabled
+  Active peer: 00:00:00:00:00:00
+
+A2DP Sink State: Enabled
+  Active peer: xx:xx:xx:xx:4e:59
+  Peers:
+  Peer: xx:xx:xx:xx:4e:59
+    Connected: true
+    Streaming: true
+    SEP: 0(Source)
+    State Machine: Started
+    Flags: 0x0(None)
+    OpenOnRcTimer: Not scheduled
+    BTA Handle: 0x41
+    Peer ID: 0
+    EDR: true
+    Support 3Mbps: true
+    Self Initiated Connection: true
+    Delay Reporting: 0 (in 1/10 milliseconds) 
+    Codec Preferred: Optional
+
+Socket Events: 
+  Time        	Address          	State             	Role
+  21:59:47.556	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.556	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.675	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.676	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.679	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.680	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.999	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:47.999	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:48.002	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:48.002	00:00:00:00:00:00	STATE_LISTENING   	ROLE_LISTEN
+  21:59:48.825	xx:xx:xx:xx:4e:59	STATE_CONNECTING   	ROLE_CONNECTION
+  21:59:48.922	xx:xx:xx:xx:4e:59	STATE_CONNECTED   	ROLE_CONNECTION
+  21:59:48.956	xx:xx:xx:xx:4e:59	STATE_CONNECTING   	ROLE_CONNECTION
+  21:59:48.981	xx:xx:xx:xx:4e:59	STATE_CONNECTED   	ROLE_CONNECTION
+  22:00:32.647	xx:xx:xx:xx:4e:59	STATE_DISCONNECTING   	ROLE_CONNECTION
+  22:00:32.647	xx:xx:xx:xx:4e:59	STATE_DISCONNECTED   	ROLE_CONNECTION
+
+
+AVRCP Target Native Service: 0 devices
+
+Bluetooth Config:
+  Config Source: Not loaded
+  Devices loaded: 0
+  File created/tagged: 
+  File source: Empty
+
+Bluetooth HF Client BTA Statistics
+  Control block #1
+    Peer Device: dc:b7:2e:5e:4e:59
+    State Machine State: BTA_HF_CLIENT_OPEN_ST
+    RFCOMM Channel (local) 11
+    BTA Generated handle 1
+
+Bluetooth Wakelock Statistics:
+  Is acquired                    : true
+  Acquired/released count        : 19 / 18
+  Acquired/released error count  : 0 / 0
+  Last acquire/release error code: 0 / 0
+  Last acquired time (ms)        : 853532
+  Acquired time min/max/avg (ms) : 1 / 853532 / 45054
+  Total acquired time (ms)       : 856031
+  Total run time (ms)            : 859390
+
+Bluetooth Memory Allocation Statistics:
+  Total allocated/free/used counts : 0 / 0 / 0
+  Total allocated/free/used octets : 0 / 0 / 0
+
+Bluetooth Alarms Statistics:
+  Total Alarms: 1
+
+  Alarm : btif.a2dp_sink_decode (PERIODIC)
+    Action counts (sched/resched/exec/cancel)      : 1 / 42676 / 27816 / 0
+    Deviation counts (overdue/premature)           : 13709 / 0
+    Time in ms (since creation/interval/remaining) : 853532 / 20 / 8
+    Overdue scheduling time in ms (total/max/avg)  : 97211 / 14 / 7
+    Premature scheduling time in ms (total/max/avg): 0 / 0 / 0
+
+Coordinated Set Service Client:
+
+Hearing Access Service Client:
+  no instance
+
+Hearing Aid Manager:
+  Hearing Aid Audio HAL:
+    Counts (underflow)                                      : 0
+    Bytes (underflow)                                       : 0
+    Last update time ago in ms (underflow)                  : 0
+
+Device Groups Manager:
+  Not initialized 
+LeAudio Manager: 
+  Not initialized 
+  LE AudioHalClient:
+    Counts (underflow)                                      : 0
+    Bytes (underflow)                                       : 0
+    Last update time ago in ms (underflow)                  : 0
+
+ AudioSetConfigurationProvider not initialized: config provider: 0, pimpl: 0 
+  ----------------
+   ISO Manager:
+    Available credits: 0
+    Controller buffer size: 0
+    Num of ISO traffic callbacks: 1
+    CISes:
+    BISes:
+  ----------------
+ 
+Le Audio Broadcaster:
+
+Volume Control Manager:
+
+
+connection_manager state:
+	no Low Energy connection attempts
+
+BT Quality Report Events: 
+Event queue is empty.
+ ----- shim::legacy::pan -----
+shim::legacy::pan Connections:0 roles configured:C.N[0x5] current:C..[0x1] previous:...[0x0]
+shim::legacy::pan service_name_user:"Android Network User"
+shim::legacy::pan service_name_nap:"Android Network Access Point"
+ ----- shim::legacy::hid -----
+shim::legacy::hid status:BTIF_HH_ENABLED num_devices:0
+shim::legacy::hid status:BTIF_HH_ENABLED
+ ----- shim::legacy::bta::dm -----
+shim::legacy::bta::dm  last 0 search state transitions
+shim::legacy::bta::dm  current bta_dm_search_state:BTA_DM_SEARCH_IDLE
+shim::legacy::dumpsys Dumping shim legacy targets:1
+ ----- shim::legacy::record -----
+shim::legacy::record 001 xx:xx:xx:xx:4e:59   DUAL cod:0x0c025a remote_info:10-00702-00029 sm4:0x11 SecureConn:T name:"POCO X3 NFC"
+shim::legacy::stack Stack information ᛒᚼ
+shim::legacy::stack Classic inquiry:disabled
+shim::legacy::stack Le scan:enabled duration_s:0.170 results:0
+shim::legacy::stack Last 0 inquiry scans:
+ ----- shim::legacy::acl -----
+shim::acl Shadow le accept list              size:0   controller_max_size:32
+shim::acl Shadow le address resolution list  size:1   controller_max_size:16
+shim::acl   001 dc:b7:2e:5e:4e:59[PUBLIC_DEVICE_ADDRESS]
+shim::legacy::acl remote_addr:xx:xx:xx:xx:4e:59 handle:0x0032 transport:BT_TRANSPORT_BR_EDR
+shim::legacy::acl     link_up_issued: true
+shim::legacy::acl     flush_timeout:0x0000
+shim::legacy::acl     link_supervision_timeout:0.000 sec
+shim::legacy::acl     disconnect_reason:0x00
+shim::legacy::acl     peer_lmp_features[0] valid:true data:0xff 0xfe 0x8f 0xfe 0xd8 0x3f 0x5b 0x87 
+shim::legacy::acl     peer_lmp_features[1] valid:true data:0x0b 0x00 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::legacy::acl     peer_lmp_features[2] valid:true data:0x55 0x03 0x00 0x00 0x00 0x00 0x00 0x00 
+shim::legacy::acl     [classic] link_policy:0x0x0009 : role_switch  park_mode 
+shim::legacy::acl     [classic] sniff_subrating:true
+shim::legacy::acl     pkt_types_mask:0xcc18
+shim::legacy::acl     role:peripheral
+ ----- shim::legacy::l2cap -----
+shim::legacy::l2cap link_state:LST_CONNECTED
+shim::legacy::l2cap handle:0x0032
+shim::legacy::l2cap   active channel lcid:0x0049 rcid:0x006a is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x004a rcid:0x006b is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x004c rcid:0x006d is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0042 rcid:0x0063 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x0046 rcid:0x0066 is_ecoc:false in_use:true
+shim::legacy::l2cap   active channel lcid:0x004d rcid:0x006f is_ecoc:false in_use:true
+ ----- shim::legacy::btm -----
+shim::legacy::btm  2026-09-10 22:05:16.686 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:05:16.686 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:16.705 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:05:16.706 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:17.698 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:05:17.698 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:17.718 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:05:17.718 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:49.111 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.393 results:0  
+shim::legacy::btm  2026-09-10 22:05:49.112 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:49.130 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.018 results:0  
+shim::legacy::btm  2026-09-10 22:05:49.131 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:50.123 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:05:50.123 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:50.142 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:05:50.142 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:51.135 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:05:51.135 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:05:51.155 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:05:51.155 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:22.545 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.390 results:0  
+shim::legacy::btm  2026-09-10 22:06:22.545 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:22.564 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:06:22.564 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:23.558 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.994 results:0  
+shim::legacy::btm  2026-09-10 22:06:23.558 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:23.577 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:06:23.577 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:24.571 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.994 results:0  
+shim::legacy::btm  2026-09-10 22:06:24.571 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:24.591 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:06:24.591 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:54.960 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.369 results:0  
+shim::legacy::btm  2026-09-10 22:06:54.960 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:54.979 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:06:54.979 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:55.972 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:06:55.973 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:55.993 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:06:55.993 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:56.986 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:06:56.986 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:06:57.011 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.025 results:0  
+shim::legacy::btm  2026-09-10 22:06:57.011 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:28.407 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.396 results:0  
+shim::legacy::btm  2026-09-10 22:07:28.407 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:28.426 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:07:28.426 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:29.419 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:07:29.419 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:29.438 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:07:29.439 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:30.432 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:07:30.432 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:07:30.451 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:07:30.451 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:00.825 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.374 results:0  
+shim::legacy::btm  2026-09-10 22:08:00.825 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:00.844 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:08:00.844 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:01.837 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:08:01.838 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:01.857 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:08:01.858 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:02.850 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:08:02.851 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:02.870 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:08:02.870 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:34.260 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.390 results:0  
+shim::legacy::btm  2026-09-10 22:08:34.261 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:34.280 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:08:34.280 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:35.273 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:08:35.273 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:35.293 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:08:35.293 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:36.286 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:08:36.286 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:08:36.306 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:08:36.306 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:07.697 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.391 results:0  
+shim::legacy::btm  2026-09-10 22:09:07.698 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:07.717 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:09:07.717 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:08.710 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:09:08.711 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:08.730 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:09:08.730 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:09.723 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:09:09.724 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:09.744 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:09:09.744 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:40.114 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.370 results:0  
+shim::legacy::btm  2026-09-10 22:09:40.114 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:40.135 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.021 results:0  
+shim::legacy::btm  2026-09-10 22:09:40.135 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:41.128 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:09:41.128 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:41.148 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:09:41.149 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:42.142 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:09:42.142 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:09:42.163 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.021 results:0  
+shim::legacy::btm  2026-09-10 22:09:42.163 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:13.539 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.376 results:0  
+shim::legacy::btm  2026-09-10 22:10:13.539 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:13.558 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:10:13.558 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:14.551 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:10:14.551 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:14.570 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:10:14.570 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:15.563 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:10:15.563 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:15.583 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:10:15.584 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:45.949 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.365 results:2  
+shim::legacy::btm  2026-09-10 22:10:45.949 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:45.966 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.017 results:0  
+shim::legacy::btm  2026-09-10 22:10:45.966 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:46.960 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.994 results:0  
+shim::legacy::btm  2026-09-10 22:10:46.960 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:46.980 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:10:46.980 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:47.973 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:10:47.973 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:10:47.992 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:10:47.992 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:19.385 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.393 results:0  
+shim::legacy::btm  2026-09-10 22:11:19.385 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:19.404 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:11:19.404 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:20.397 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:11:20.397 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:20.416 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:11:20.417 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:21.409 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:11:21.409 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:21.429 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:11:21.429 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:52.808 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.379 results:0  
+shim::legacy::btm  2026-09-10 22:11:52.808 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:52.828 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:11:52.829 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:53.822 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:11:53.822 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:53.841 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:11:53.841 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:54.833 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:11:54.834 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:11:54.852 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.018 results:0  
+shim::legacy::btm  2026-09-10 22:11:54.852 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:25.227 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.375 results:0  
+shim::legacy::btm  2026-09-10 22:12:25.227 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:25.245 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.018 results:0  
+shim::legacy::btm  2026-09-10 22:12:25.246 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:26.239 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:12:26.239 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:26.259 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:12:26.259 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:27.251 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:12:27.252 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:27.273 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.021 results:0  
+shim::legacy::btm  2026-09-10 22:12:27.273 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:58.644 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.371 results:0  
+shim::legacy::btm  2026-09-10 22:12:58.644 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:58.664 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:12:58.665 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:59.658 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.992 results:0  
+shim::legacy::btm  2026-09-10 22:12:59.658 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:12:59.677 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:12:59.677 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:00.670 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:13:00.670 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:00.690 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:13:00.690 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:32.066 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:31.376 results:0  
+shim::legacy::btm  2026-09-10 22:13:32.066 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:32.085 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:13:32.085 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:33.078 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:13:33.079 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:33.098 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:13:33.099 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:34.092 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.994 results:0  
+shim::legacy::btm  2026-09-10 22:13:34.092 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:13:34.112 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:13:34.113 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:04.473 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s:30.360 results:0  
+shim::legacy::btm  2026-09-10 22:14:04.473 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:04.493 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:14:04.493 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:05.486 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:14:05.486 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:05.506 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.020 results:0  
+shim::legacy::btm  2026-09-10 22:14:05.506 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:06.499 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.993 results:0  
+shim::legacy::btm  2026-09-10 22:14:06.500 SCAN   Le scan started          : 00:00:00:00:00:00 
+shim::legacy::btm  2026-09-10 22:14:06.519 SCAN   Le scan stopped          : 00:00:00:00:00:00 duration_s: 0.019 results:0  
+shim::legacy::btm  2026-09-10 22:14:06.519 SCAN   Le scan started          : 00:00:00:00:00:00 
+ ----- Filtering as Developer -----
+{
+  title: "----- Gd Dumpsys ------",
+  init_flags: {
+    values: [
+      {
+        flag: "always_send_services_if_gatt_disc_done",
+        value: "true"
+      },
+      {
+        flag: "always_use_private_gatt_for_debugging",
+        value: "false"
+      },
+      {
+        flag: "asha_packet_drop_frequency_threshold",
+        value: "60"
+      },
+      {
+        flag: "asha_phy_update_retry_limit",
+        value: "5"
+      },
+      {
+        flag: "asynchronously_start_l2cap_coc",
+        value: "true"
+      },
+      {
+        flag: "bluetooth_quality_report_callback",
+        value: "true"
+      },
+      {
+        flag: "bta_dm_clear_conn_id_on_client_close",
+        value: "true"
+      },
+      {
+        flag: "btaa_hci",
+        value: "true"
+      },
+      {
+        flag: "btm_dm_flush_discovery_queue_on_search_cancel",
+        value: "false"
+      },
+      {
+        flag: "classic_discovery_only",
+        value: "false"
+      },
+      {
+        flag: "clear_hidd_interrupt_cid_on_disconnect",
+        value: "true"
+      },
+      {
+        flag: "default_log_level",
+        value: "4"
+      },
+      {
+        flag: "delay_hidh_cleanup_until_hidh_ready_start",
+        value: "true"
+      },
+      {
+        flag: "device_iot_config_logging",
+        value: "false"
+      },
+      {
+        flag: "dynamic_avrcp_version_enhancement",
+        value: "true"
+      },
+      {
+        flag: "finite_att_timeout",
+        value: "true"
+      },
+      {
+        flag: "gatt_robust_caching_client",
+        value: "true"
+      },
+      {
+        flag: "gatt_robust_caching_server",
+        value: "false"
+      },
+      {
+        flag: "gd_core",
+        value: "false"
+      },
+      {
+        flag: "gd_hal_snoop_logger_filtering",
+        value: "true"
+      },
+      {
+        flag: "gd_hal_snoop_logger_socket",
+        value: "true"
+      },
+      {
+        flag: "gd_l2cap",
+        value: "false"
+      },
+      {
+        flag: "gd_link_policy",
+        value: "false"
+      },
+      {
+        flag: "gd_remote_name_request",
+        value: "false"
+      },
+      {
+        flag: "gd_rust",
+        value: "false"
+      },
+      {
+        flag: "hci_adapter",
+        value: "0"
+      },
+      {
+        flag: "hfp_dynamic_version",
+        value: "true"
+      },
+      {
+        flag: "irk_rotation",
+        value: "false"
+      },
+      {
+        flag: "leaudio_targeted_announcement_reconnection_mode",
+        value: "true"
+      },
+      {
+        flag: "logging_explicit_tag_settings",
+        value: "{}"
+      },
+      {
+        flag: "pass_phy_update_callback",
+        value: "true"
+      },
+      {
+        flag: "pbap_pse_dynamic_version_upgrade",
+        value: "false"
+      },
+      {
+        flag: "periodic_advertising_adi",
+        value: "true"
+      },
+      {
+        flag: "private_gatt",
+        value: "true"
+      },
+      {
+        flag: "queue_l2cap_coc_while_encrypting",
+        value: "true"
+      },
+      {
+        flag: "read_encryption_key_size",
+        value: "true"
+      },
+      {
+        flag: "redact_log",
+        value: "true"
+      },
+      {
+        flag: "rust_event_loop",
+        value: "true"
+      },
+      {
+        flag: "sco_codec_select_lc3",
+        value: "false"
+      },
+      {
+        flag: "sco_codec_timeout_clear",
+        value: "false"
+      },
+      {
+        flag: "sdp_return_classic_services_when_le_discovery_fails",
+        value: "true"
+      },
+      {
+        flag: "sdp_serialization",
+        value: "true"
+      },
+      {
+        flag: "sdp_skip_rnr_if_known",
+        value: "true"
+      },
+      {
+        flag: "set_min_encryption",
+        value: "true"
+      },
+      {
+        flag: "subrating",
+        value: "true"
+      },
+      {
+        flag: "trigger_advertising_callbacks_on_first_resume_after_pause",
+        value: "true"
+      },
+      {
+        flag: "use_unified_connection_manager",
+        value: "false"
+      }
+    ]
+  },
+  wakelock_manager_data: {
+    title: "Bluetooth Wakelock Statistics",
+    is_acquired: false,
+    is_native: true,
+    acquired_count: 1,
+    released_count: 1,
+    acquired_error_count: 0,
+    released_error_count: 0,
+    last_acquire_error_code: 0,
+    last_release_error_code: 0,
+    last_acquired_timestamp_millis: 121,
+    last_released_timestamp_millis: 1636275,
+    last_interval_millis: 121,
+    max_interval_millis: 121,
+    min_interval_millis: 121,
+    avg_interval_millis: 121,
+    total_interval_millis: 121,
+    total_time_since_reset_millis: 859625
+  },
+  shim_dumpsys_data: {
+    title: "----- Shim Dumpsys -----",
+    number_of_bundled_schemas: 8
+  },
+  hci_acl_manager_dumpsys_data: {
+    title: "----- Acl Manager Dumpsys -----",
+    le_filter_accept_list_count: 0,
+    le_filter_accept_list: [
+
+    ],
+    le_connectability_state: "ConnectabilityState::DISARMED",
+    le_create_connection_timeout_alarms_count: 0
+  },
+  hci_controller_dumpsys_data: {
+    title: "----- Hci Controller Dumpsys -----",
+    local_version_information: {
+      hci_version: "V_5_0",
+      hci_revision: 255,
+      lmp_version: "V_5_0",
+      manufacturer_name: 1855,
+      lmp_subversion: 2048
+    },
+    acl_buffer_size: {
+      data_packet_length: 1021,
+      total_num_packets: 7
+    },
+    sco_buffer_size: {
+      data_packet_length: 240,
+      total_num_packets: 3
+    },
+    iso_buffer_size: {
+      data_packet_length: 0,
+      total_num_packets: 0
+    },
+    le_buffer_size: {
+      data_packet_length: 272,
+      total_num_packets: 15
+    },
+    le_connect_list_size: 32,
+    le_resolving_list_size: 16,
+    le_maximum_data_length: {
+      supported_max_tx_octets: 251,
+      supported_max_tx_time: 17040,
+      supported_max_rx_octets: 251,
+      supported_max_rx_time: 17040
+    },
+    le_maximum_advertising_data_length: 1650,
+    le_suggested_default_data_length: 27,
+    le_number_supported_advertising_sets: 16,
+    le_periodic_advertiser_list_size: 16,
+    local_supported_commands: [
+      {
+        index: 0,
+        value: 255
+      },
+      {
+        index: 1,
+        value: 255
+      },
+      {
+        index: 2,
+        value: 255
+      },
+      {
+        index: 3,
+        value: 3
+      },
+      {
+        index: 4,
+        value: 204
+      },
+      {
+        index: 5,
+        value: 255
+      },
+      {
+        index: 6,
+        value: 255
+      },
+      {
+        index: 7,
+        value: 255
+      },
+      {
+        index: 8,
+        value: 207
+      },
+      {
+        index: 9,
+        value: 255
+      },
+      {
+        index: 10,
+        value: 255
+      },
+      {
+        index: 11,
+        value: 255
+      },
+      {
+        index: 12,
+        value: 243
+      },
+      {
+        index: 13,
+        value: 15
+      },
+      {
+        index: 14,
+        value: 232
+      },
+      {
+        index: 15,
+        value: 254
+      },
+      {
+        index: 16,
+        value: 63
+      },
+      {
+        index: 17,
+        value: 247
+      },
+      {
+        index: 18,
+        value: 143
+      },
+      {
+        index: 19,
+        value: 255
+      },
+      {
+        index: 20,
+        value: 28
+      },
+      {
+        index: 21,
+        value: 0
+      },
+      {
+        index: 22,
+        value: 0
+      },
+      {
+        index: 23,
+        value: 0
+      },
+      {
+        index: 24,
+        value: 97
+      },
+      {
+        index: 25,
+        value: 247
+      },
+      {
+        index: 26,
+        value: 255
+      },
+      {
+        index: 27,
+        value: 255
+      },
+      {
+        index: 28,
+        value: 127
+      },
+      {
+        index: 29,
+        value: 0
+      },
+      {
+        index: 30,
+        value: 192
+      },
+      {
+        index: 31,
+        value: 0
+      },
+      {
+        index: 32,
+        value: 254
+      },
+      {
+        index: 33,
+        value: 255
+      },
+      {
+        index: 34,
+        value: 255
+      },
+      {
+        index: 35,
+        value: 255
+      },
+      {
+        index: 36,
+        value: 255
+      },
+      {
+        index: 37,
+        value: 255
+      },
+      {
+        index: 38,
+        value: 255
+      },
+      {
+        index: 39,
+        value: 255
+      },
+      {
+        index: 40,
+        value: 31
+      },
+      {
+        index: 41,
+        value: 0
+      },
+      {
+        index: 42,
+        value: 0
+      },
+      {
+        index: 43,
+        value: 0
+      },
+      {
+        index: 44,
+        value: 0
+      },
+      {
+        index: 45,
+        value: 0
+      },
+      {
+        index: 46,
+        value: 0
+      },
+      {
+        index: 47,
+        value: 0
+      },
+      {
+        index: 48,
+        value: 0
+      },
+      {
+        index: 49,
+        value: 0
+      },
+      {
+        index: 50,
+        value: 0
+      },
+      {
+        index: 51,
+        value: 0
+      },
+      {
+        index: 52,
+        value: 0
+      },
+      {
+        index: 53,
+        value: 0
+      },
+      {
+        index: 54,
+        value: 0
+      },
+      {
+        index: 55,
+        value: 0
+      },
+      {
+        index: 56,
+        value: 0
+      },
+      {
+        index: 57,
+        value: 0
+      },
+      {
+        index: 58,
+        value: 0
+      },
+      {
+        index: 59,
+        value: 0
+      },
+      {
+        index: 60,
+        value: 0
+      },
+      {
+        index: 61,
+        value: 0
+      },
+      {
+        index: 62,
+        value: 0
+      },
+      {
+        index: 63,
+        value: 0
+      }
+    ],
+    extended_lmp_features_array: [
+      9744450233824051135,
+      2,
+      2864
+    ],
+    le_local_supported_features: 1030926499839,
+    le_supported_states: 4398046511103,
+    vendor_capabilities: {
+      is_supported: 1,
+      max_advt_instances: 10,
+      offloaded_resolution_of_private_address: 0,
+      total_scan_results_storage: 1600,
+      max_irk_list_sz: 0,
+      filtering_support: 1,
+      max_filter: 14,
+      activity_energy_info_support: 1,
+      version_supported: 260,
+      total_num_of_advt_tracked: 14,
+      extended_scan_support: 1,
+      debug_logging_supported: 1,
+      le_address_generation_offloading_support: 0,
+      a2dp_source_offload_capability_mask: 0,
+      bluetooth_quality_report_support: 1
+    }
+  },
+  activity_attribution_dumpsys_data: {
+    title_device_wakeup: "----- Device-based Wakeup Attribution Dumpsys -----",
+    num_device_wakeup: 0,
+    device_wakeup_attribution: [
+
+    ],
+    title_device_activity: "----- Device-based Activity Attribution Dumpsys -----",
+    num_device_activity: 0,
+    device_activity_aggregation: [
+
+    ],
+    title_app_wakeup: "----- App-based Wakeup Attribution Dumpsys -----",
+    num_app_wakeup: 0,
+    app_wakeup_attribution: [
+
+    ],
+    title_app_activity: "----- App-based Activity Attribution Dumpsys -----",
+    num_app_activity: 0,
+    app_activity_aggregation: [
+
+    ]
+  }
+}
