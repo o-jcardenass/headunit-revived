@@ -26,9 +26,15 @@
   told to stop yet, so of course `setActive` answered "already initialized". Kept as `d2-dhu.txt` for the
   record. The corrected attempt polled the capture for that exact log line before firing the re-arm;
   `d2-dhu-v2.txt` is the graded run below.
-- C1, C3 and C5 were **not run this round**: they need D-HU on D-MOTO's 2.4 GHz hand-operated hotspot
-  (D-MOTO is not rooted — `cmd wifi start-softap` refuses with `SecurityException: Uid 2000 does not have
-  access`), which needs a person at the phone. Deferred; see the closing section.
+- C1, C3 and C5 needed D-HU on D-MOTO's 2.4 GHz hand-operated hotspot (D-MOTO is not rooted —
+  `cmd wifi start-softap` refuses with `SecurityException: Uid 2000 does not have access`), so they were
+  run later in the day once the operator joined D-HU to the hotspot by hand. Between C1 and C3, D-HU
+  roamed back to its preferred 5 GHz home network the moment the app exited (`headunit://exit` tears the
+  stand-down down and this rig's saved 5 GHz network wins any reconnect race — `TESTING-TEMPLATE.md` §7a
+  already documents this as having no non-destructive fix). `cmd wifi connect-network <netId>` does not
+  accept a bare saved network id, and the spaced SSID trap makes the quoted form fail too
+  (`Unknown network type Chingon`); reconnecting the saved network needed the operator's hands again for
+  C3 (C3 itself never left the hotspot since it's the NEVER-mode run, so C5 needed no further reconnect).
 - Settings were diffed against a fresh backup at the end of the round: D-HU and D-POCO both restored to
   byte-identical to their round-start `shared_prefs/settings.xml`, confirmed with `diff`.
 
@@ -145,12 +151,27 @@ attempt). `auto-start-bt-macs` and `auto-start-offer-answered-macs` were already
 
 ## Part C — the station stand-down mode
 
-D-HU's own 5 GHz home network (`Pegue Cdesta`, 5745 MHz) throughout — confirmed live at round start and
-re-confirmed after every run that stood the station down. `wifi-direct-band=0` for C2/C4,
-`stand-down-station-mode` set per run. Overlay permission confirmed granted
-(`SYSTEM_ALERT_WINDOW: granted=true`) throughout.
+D-HU's own 5 GHz home network (`Pegue Cdesta`, 5745 MHz) for C2/C4/C6, D-MOTO's hand-operated hotspot
+(`Hotspotcito Chingon`, 2462 MHz) for C1/C3/C5 — both confirmed live immediately before each run.
+`wifi-direct-band=0` for C1-C5, `stand-down-station-mode` set per run. Overlay permission confirmed
+granted (`SYSTEM_ALERT_WINDOW: granted=true`, and separately via `appops get`) throughout except C5,
+which deliberately revokes it.
 
-**C1, C3, C5 not run** — need D-MOTO's hand-operated 2.4 GHz hotspot; see closing section.
+### C1 — AUTO stands down from a 2.4 GHz station
+
+**PASS**
+
+- `stand-down-station-mode=0`, D-HU on the 2.4 GHz hotspot (`Hotspotcito Chingon`, 2462 MHz).
+- `StationStandDown: asked this unit to leave its WiFi network so the group can have the radio to itself
+  (mode=AUTO, station on 2462MHz, 5GHz=true, group asking for AUTO, disableNetwork returned false). It is
+  rejoined when the session ends.` at `19:31:44.966` — whole line readable: `mode=`, station frequency,
+  `5GHz=` (the station's own dual-band capability, not its current band — confirmed against
+  `StationStandDown.kt`'s `describeSkipped`/`standDown` source), and `group asking for`.
+- `StationStandDown: this unit has left its WiFi network.` at `19:31:47.893`.
+- A stray `StationStandDown: the platform refused to re-enable this unit's WiFi network` line logged
+  immediately before this run's own stand-down, at app startup — leftover from an earlier run's restore
+  attempt against the *5 GHz* network, unrelated to this run's 2.4 GHz station; noted, does not affect
+  the verdict.
 
 ### C2 — AUTO stays joined on a 5 GHz station with a 5 GHz group
 
@@ -195,6 +216,30 @@ re-confirmed after every run that stood the station down. `wifi-direct-band=0` f
   same hardware suggests C6's stall here was rig-side flakiness in that specific instance (the DHCP/join
   race this thread has documented before) rather than a deterministic gap in the fix. Conditions 1 and 2
   — the actual code change under test — are unambiguous passes.
+
+### C3 — NEVER stays joined
+
+**PASS**
+
+- `stand-down-station-mode=2`, D-HU on the 2.4 GHz hotspot.
+- No `asked this unit to leave` anywhere.
+- `StationStandDown: the setting keeps this unit joined to its own WiFi network, so the group shares the
+  radio with it.` at `19:34:44.821`.
+- D-HU stayed on the hotspot throughout (NEVER never leaves), so C5 needed no reconnect.
+
+### C5 — the permission gate
+
+**PASS**
+
+- `stand-down-station-mode=1` (ALWAYS), overlay **revoked** via `appops set ... SYSTEM_ALERT_WINDOW deny`
+  (confirmed with `appops get`, not `dumpsys package`'s runtime-permission flag — same
+  permission-vs-appop distinction `TESTING-TEMPLATE.md` §7a documents for `RECORD_AUDIO`; the runtime
+  flag stayed `granted=true` throughout, as expected, since the appop is the real gate here too).
+- No stand-down.
+- `StationStandDown: This unit's Android will only let the app drop its own WiFi connection while the
+  app has the "display over other apps" permission. Granting it frees the group's radio.` at
+  `19:35:56.167`.
+- Overlay permission re-granted afterward, confirmed via `appops get` back to `allow`.
 
 ---
 
@@ -256,3 +301,6 @@ identically to F1 in every session before the group formed.
    `RECEIVER_NOT_EXPORTED`, so the brief's own trigger command for A2b is dead on arrival regardless of
    `-p`. A real device rotation (`accelerometer_rotation=0` + `user_rotation=1`) is the substitute that
    worked and should replace that command in the next brief that needs this trigger.
+3. **C1, C3 and C5 all passed cleanly once the operator joined the hotspot**, with no surprises relative
+   to C2/C4/C6's already-passing regression coverage. Part C's whole regression suite (C1-C6) is now a
+   clean sweep for this build.
