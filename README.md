@@ -129,7 +129,7 @@ by `bssid-round1-results.md` and its addendum.
 | `hotspot-unreadable-config` | **CLOSED** | No dedicated brief; this is the origin round the transfer branch was created for, now historical. |
 | `p2p-bringup-loop` | **DONE** | p2p-bringup-loop-round1-results.md; round 1 PASS, regression-clean, ships. Nothing queued. |
 | `wpp-over-tcp` | **DONE** | wpp-over-tcp-round5-results.md; PR-ready at aa54e6e9, ping-count question resolved. No further round needed. |
-| `bring-up-status-pill-and-poke-readiness` | **DONE** | round8-results.md: **A2b FAIL** (recreation via a real device rotation never re-arms the watchdog for the native-driver auto-connect trigger — `beginAutoConnect()` never gets called again). Everything else PASS incl. all six of C1-C6 and F1's condition 3, A4 UNTESTABLE. Nothing queued; A2b needs a code fix. |
+| `bring-up-status-pill-and-poke-readiness` | **IN FLIGHT** | round9-brief.md queued against `a8917a7a`, gate 1831/0. Two things: A2b's fix (A2 as its control, A2b, and A2e's two recreations), and the first hardware run of the auto-start offer now that it is asked at the session's first frame instead of on the home screen (Part O, five runs). Round 8's only FAIL was A2b and it is fixed; everything else there PASSed, including all six of C1-C6 and F1's condition 3. |
 | `bring-up-status-pill-and-poke-readiness (round 7)` | **DONE** | round 7 no FAIL: R1/A1/A3/B2/C1-C5/E5 PASS and the offer's ASK arm reached the screen at last. Three defects found, all fixed on `e466171a`. See round7-results.md. |
 
 Round files are `<thread>-round<N>-brief.md` and `<thread>-round<N>-results.md`. A brief with no
