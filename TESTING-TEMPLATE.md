@@ -518,6 +518,22 @@ when a quirk changes a run.
   `dumpsys activity services` showing no `AapService` the whole time; the session formed
   immediately once `MainActivity` was launched explicitly. Never plan a run that skips the explicit
   launch.
+- **`ACTION_RECREATE_MAIN` cannot be fired from adb, and no `-p` fixes it.** `MainActivity`
+  registers that receiver with `ContextCompat.RECEIVER_NOT_EXPORTED`, so a shell-uid broadcast is
+  never dispatched to the app; `am` still answers `Broadcast completed: result=0`, and
+  `dumpsys activity broadcasts history` shows it enqueued and never delivered. Round 8 lost an
+  attempt to it. **To recreate an activity, rotate the unit for real:**
+
+  ```bash
+  adb shell settings put system accelerometer_rotation 0
+  adb shell settings put system user_rotation 1     # 0 restores
+  ```
+
+  `MainActivity`'s manifest `configChanges` is `keyboardHidden|uiMode` only, so a rotation genuinely
+  destroys and rebuilds it: two `WindowManager: finishDrawing of relaunch` events and a second
+  `MainActivity.logLaunchSource`. **Grade a recreation on those, never on the PID** - Android rebuilds
+  an activity inside the same process. Note `AapProjectionActivity` carries `orientation|screenSize`
+  in its own `configChanges`, so the same lever does **not** recreate the projection activity.
 - **Bring the head unit up before the phone, always.** Restoring the phone's radios first lets its
   own Bluetooth reconnect race an explicit `am start` a few seconds later, and the result is two
   sessions, two SSL handshakes and two `p2p-wlan0-N` interfaces — a genuine discard-rule hit. §4's
@@ -713,6 +729,14 @@ when a quirk changes a run.
   ```bash
   adb shell dumpsys wifi | grep -iE "mWifiInfo|SSID|Frequency" | head
   ```
+- **A run that needs D-HU on a 2.4 GHz network needs the operator's hands, twice.** D-MOTO is not
+  rooted, so `cmd wifi start-softap` refuses (`SecurityException: Uid 2000 does not have access`) and
+  its hotspot is hand-started; and D-HU roams straight back to its saved 5 GHz network the moment the
+  app exits, so every run after the first needs the join redone. `cmd wifi connect-network` is not
+  the way back: it accepts neither a bare saved network id nor this rig's spaced SSID
+  (`Unknown network type Chingon`). Round 8 ran C1, C3 and C5 hours after the rest of Part C for this
+  reason. **Order a brief's runs so every hand-operated-hotspot run is adjacent**, and put the
+  NEVER-mode run between them where it can be, since NEVER never leaves the network.
 - **`settings.xml` survives between rounds and carries the previous thread's non-defaults.** This
   cuts both ways. Media-gap round 2 needed no settings writes at all because round 1 had left the
   file exactly right, which saved a `force-stop` cycle; the same property silently imports another
